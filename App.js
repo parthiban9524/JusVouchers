@@ -18,11 +18,25 @@ import Vouchers from "./src/screens/Dashboard/Vouchers";
 import Cart from "./src/screens/Dashboard/Cart";
 import Notification from "./src/screens/Dashboard/Notification";
 import { fonts, normalize } from "./src/components/Utils";
+import Profile from "./src/screens/Dashboard/Profile";
+import ContactUs from "./src/screens/Dashboard/Menu/ContactUs";
+import AboutUs from "./src/screens/Dashboard/Menu/AboutUs";
 
 export default function App() {
 
   const Stack = createStackNavigator();
   const AuthNavigator = createStackNavigator();
+  const HomeNavigator = createStackNavigator();
+
+  function HomeScreen() {
+    return (
+      <HomeNavigator.Navigator initialRouteName="Home" screenOptions={{ headerShown: false }} >
+        <HomeNavigator.Screen name="Home" component={Home} />
+        <HomeNavigator.Screen name="ContactUs" component={ContactUs} />
+        <HomeNavigator.Screen name="AboutUs" component={AboutUs} />
+      </HomeNavigator.Navigator>
+    )
+  }
 
   function AuthScreen() {
     return (
@@ -41,11 +55,11 @@ export default function App() {
   function DashboardNavigation() {
     return (
       <Tab.Navigator screenOptions={{ headerShown: false, tabBarShowLabel: false, tabBarHideOnKeyboard: true, tabBarStyle: { height: normalize(50), backgroundColor: "#F9AA44" } }}  >
-        <Tab.Screen name="Home" component={Home}
+        <Tab.Screen name="HomeScreen" component={HomeScreen}
           listeners={({ navigation }) => ({
             tabPress: e => {
               e.preventDefault();
-              navigation.navigate('Home', { screen: 'Home' })
+              navigation.navigate('HomeScreen', { screen: 'HomeScreen' })
             },
           })}
           options={{
@@ -74,7 +88,7 @@ export default function App() {
                   resizeMode='contain'
                   style={{ width: 35, height: 35, }}
                 />
-                <Text style={{ textAlign: 'center', fontSize: normalize(12), fontFamily: fonts.inter_bold, color: "#ffffff",right : 10 }}>{"Voucher"}</Text>
+                <Text style={{ textAlign: 'center', fontSize: normalize(12), fontFamily: fonts.inter_bold, color: "#ffffff", right: 10 }}>{"Voucher"}</Text>
               </View>
             )
           }}
@@ -112,7 +126,7 @@ export default function App() {
                   resizeMode='contain'
                   style={{ width: 35, height: 35, }}
                 />
-                <Text style={{ textAlign: 'center', fontSize: normalize(12), fontFamily: fonts.inter_bold, color: "#ffffff",right : 15 }}>{"Notification"}</Text>
+                <Text style={{ textAlign: 'center', fontSize: normalize(12), fontFamily: fonts.inter_bold, color: "#ffffff", right: 15 }}>{"Notification"}</Text>
               </View>
             )
           }}
@@ -127,6 +141,7 @@ export default function App() {
         <Stack.Navigator initialRouteName="DashboardNavigation" screenOptions={{ headerShown: false }} >
           <Stack.Screen name="AuthScreen" component={AuthScreen} />
           <Stack.Screen name="DashboardNavigation" component={DashboardNavigation} />
+          <Stack.Screen name="Profile" component={Profile} />
         </Stack.Navigator>
       </Provider>
     </NavigationContainer>

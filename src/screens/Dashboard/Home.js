@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text, Image, ScrollView } from "react-native"
 
 import Header from "../../components/Header";
-import { card } from "../../components/Icons";
+import { card, cart1, cart2, offer1, offer2, offer3, offer4, offer5, offer6 } from "../../components/Icons";
 import Submitbutton from "../../components/Submitbutton";
 import Typecard from "../../components/Typecard";
 import { fonts, normalize } from "../../components/Utils";
@@ -15,11 +15,13 @@ import saloon from "../../assest/images/saloon.png"
 import diet from "../../assest/images/diet.png"
 import exclusive from "../../assest/images/exclusive.png"
 import Slider from "../../components/Slider";
+import Card from "../../components/Card";
+
 export default function Home({ navigation }) {
     return (
         <>
             <Header navigation={navigation} />
-            <ScrollView style={{ backfaceVisibility: "visible" }} >
+            <ScrollView style={{ backfaceVisibility: "visible", backgroundColor: "#ffffff" }} >
                 <View style={{ flexDirection: "row" }} >
                     <View style={{ marginTop: normalize(30), marginLeft: normalize(30) }} >
                         <Text style={{ fontSize: normalize(22), color: "#000000", fontFamily: fonts.montserrat_regular, fontWeight: "700" }}>It's raining</Text>
@@ -46,16 +48,32 @@ export default function Home({ navigation }) {
                     <Typecard bg={"#819CFF"} img={gym} txtbg={"#0D2FA9"} text={"GYM"} />
                     <Typecard bg={"#76E28E"} img={yoga} txtbg={"#348847"} text={"Yoga"} />
                 </View>
-                <View style={{ marginTop: normalize(25) }} >
-                    <Slider />
+                <View style={{ alignSelf: "center" }} >
+                    <Slider navigation={navigation} id = {1} />
                 </View>
                 <View style={{ marginTop: normalize(20), marginLeft: normalize(30) }} >
-                    <Text style={{ fontFamily: fonts.montserrat_regular, fontWeight: "500", color: "#3D3C3B", fontSize: normalize(18) }} >Health Plus Card</Text>
+                    <Text style={{ fontFamily: fonts.montserrat_regular, fontWeight: "600", color: "#3D3C3B", fontSize: normalize(18) }} >Health Plus Card</Text>
                 </View>
-                <View style={{ marginTop: normalize(85), marginLeft: normalize(30) }} >
-                    <Text style={{ fontFamily: fonts.montserrat_regular, fontWeight: "500", color: "#3D3C3B", fontSize: normalize(18) }} >Offer Cards</Text>
+                <View style={{ flexDirection: "row", marginLeft: normalize(15), marginTop: normalize(10) }} >
+                    <Image source={cart1} style={{ height: normalize(85), width: normalize(170), resizeMode: "contain" }} />
+                    <Image source={cart2} style={{ height: normalize(85), width: normalize(170), resizeMode: "contain", marginLeft: normalize(10) }} />
                 </View>
-                <View style={{ marginTop: normalize(213), marginLeft: normalize(30) }} >
+                <View style={{ marginTop: normalize(20), marginLeft: normalize(30) }} >
+                    <Text style={{ fontFamily: fonts.montserrat_regular, fontWeight: "600", color: "#3D3C3B", fontSize: normalize(18) }} >Offer Cards</Text>
+                </View>
+                <View style={{ marginTop: normalize(20), marginLeft: normalize(20) }} >
+                    <View style={{ flexDirection: "row" }} >
+                        <Image source={offer1} style={{ height: normalize(85), width: normalize(110), resizeMode: "contain" }} />
+                        <Image source={offer2} style={{ height: normalize(85), width: normalize(110), resizeMode: "contain", marginLeft: 10 }} />
+                        <Image source={offer3} style={{ height: normalize(85), width: normalize(110), resizeMode: "contain", marginLeft: 10 }} />
+                    </View>
+                    <View style={{ flexDirection: "row", marginTop: normalize(18) }} >
+                        <Image source={offer4} style={{ height: normalize(85), width: normalize(110), resizeMode: "contain" }} />
+                        <Image source={offer5} style={{ height: normalize(85), width: normalize(110), resizeMode: "contain", marginLeft: 10 }} />
+                        <Image source={offer6} style={{ height: normalize(85), width: normalize(110), resizeMode: "contain", marginLeft: 10 }} />
+                    </View>
+                </View>
+                <View style={{ marginTop: normalize(20), marginLeft: normalize(30) }} >
                     <Text style={{ fontFamily: fonts.montserrat_regular, fontWeight: "500", color: "#3D3C3B", fontSize: normalize(18) }} >Offer Cards</Text>
                 </View>
                 <View style={{ marginHorizontal: normalize(10), marginTop: normalize(20), flexDirection: "row", justifyContent: "space-around" }} >
@@ -87,7 +105,10 @@ export default function Home({ navigation }) {
                 <View style={{ marginTop: normalize(20), marginLeft: normalize(30) }} >
                     <Text style={{ fontFamily: fonts.montserrat_regular, fontWeight: "600", color: "#3D3C3B", fontSize: normalize(18) }} >Doctors Card</Text>
                 </View>
-                <View style={{ paddingBottom: normalize(200) }} />
+                <View style={{ marginLeft : normalize(15) }} >
+                    <Slider navigation={navigation} id = {2}/>
+                </View>
+                <View style={{ paddingBottom: normalize(50) }} />
             </ScrollView>
         </>
     )
