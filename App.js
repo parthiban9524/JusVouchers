@@ -154,12 +154,13 @@ export default function App() {
   return (
     <NavigationContainer>
       <Provider store={Store}>
-        <Stack.Navigator initialRouteName="DashboardNavigation" screenOptions={{ headerShown: false }} >
+        {/* <Stack.Navigator initialRouteName="AdminDash" screenOptions={{ headerShown: false }} >
           <Stack.Screen name="AuthScreen" component={AuthScreen} />
           <Stack.Screen name="DashboardNavigation" component={DashboardNavigation} />
           <Stack.Screen name="Profile" component={Profile} />
           <Stack.Screen name="AdminDash" component={AdminDash} />
-        </Stack.Navigator>
+        </Stack.Navigator> */}
+        <AdminDash/>
       </Provider>
     </NavigationContainer>
   )
