@@ -22,12 +22,16 @@ import Profile from "./src/screens/Dashboard/Profile";
 import ContactUs from "./src/screens/Dashboard/Menu/ContactUs";
 import AboutUs from "./src/screens/Dashboard/Menu/AboutUs";
 import Blog from "./src/screens/Dashboard/Menu/Blog"
+import AdminDash from "./src/screens/Admin/AdminDash";
+import Vouchers_detail from "./src/screens/Dashboard/Vouchers_detail";
 
 export default function App() {
 
   const Stack = createStackNavigator();
   const AuthNavigator = createStackNavigator();
   const HomeNavigator = createStackNavigator();
+  const VouchersNavigator = createStackNavigator();
+
 
   function HomeScreen() {
     return (
@@ -37,6 +41,16 @@ export default function App() {
         <HomeNavigator.Screen name="AboutUs" component={AboutUs} />
         <HomeNavigator.Screen name="Blog" component={Blog} />
       </HomeNavigator.Navigator>
+    )
+  }
+
+  function VouchersScreen() {
+    return (
+      <VouchersNavigator.Navigator initialRouteName="Home" screenOptions={{ headerShown: false }} >
+        <VouchersNavigator.Screen name="Vouchers" component={Vouchers} />
+        <VouchersNavigator.Screen name="Vouchers_detail" component={Vouchers_detail} />
+
+      </VouchersNavigator.Navigator>
     )
   }
 
@@ -76,11 +90,11 @@ export default function App() {
             )
           }}
         />
-        <Tab.Screen name="Vouchers" component={Vouchers}
+        <Tab.Screen name="VouchersScreen" component={VouchersScreen}
           listeners={({ navigation }) => ({
             tabPress: e => {
               e.preventDefault();
-              navigation.navigate('Vouchers', { screen: 'Vouchers' })
+              navigation.navigate('VouchersScreen', { screen: 'VouchersScreen' })
             },
           })}
           options={{
@@ -144,6 +158,7 @@ export default function App() {
           <Stack.Screen name="AuthScreen" component={AuthScreen} />
           <Stack.Screen name="DashboardNavigation" component={DashboardNavigation} />
           <Stack.Screen name="Profile" component={Profile} />
+          <Stack.Screen name="AdminDash" component={AdminDash} />
         </Stack.Navigator>
       </Provider>
     </NavigationContainer>

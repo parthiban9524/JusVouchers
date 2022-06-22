@@ -26,3 +26,24 @@ export const fonts = {
   inter_regular: 'Inter-Regular',
   inter_bold: 'Inter-SemiBold'
 };
+
+export const getDistinctCategory = (offers) => {
+  if (Array.isArray(offers)) {
+    let a = [];
+    offers.map((offer) => {
+      a.push(offer.category)
+    })
+    let b = [...new Set(a)]
+    if (Array.isArray(b)) {
+      let c = []
+      b.map((category) => {
+        c.push({
+          name: category,
+          selected: false
+        })
+      })
+      return c
+    }
+  }
+  return []
+};
