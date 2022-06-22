@@ -21,6 +21,7 @@ import { fonts, normalize } from "./src/components/Utils";
 import Profile from "./src/screens/Dashboard/Profile";
 import ContactUs from "./src/screens/Dashboard/Menu/ContactUs";
 import AboutUs from "./src/screens/Dashboard/Menu/AboutUs";
+import Blog from "./src/screens/Dashboard/Menu/Blog"
 
 export default function App() {
 
@@ -34,6 +35,7 @@ export default function App() {
         <HomeNavigator.Screen name="Home" component={Home} />
         <HomeNavigator.Screen name="ContactUs" component={ContactUs} />
         <HomeNavigator.Screen name="AboutUs" component={AboutUs} />
+        <HomeNavigator.Screen name="Blog" component={Blog} />
       </HomeNavigator.Navigator>
     )
   }
