@@ -22,6 +22,7 @@ function ResetPassword({ navigation }) {
                     name="email"
                     component={Input}
                     img={lock}
+                    id = {1}
                 />
             </View>
             <View style={{ marginTop: normalize(10) }} >
@@ -30,6 +31,7 @@ function ResetPassword({ navigation }) {
                     name="email"
                     component={Input}
                     img={lock}
+                    id = {1}
                 />
             </View>
             <View style={{ marginTop: normalize(90) }} >

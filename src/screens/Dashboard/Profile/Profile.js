@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 import { View, Text, Image, TouchableOpacity, Modal, StyleSheet, Dimensions } from "react-native"
-const { height, width } = Dimensions.get("screen");
 
-
-import { fonts, normalize } from "../../components/Utils";
-import man from "../../assest/images/man.png"
-import { profile_back, edit, phone, mail, heart, share, logout_dark, paycard, whatsapp, facebook, instagram, cancel } from "../../components/Icons"
-import styles from "../../assest/styles";
+import { fonts, normalize } from "../../../components/Utils";
+import man from "../../../assest/images/man.png"
+import { profile_back, edit, phone, mail, heart, share, logout_dark, paycard, whatsapp, facebook, instagram, cancel, order_history } from "../../../components/Icons"
+import styles from "../../../assest/styles";
 
 export default function Profile({ navigation }) {
 
@@ -24,7 +22,7 @@ export default function Profile({ navigation }) {
         <View style={{ flex: 1 }} >
             <View style={{ height: "100%", width: "100%", backgroundColor: "#F9AA44" }} >
                 <View style={{ marginTop: normalize(20), flexDirection: "row", justifyContent: "space-evenly" }} >
-                    <TouchableOpacity onPress={() => navigation.navigate("Home")} >
+                    <TouchableOpacity onPress={() => navigation.navigate("DashboardNavigation")} >
                         <Image source={profile_back} style={{ height: normalize(30), width: normalize(30), right: normalize(40) }} />
                     </TouchableOpacity>
                     <View style={{ height: normalize(90), width: normalize(90), borderRadius: normalize(50), top: normalize(50), borderColor: "#ffffff", borderWidth: 3 }} >
@@ -56,22 +54,26 @@ export default function Profile({ navigation }) {
                             <Text style={styles.price_text} >order</Text>
                         </View>
                     </View>
-                    <View style={{ flexDirection: "row", marginTop: normalize(40), marginLeft: normalize(36) }} >
+                    <TouchableOpacity style={{ flexDirection: "row", marginTop: normalize(40), marginLeft: normalize(36) }} onPress = {() => navigation.navigate("Favorites")} >
                         <Image source={heart} style={{ height: normalize(25), width: normalize(25) }} />
                         <Text style={styles.profile_text} >Your Favorites</Text>
-                    </View>
+                    </TouchableOpacity>
                     <View style={{ flexDirection: "row", marginTop: normalize(25), marginLeft: normalize(36) }} >
                         <Image source={paycard} style={{ height: normalize(25), width: normalize(25) }} />
                         <Text style={styles.profile_text} >Payment</Text>
                     </View>
+                    <TouchableOpacity style={{ flexDirection: "row", marginTop: normalize(25), marginLeft: normalize(36) }} onPress = {() => navigation.navigate("OrderHistory")} >
+                        <Image source={order_history} style={{ height: normalize(25), width: normalize(25) }} />
+                        <Text style={styles.profile_text} >Order History</Text>
+                    </TouchableOpacity>
                     <TouchableOpacity style={{ flexDirection: "row", marginTop: normalize(25), marginLeft: normalize(36) }} onPress={Onshare} >
                         <Image source={share} style={{ height: normalize(25), width: normalize(25) }} />
                         <Text style={styles.profile_text} >Refer & earn</Text>
                     </TouchableOpacity>
-                    <View style={{ flexDirection: "row", marginTop: normalize(120), marginLeft: normalize(40) }} >
+                    <TouchableOpacity style={{ flexDirection: "row", marginTop: normalize(80), marginLeft: normalize(36) }} onPress = { () => navigation.navigate("AuthScreen") } >
                         <Image source={logout_dark} style={{ height: normalize(25), width: normalize(25) }} />
                         <Text style={[styles.profile_text, { color: "#3D3C3B" }]} >Logout</Text>
-                    </View>
+                    </TouchableOpacity>
                 </View>
             </View>
             {

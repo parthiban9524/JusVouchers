@@ -19,6 +19,7 @@ function Login({ navigation }) {
                     name="email"
                     component={Input}
                     img={mail}
+                    id = {1}
                 />
             </View>
             <View style={{ marginTop: normalize(10) }} >
@@ -27,13 +28,14 @@ function Login({ navigation }) {
                     name="email"
                     component={Input}
                     img={lock}
+                    id = {1}
                 />
             </View>
             <TouchableOpacity style={{ alignSelf: "flex-end", marginRight: normalize(35) }} onPress={() => navigation.navigate('ForgotPassword')} >
                 <Text style={{ fontSize: normalize(18), fontFamily: fonts.lato_regular, color: "#F58220" }}>Forgot password </Text>
             </TouchableOpacity>
             <View style={{ marginTop: normalize(110) }} >
-                <Submitbutton bg={"#f69632"} text={"Log in"} txtclr={"#ffffff"} onpress={() => navigation.navigate("Login")} big={true} />
+                <Submitbutton bg={"#f69632"} text={"Log in"} txtclr={"#ffffff"} big={true} onpress = {() => navigation.navigate('DashboardNavigation')} />
             </View>
             <View style={{ flexDirection: "row", alignSelf: "center", justifyContent: "center" }} >
                 <View style={{ width: normalize(130), borderBottomWidth: 1, borderColor: "#938C8C" }} />

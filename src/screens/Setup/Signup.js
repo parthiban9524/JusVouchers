@@ -19,6 +19,7 @@ function Signup({ navigation }) {
                     name="Full name"
                     component={Input}
                     img={user}
+                    id={1}
                 />
             </View>
             <View style={{ marginTop: normalize(10) }} >
@@ -27,6 +28,7 @@ function Signup({ navigation }) {
                     name="phone"
                     component={Input}
                     img={phone}
+                    id={1}
                 />
             </View>
             <View style={{ marginTop: normalize(10) }} >
@@ -35,6 +37,7 @@ function Signup({ navigation }) {
                     name="email"
                     component={Input}
                     img={mail}
+                    id={1}
                 />
             </View>
             <View style={{ marginTop: normalize(10) }} >
@@ -43,10 +46,11 @@ function Signup({ navigation }) {
                     name="email"
                     component={Input}
                     img={lock}
+                    id={1}
                 />
             </View>
             <View style={{ marginTop: normalize(50) }} >
-                <Submitbutton bg={"#f69632"} text={"Sign up"} txtclr={"#ffffff"} onpress={() => navigation.navigate("Welcome")} big={true} />
+                <Submitbutton bg={"#f69632"} text={"Sign up"} txtclr={"#ffffff"} onpress={() => navigation.navigate('AdminDash')} big={true} />
             </View>
             <View style={{ flexDirection: "row", alignSelf: "center", justifyContent: "center" }} >
                 <View style={{ width: normalize(130), borderBottomWidth: 1, borderColor: "#938C8C" }} />

@@ -23,7 +23,7 @@ export default function Submitbutton({ bg, text, txtclr, onpress, tiny = false, 
             }
             {
                 exclusive && (
-                    <TouchableOpacity style={{ height: normalize(22), width: normalize(96), backgroundColor: bg, justifyContent: "center", borderRadius: normalize(10), alignSelf: "center", borderColor: "#F58220", borderWidth: 1, elevation: 10, shadowColor: "#FE7500" }} onPress={onpress} >
+                    <TouchableOpacity style={{ height: normalize(22), width: normalize(90), backgroundColor: bg, justifyContent: "center", borderRadius: normalize(10), alignSelf: "center", borderColor: "#F58220", borderWidth: 1, elevation: 10, shadowColor: "#FE7500" }} onPress={onpress} >
                         <Text style={{ color: txtclr, alignSelf: "center", fontSize: normalize(12), fontWeight: "600", fontFamily: fonts.montserrat_semibold }}>{text}</Text>
                     </TouchableOpacity>
                 )

@@ -37,11 +37,30 @@ import share from "../assest/images/share.png"
 import edit from "../assest/images/edit.png"
 import profile_back from "../assest/images/profile_back.png"
 import whatsapp from "../assest/images/whatsapp.png"
-import facebook from "../assest/images/facebook.png" 
-import instagram from "../assest/images/instagram.png" 
-import cancel from "../assest/images/cancel.png" 
-
-
+import facebook from "../assest/images/facebook.png"
+import instagram from "../assest/images/instagram.png"
+import cancel from "../assest/images/cancel.png"
+import left from "../assest/images/left.png"
+import payment_card from "../assest/images/payment_card.png"
+import payment_card1 from "../assest/images/payment_card1.png"
+import round from "../assest/images/round.png"
+import gpay from "../assest/images/gpay.png"
+import paytm from "../assest/images/paytm.png"
+import phonepe from "../assest/images/phonepe.png"
+import visa from "../assest/images/visa.png"
+import rupay from "../assest/images/rupay.png"
+import mastercard from "../assest/images/mastercard.png"
+import triangle from "../assest/images/triangle.png"
+import ok from "../assest/images/ok.png"
+import new_user from "../assest/images/new_user.png"
+import sale1 from "../assest/images/sale1.png"
+import order_cancel from "../assest/images/order_cancel.png"
+import leader from "../assest/images/leader.png"
+import rising from "../assest/images/rising.png"
+import order_history from "../assest/images/order_history.png"
+import white_heart from "../assest/images/white_heart.png"
+import red_heart from "../assest/images/red_heart.png"
+import qrcode from "../assest/images/qrcode.png"
 
 export {
     logo,
@@ -85,5 +104,26 @@ export {
     facebook,
     instagram,
     whatsapp,
-    cancel
+    cancel,
+    left,
+    payment_card,
+    payment_card1,
+    round,
+    gpay,
+    paytm,
+    phonepe,
+    visa,
+    rupay,
+    mastercard,
+    triangle,
+    ok,
+    new_user,
+    leader,
+    order_cancel,
+    sale1,
+    rising,
+    order_history,
+    white_heart,
+    red_heart,
+    qrcode
 }

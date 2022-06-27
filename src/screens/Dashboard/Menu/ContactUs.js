@@ -22,6 +22,7 @@ function Contactus({ navigation }) {
                     name="Full name"
                     component={Input}
                     img={user}
+                    id = {1}
                 />
             </View>
             <View style={{ marginTop: normalize(5) }} >
@@ -30,6 +31,7 @@ function Contactus({ navigation }) {
                     name="phone"
                     component={Input}
                     img={phone}
+                    id = {1}
                 />
             </View>
             <View style={{ marginTop: normalize(5) }} >
@@ -38,6 +40,7 @@ function Contactus({ navigation }) {
                     name="email"
                     component={Input}
                     img={mail}
+                    id = {1}
                 />
             </View>
             <View style={{ marginTop: normalize(5) }} >
@@ -46,6 +49,7 @@ function Contactus({ navigation }) {
                     name="message"
                     component={Input}
                     img={message}
+                    id = {1}
                 />
             </View>
             <View style={{ marginTop: normalize(10) }} >

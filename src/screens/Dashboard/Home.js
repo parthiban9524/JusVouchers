@@ -18,6 +18,27 @@ import Slider from "../../components/Slider";
 import Card from "../../components/Card";
 
 export default function Home({ navigation }) {
+
+    const val1 = [
+        {"bg" : "#E61E6B","img" : health,"txtbg" : "#74002D","text" : "Health"},
+        {"bg" : "#92DAF9","img" : doctor,"txtbg" : "#006895","text" : "Doctor"},
+    ]
+
+    const val2 = [
+        {"bg" : "#819CFF","img" : gym,"txtbg" : "#0D2FA9","text" : "GYM"},
+        {"bg" : "#76E28E","img" : yoga,"txtbg" : "#348847","text" : "Yoga"},
+    ]
+
+    const val3 = [
+        {"bg" : "#E61E6B","img" : health,"txtbg" : "#74002D","text" : "Health"},
+        {"bg" : "#92DAF9","img" : saloon,"txtbg" : "#006895","text" : "Saloon"},
+    ]
+
+    const val4 = [
+        {"bg" : "#819CFF","img" : gym,"txtbg" : "#0D2FA9","text" : "GYM"},
+        {"bg" : "#76E28E","img" : diet,"txtbg" : "#348847","text" : "Dietician"},
+    ]
+
     return (
         <>
             <Header navigation={navigation} />
@@ -41,15 +62,13 @@ export default function Home({ navigation }) {
                     </View>
                 </View>
                 <View style={{ marginHorizontal: normalize(10), marginTop: 16, flexDirection: "row", justifyContent: "space-around" }} >
-                    <Typecard bg={"#E61E6B"} img={health} txtbg={"#74002D"} text={"Health"} />
-                    <Typecard bg={"#92DAF9"} img={doctor} txtbg={"#006895"} text={"Doctor"} />
+                   <Typecard data={val1} onpress = {() => navigation.navigate("VouchersScreen") } />
                 </View>
                 <View style={{ marginHorizontal: normalize(10), marginTop: 16, flexDirection: "row", justifyContent: "space-around" }} >
-                    <Typecard bg={"#819CFF"} img={gym} txtbg={"#0D2FA9"} text={"GYM"} />
-                    <Typecard bg={"#76E28E"} img={yoga} txtbg={"#348847"} text={"Yoga"} />
+                   <Typecard data={val2} />
                 </View>
                 <View style={{ alignSelf: "center" }} >
-                    <Slider navigation={navigation} id = {1} />
+                    <Slider navigation={navigation} id={1} />
                 </View>
                 <View style={{ marginTop: normalize(20), marginLeft: normalize(30) }} >
                     <Text style={{ fontFamily: fonts.montserrat_regular, fontWeight: "600", color: "#3D3C3B", fontSize: normalize(18) }} >Health Plus Card</Text>
@@ -74,15 +93,13 @@ export default function Home({ navigation }) {
                     </View>
                 </View>
                 <View style={{ marginTop: normalize(20), marginLeft: normalize(30) }} >
-                    <Text style={{ fontFamily: fonts.montserrat_regular, fontWeight: "500", color: "#3D3C3B", fontSize: normalize(18) }} >Offer Cards</Text>
+                    <Text style={{ fontFamily: fonts.montserrat_regular, fontWeight: "500", color: "#3D3C3B", fontSize: normalize(18) }} >Top Selling</Text>
                 </View>
                 <View style={{ marginHorizontal: normalize(10), marginTop: normalize(20), flexDirection: "row", justifyContent: "space-around" }} >
-                    <Typecard bg={"#E61E6B"} img={health} txtbg={"#74002D"} text={"Health"} />
-                    <Typecard bg={"#92DAF9"} img={saloon} txtbg={"#006895"} text={"Saloon"} />
+                  <Typecard data={val3} />
                 </View>
                 <View style={{ marginHorizontal: normalize(10), marginTop: 16, flexDirection: "row", justifyContent: "space-around" }} >
-                    <Typecard bg={"#819CFF"} img={gym} txtbg={"#0D2FA9"} text={"GYM"} />
-                    <Typecard bg={"#76E28E"} img={diet} txtbg={"#348847"} text={"Dietician"} />
+                   <Typecard data={val4 } />
                 </View>
                 <View style={{ marginTop: normalize(20), marginLeft: normalize(30) }} >
                     <Text style={{ fontFamily: fonts.montserrat_regular, fontWeight: "600", color: "#3D3C3B", fontSize: normalize(18) }} >Exclusive Package</Text>
@@ -105,8 +122,8 @@ export default function Home({ navigation }) {
                 <View style={{ marginTop: normalize(20), marginLeft: normalize(30) }} >
                     <Text style={{ fontFamily: fonts.montserrat_regular, fontWeight: "600", color: "#3D3C3B", fontSize: normalize(18) }} >Doctors Card</Text>
                 </View>
-                <View style={{ marginLeft : normalize(15) }} >
-                    <Slider navigation={navigation} id = {2}/>
+                <View style={{ marginLeft: normalize(15) }} >
+                    <Slider navigation={navigation} id={2} />
                 </View>
                 <View style={{ paddingBottom: normalize(50) }} />
             </ScrollView>

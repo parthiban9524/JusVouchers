@@ -34,9 +34,9 @@ const App = ({navigation}) => {
                                 <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(15), color: "#3D3C3B", fontWeight: "700", marginLeft: normalize(30), top: 2 }} >Venders</Text>
                             </View>
                         </TouchableOpacity>
-                        <TouchableOpacity style={{ marginLeft: normalize(30), marginTop: normalize(25), justifyContent: "center" }} onPress = {() => navigation.navigate("ContactUs")} >
+                        <TouchableOpacity style={{ marginLeft: normalize(30), marginTop: normalize(25), justifyContent: "center" }} onPress = {() => navigation.navigate("AddVoucher")} >
                             <View style={{ flexDirection: "row", }} >
-                                <Image source={blog} style={{ height: normalize(20), width: normalize(20), resizeMode: 'contain', left: normalize(25) }} />
+                                <Image source={blog} style={{ height: normalize(20), width: normalize(20), resizeMode: 'contain', left: normalize(25) }}  />
                                 <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(15), color: "#3D3C3B", fontWeight: "700", marginLeft: normalize(30), top: 2 }} >Add Voucher</Text>
                             </View>
                         </TouchableOpacity>

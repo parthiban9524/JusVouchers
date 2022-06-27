@@ -14,16 +14,24 @@ import Store from "./src/components/Store";
 import Home from "./src/screens/Dashboard/Home";
 
 import { home, cart, voucher, notification } from "./src/components/Icons";
-import Vouchers from "./src/screens/Dashboard/Vouchers";
+import Vouchers from "./src/screens/Dashboard/Vouchers/Vouchers";
 import Cart from "./src/screens/Dashboard/Cart";
 import Notification from "./src/screens/Dashboard/Notification";
 import { fonts, normalize } from "./src/components/Utils";
-import Profile from "./src/screens/Dashboard/Profile";
+import Profile from "./src/screens/Dashboard/Profile/Profile";
 import ContactUs from "./src/screens/Dashboard/Menu/ContactUs";
 import AboutUs from "./src/screens/Dashboard/Menu/AboutUs";
 import Blog from "./src/screens/Dashboard/Menu/Blog"
 import AdminDash from "./src/screens/Admin/AdminDash";
-import Vouchers_detail from "./src/screens/Dashboard/Vouchers_detail";
+import Vouchers_detail from "./src/screens/Dashboard/Vouchers/Vouchers_detail";
+import PaymentType from "./src/screens/Dashboard/Payment/PaymentType";
+import PaymentOption from "./src/screens/Dashboard/Payment/PaymentOption";
+import Payment from "./src/screens/Dashboard/Payment/Payment";
+import RedeemedVoucher from "./src/screens/Dashboard/Vouchers/RedeemedVoucher";
+import Sales from "./src/screens/Admin/Sales/Sales";
+import SalesDetails from "./src/screens/Admin/Sales/SalesDetails";
+import Favorites from "./src/screens/Dashboard/Profile/Favorites";
+import OrderHistory from "./src/screens/Dashboard/Profile/OrderHistory";
 
 export default function App() {
 
@@ -40,16 +48,22 @@ export default function App() {
         <HomeNavigator.Screen name="ContactUs" component={ContactUs} />
         <HomeNavigator.Screen name="AboutUs" component={AboutUs} />
         <HomeNavigator.Screen name="Blog" component={Blog} />
+        <HomeNavigator.Screen name="Favorites" component={Favorites} />
+        <HomeNavigator.Screen name="OrderHistory" component={OrderHistory} />
+
       </HomeNavigator.Navigator>
     )
   }
 
   function VouchersScreen() {
     return (
-      <VouchersNavigator.Navigator initialRouteName="Home" screenOptions={{ headerShown: false }} >
+      <VouchersNavigator.Navigator initialRouteName="Vouchers" screenOptions={{ headerShown: false }} >
         <VouchersNavigator.Screen name="Vouchers" component={Vouchers} />
         <VouchersNavigator.Screen name="Vouchers_detail" component={Vouchers_detail} />
-
+        <VouchersNavigator.Screen name="PaymentType" component={PaymentType} />
+        <VouchersNavigator.Screen name="PaymentOption" component={PaymentOption} />
+        <VouchersNavigator.Screen name="Payment" component={Payment} />
+        <VouchersNavigator.Screen name="RedeemedVoucher" component={RedeemedVoucher} />
       </VouchersNavigator.Navigator>
     )
   }
@@ -70,12 +84,12 @@ export default function App() {
 
   function DashboardNavigation() {
     return (
-      <Tab.Navigator screenOptions={{ headerShown: false, tabBarShowLabel: false, tabBarHideOnKeyboard: true, tabBarStyle: { height: normalize(50), backgroundColor: "#F9AA44" } }}  >
+      <Tab.Navigator screenOptions={{ headerShown: false, tabBarShowLabel: false, tabBarHideOnKeyboard: true, tabBarStyle: { height: normalize(50), backgroundColor: "#F9AA44" } }} initialRouteName = "HomeScreen"  >
         <Tab.Screen name="HomeScreen" component={HomeScreen}
           listeners={({ navigation }) => ({
             tabPress: e => {
               e.preventDefault();
-              navigation.navigate('HomeScreen', { screen: 'HomeScreen' })
+              navigation.navigate('HomeScreen', { screen: 'Home' })
             },
           })}
           options={{
@@ -83,7 +97,7 @@ export default function App() {
               <View>
                 <Image source={home}
                   resizeMode='contain'
-                  style={{ width: 35, height: 35, }}
+                  style={{ width: normalize(35), height: normalize(35), }}
                 />
                 <Text style={{ textAlign: 'center', fontSize: normalize(12), fontFamily: fonts.inter_bold, color: "#ffffff" }}>{"Home"}</Text>
               </View>
@@ -94,7 +108,7 @@ export default function App() {
           listeners={({ navigation }) => ({
             tabPress: e => {
               e.preventDefault();
-              navigation.navigate('VouchersScreen', { screen: 'VouchersScreen' })
+              navigation.navigate('VouchersScreen', { screen: 'Vouchers' })
             },
           })}
           options={{
@@ -102,7 +116,7 @@ export default function App() {
               <View>
                 <Image source={voucher}
                   resizeMode='contain'
-                  style={{ width: 35, height: 35, }}
+                  style={{ width: normalize(35), height: normalize(35), }}
                 />
                 <Text style={{ textAlign: 'center', fontSize: normalize(12), fontFamily: fonts.inter_bold, color: "#ffffff", right: 10 }}>{"Voucher"}</Text>
               </View>
@@ -121,7 +135,7 @@ export default function App() {
               <View>
                 <Image source={cart}
                   resizeMode='contain'
-                  style={{ width: 35, height: 35, }}
+                  style={{ width: normalize(35), height: normalize(35), }}
                 />
                 <Text style={{ textAlign: 'center', fontSize: normalize(12), fontFamily: fonts.inter_bold, color: "#ffffff" }}>{"Cart"}</Text>
               </View>
@@ -140,7 +154,7 @@ export default function App() {
               <View>
                 <Image source={notification}
                   resizeMode='contain'
-                  style={{ width: 35, height: 35, }}
+                  style={{ width: normalize(35), height: normalize(35), }}
                 />
                 <Text style={{ textAlign: 'center', fontSize: normalize(12), fontFamily: fonts.inter_bold, color: "#ffffff", right: 15 }}>{"Notification"}</Text>
               </View>
@@ -154,13 +168,16 @@ export default function App() {
   return (
     <NavigationContainer>
       <Provider store={Store}>
-        {/* <Stack.Navigator initialRouteName="AdminDash" screenOptions={{ headerShown: false }} >
+        <Stack.Navigator initialRouteName="AuthScreen" screenOptions={{ headerShown: false }} >
           <Stack.Screen name="AuthScreen" component={AuthScreen} />
           <Stack.Screen name="DashboardNavigation" component={DashboardNavigation} />
           <Stack.Screen name="Profile" component={Profile} />
           <Stack.Screen name="AdminDash" component={AdminDash} />
-        </Stack.Navigator> */}
-        <AdminDash/>
+          <Stack.Screen name="Sales" component={Sales} />
+          <Stack.Screen name="SalesDetails" component={SalesDetails} />
+
+        </Stack.Navigator>
+        {/* <AdminDash/> */}
       </Provider>
     </NavigationContainer>
   )

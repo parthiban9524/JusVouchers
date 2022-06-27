@@ -23,21 +23,25 @@ export const Data = [
         "name": "",
         "offer": "599/-",
         "offer_text": "on Combo pack",
-        "image": beauty1
+        "image": beauty1,
+        "like": true
     },
     {
         "category": "Beauty",
         "name": "",
         "offer": "699/-",
         "offer_text": "on Combo pack",
-        "image": beauty2
+        "image": beauty2,
+        "like": false
+
     },
     {
         "category": "Saloon",
         "name": "",
         "offer": "899/-",
         "offer_text": "on Combo pack",
-        "image": saloon
+        "image": saloon,
+        "like": false
     },
     {
         "category": "Health",
@@ -45,21 +49,24 @@ export const Data = [
         "start_offer": "10%",
         "end_offer": "40%",
         "offer_text": "",
-        "image": path
+        "image": path,
+        "like": true
     },
     {
         "category": "Health",
         "name": "Physiotherapy",
         "offer": "599/-",
         "offer_text": "1 Session Free",
-        "image": physio
+        "image": physio,
+        "like": false
     },
     {
         "category": "Health",
         "name": "Dietician",
         "offer": "599/-",
         "offer_text": "1 Session Free",
-        "image": diet
+        "image": diet,
+        "like": false
     },
     {
         "category": "Health",
@@ -67,62 +74,71 @@ export const Data = [
         "start_offer": "10%",
         "end_offer": "40%",
         "offer_text": "     ",
-        "image": radio
+        "image": radio,
+        "like": false
     },
     {
         "category": "Yoga",
         "name": "",
         "offer": "30%",
         "offer_text": "on 3 months member ship",
-        "image": yoga1
+        "image": yoga1,
+        "like": false
     },
     {
         "category": "Yoga",
         "name": "",
         "offer": "15%",
         "offer_text": "on 6 months member ship",
-        "image": yoga2
+        "image": yoga2,
+        "like": false
     },
     {
         "category": "Yoga",
         "name": "",
         "offer": "20%",
         "offer_text": "on 1 year member ship",
-        "image": yoga3
+        "image": yoga3,
+        "like": false
     },
     {
         "category": "Yoga",
         "name": "",
         "offer": "10%",
         "offer_text": "on 3 months member ship",
-        "image": yoga4
+        "image": yoga4,
+        "like": false
     },
     {
         "category": "Gym",
         "name": "Beauty Two",
         "offer": "10%",
         "offer_text": "on 3 months member ship",
-        "image": gym1
+        "image": gym1,
+        "like": false
     },
     {
         "category": "Gym",
         "name": "Beauty Two",
         "offer": "15%",
         "offer_text": "on 6 months member ship",
-        "image": gym2
+        "image": gym2,
+        "like": false
     },
     {
         "category": "Gym",
         "name": "Beauty Two",
         "offer": "20%",
         "offer_text": "on 1 year member ship",
-        "image": gym3
+        "image": gym3,
+        "like": false
     },
     {
         "category": "Gym",
         "name": "Beauty Two",
         "offer": "10%",
         "offer_text": "on 3 months member ship",
-        "image": gym4
+        "image": gym4,
+        "like": false
     }
 ]

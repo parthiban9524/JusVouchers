@@ -22,6 +22,7 @@ function ForgotPassword({ navigation }) {
                     name="email"
                     component={Input}
                     img={mail}
+                    id = {1}
                 />
             </View>
             <View style={{ marginTop: normalize(110) }} >

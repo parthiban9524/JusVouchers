@@ -4,6 +4,7 @@ import { View,StyleSheet,Text, StatusBar, Image,DrawerLayoutAndroid, TouchableOp
 import { normalize } from "../../components/Utils";
 import { menu, logo, search, close } from "../../components/Icons";
 import AdminDash from "./AdminDash"
+import AddVoucher from "./AddVoucher";
 
 export default function Drawer({ navigation }) {
 
