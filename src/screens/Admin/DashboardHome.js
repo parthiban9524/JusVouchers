@@ -1,12 +1,15 @@
 import React from "react";
-import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native"
-import Graph from "../../components/Graph";
+import { View, Text, Image, StyleSheet, TouchableOpacity ,ScrollView} from "react-native"
+import GraphSales from "../../components/GraphSales";
+import GraphVender from "../../components/GraphVender";
+import GraphUser from "../../components/GraphUser";
+import GraphOrderCancel from "../../components/GraphOrderCancel"
 import { card, leader, new_user, order_cancel, rising, sale1, user } from "../../components/Icons";
 import { normalize, fonts } from "../../components/Utils";
 
-export default function Demp(navigation) {
+export default function Demp({navigation}) {
     return (
-        <>
+        <ScrollView>
             <View style={{ margin: 20 }} >
                 <Text style={{ fontSize: normalize(22), fontWeight: 'bold', color: "#000000" }}>Dashboard</Text>
             </View>
@@ -14,10 +17,10 @@ export default function Demp(navigation) {
                 <Text style={{ fontSize: normalize(19), fontWeight: 'bold', color: 'green' }}>15 June 2022 Wednesday</Text>
             </View>
             <View style={{ flexDirection: "row", justifyContent: "space-evenly", marginTop: 12 }}>
-                <TouchableOpacity style={{ borderRadius: 10, backgroundColor: '#FFDCAE99', width: 155, height: 95 }} onPress = { () => navigation.navigate("sales") } >
+                <TouchableOpacity style={{ borderRadius: 10, backgroundColor: '#FFDCAE99', width: 155, height: 95 }} onPress={() => navigation.navigate("SalesDetails")} >
                     <View style={{ flexDirection: "row", flexWrap: "wrap" }}>
                         <Image source={sale1} style={{ height: normalize(35), width: normalize(35), resizeMode: "contain", alignSelf: "center", marginLeft: normalize(8), marginTop: 5 }} />
-                        <Text style={{ fontSize: normalize(14), fontWeight: '500', marginLeft: 5, marginTop: 10 }} >Today Sale</Text>
+                        <Text style={{ fontSize: normalize(14), fontWeight: '500', marginLeft: 5, marginTop: 10 }}  >Today Sale</Text>
                         <View style={{ flexDirection: "row", marginTop: 10, }} >
                             <Text style={{ fontSize: normalize(16), fontWeight: '500', marginLeft: normalize(12), }}>$6960</Text>
                             <Image source={rising} style={{ width: normalize(20), height: normalize(15), marginLeft: normalize(20), alignSelf: "center" }} />
@@ -66,9 +69,12 @@ export default function Demp(navigation) {
                 </TouchableOpacity>
             </View>
             <View>
-                <Graph />
+                <GraphSales />
+                <GraphVender/>
+                <GraphUser/>
+                <GraphOrderCancel/>
             </View>
-        </>
+        </ScrollView>
     )
 }
 const styles = StyleSheet.create({

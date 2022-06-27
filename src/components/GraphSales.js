@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text } from "react-native"
+import { View, Text,Image } from "react-native"
 import {
     LineChart,
     BarChart,
@@ -9,13 +9,17 @@ import {
     StackedBarChart
 } from "react-native-chart-kit";
 import { normalize } from "./Utils";
+import {sale1} from "./Utils"
 
-export default function Graph() {
+export default function GraphSales() {
     return (
+
         <View style={{ alignSelf: "center", marginTop: normalize(40), elevation: normalize(5), shadowColor: "#000000" }}>
+                <View style={{flexDirection:"row", justifyContent:'space-between'}}><Text style={{ fontSize: normalize(20), fontWeight: 'bold', color: "black" }}>Sales</Text>
+                       <Text style={{ fontSize: normalize(18), fontWeight: 'bold', color: "black" }} >01 May-31 May </Text></View> 
             <LineChart
                 data={{
-                    labels: ["January", "February", "March", "April", "May", "June"],
+                    labels: ["Jan", "Feb", "March", "April", "May", "June"],
                     datasets: [
                         {
                             data: [4.3, 4.8, 7, 9]

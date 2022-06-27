@@ -168,7 +168,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Provider store={Store}>
-        <Stack.Navigator initialRouteName="AuthScreen" screenOptions={{ headerShown: false }} >
+        {/* <Stack.Navigator initialRouteName="AuthScreen" screenOptions={{ headerShown: false }} >
           <Stack.Screen name="AuthScreen" component={AuthScreen} />
           <Stack.Screen name="DashboardNavigation" component={DashboardNavigation} />
           <Stack.Screen name="Profile" component={Profile} />
@@ -176,8 +176,8 @@ export default function App() {
           <Stack.Screen name="Sales" component={Sales} />
           <Stack.Screen name="SalesDetails" component={SalesDetails} />
 
-        </Stack.Navigator>
-        {/* <AdminDash/> */}
+        </Stack.Navigator> */}
+        <AdminDash/>
       </Provider>
     </NavigationContainer>
   )

@@ -4,6 +4,8 @@ import { StatusBar } from "react-native";
 import { normalize,fonts} from "../../components/Utils";
 import { menu,close, user, sale, terms, blog, logout,man, voucher } from "../../components/Icons";
 import Demp from "./DashboardHome";
+import Sales from "./Sales/Sales"
+import SalesDetails from "./Sales/SalesDetails";
 const App = ({navigation}) => {
     const drawer = useRef(null);
 
@@ -28,7 +30,7 @@ const App = ({navigation}) => {
                                 <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(15), color: "#3D3C3B", fontWeight: "700", marginLeft: normalize(30), top: 2 }} >Dashboard</Text>
                             </View>
                         </TouchableOpacity>
-                        <TouchableOpacity style={{ marginLeft: normalize(30), marginTop: normalize(25), justifyContent: "center" }} >
+                        <TouchableOpacity style={{ marginLeft: normalize(30), marginTop: normalize(25), justifyContent: "center" }} onPress={() => navigation.navigate("SalesDetails")} >
                             <View style={{ flexDirection: "row", }} >
                                 <Image source={sale} style={{ height: normalize(20), width: normalize(20), resizeMode: 'contain', left: normalize(25) }} />
                                 <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(15), color: "#3D3C3B", fontWeight: "700", marginLeft: normalize(30), top: 2 }} >Venders</Text>
@@ -40,7 +42,7 @@ const App = ({navigation}) => {
                                 <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(15), color: "#3D3C3B", fontWeight: "700", marginLeft: normalize(30), top: 2 }} >Add Voucher</Text>
                             </View>
                         </TouchableOpacity>
-                        <TouchableOpacity style={{ marginLeft: normalize(30), marginTop: normalize(25), justifyContent: "center" }} onPress = {() => navigation.navigate("AboutUs")} >
+                         <TouchableOpacity style={{ marginLeft: normalize(30), marginTop: normalize(25), justifyContent: "center" }} onPress = {() => navigation.navigate("AboutUs")} >
                             <View style={{ flexDirection: "row", }} >
                                 <Image source={blog} style={{ height: normalize(20), width: normalize(20), resizeMode: 'contain', left: normalize(25) }} />
                                 <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(15), color: "#3D3C3B", fontWeight: "700", marginLeft: normalize(30), top: 2 }} >Add Blog</Text>
@@ -75,7 +77,9 @@ const App = ({navigation}) => {
                 <View style={{justifyContent:'center',}}><Text style={{fontSize: normalize(26),color:"white",marginLeft: normalize(10),fontWeight:"bold"}}>JusVouchers Manager</Text>
                 </View>
             </View>
-        <Demp/>
+        {/* <Demp/>
+        <Sales/> */}
+        <SalesDetails/>
         </DrawerLayoutAndroid>
     );
 };
