@@ -12,7 +12,7 @@ import WavyHeader from "../../components/Wavyheader";
 function Signup({ navigation }) {
     return (
         <ScrollView style={{ flex: 1, backgroundColor: "#ffffff" }} >
-            <WavyHeader firstTxt={"Create"} secTxt={"Account"} />
+            <WavyHeader firstTxt={"Create"} secTxt={"Account"} navigation={navigation} />
             <View style={{ marginTop: normalize(60) }} >
                 <Field
                     label="Full Name"
@@ -22,7 +22,7 @@ function Signup({ navigation }) {
                     id={1}
                 />
             </View>
-            <View style={{ marginTop: normalize(10) }} >
+            <View>
                 <Field
                     label="Phone"
                     name="phone"
@@ -31,7 +31,7 @@ function Signup({ navigation }) {
                     id={1}
                 />
             </View>
-            <View style={{ marginTop: normalize(10) }} >
+            <View>
                 <Field
                     label="Email"
                     name="email"
@@ -40,7 +40,7 @@ function Signup({ navigation }) {
                     id={1}
                 />
             </View>
-            <View style={{ marginTop: normalize(10) }} >
+            <View>
                 <Field
                     label="Password"
                     name="email"
@@ -49,7 +49,10 @@ function Signup({ navigation }) {
                     id={1}
                 />
             </View>
-            <View style={{ marginTop: normalize(50) }} >
+            <View style = {{marginTop : normalize(25), marginLeft : normalize(35)}}>
+                <Text style = {{fontFamily : fonts.lato_regular, fontSize : normalize(18)}} >Register as Vender <Text style = {{color : "#F58220", textDecorationLine : "underline"}} > click here</Text> </Text>
+            </View>
+            <View style={{ marginTop: normalize(25) }} >
                 <Submitbutton bg={"#f69632"} text={"Sign up"} txtclr={"#ffffff"} onpress={() => navigation.navigate('AdminDash')} big={true} />
             </View>
             <View style={{ flexDirection: "row", alignSelf: "center", justifyContent: "center" }} >

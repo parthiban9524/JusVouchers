@@ -11,7 +11,7 @@ export default function PaymentType({ navigation }) {
 
     const Onselect = () => {
      setfix(true)
-     if(true)
+     if( fix === true)
      {
         setfix(false)
      }
@@ -35,11 +35,11 @@ export default function PaymentType({ navigation }) {
                                     <TouchableOpacity onPress={Onselect}>
                                     <Image source={round} style={{ height: normalize(15), width: normalize(15) }} />
                                     </TouchableOpacity>
-                                    <View style = {{height : normalize(10), width : normalize(10), backgroundColor : fix ? "red" : "white", borderRadius : normalize(10), position : "absolute", alignSelf : "center", top : 3}} />
+                                    <View style = {{height : normalize(9), width : normalize(9), backgroundColor : fix ? "red" : "white", borderRadius : normalize(10), position : "absolute", alignSelf : "center", top : 3}} />
                                     </View>
-                                    <View style={{ justifyContent: "center" }} >
+                                    <TouchableOpacity style={{ justifyContent: "center" }}  onPress={Onselect} >
                                         <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(18), left: 10, bottom: 5 }} >UPI</Text>
-                                    </View>
+                                    </TouchableOpacity>
                                     <View style={{ flexDirection: "row", marginLeft: normalize(130) }} >
                                         <Image source={paytm} style={{ height: normalize(28), width: normalize(28) }} />
                                         <Image source={phonepe} style={{ height: normalize(28), width: normalize(28), marginLeft: 10 }} />
@@ -58,13 +58,13 @@ export default function PaymentType({ navigation }) {
                                         <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(18), left: 10, bottom: 5 }} >Net Banking</Text>
                                     </View>
                                 </View>
-                                <View style={{ flexDirection: "row", marginLeft: normalize(30), marginTop: normalize(25), }} >
+                                <TouchableOpacity style={{ flexDirection: "row", marginLeft: normalize(30), marginTop: normalize(25), }} onPress = {() => navigation.navigate("QrCodePayment")} >
                                     <Image source={round} style={{ height: normalize(15), width: normalize(15) }} />
                                     <View style={{ justifyContent: "center", flexDirection : "row" }} >
                                         <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(18), left: 10, bottom: 5 }} >Scan QR </Text>
                                     </View>
                                     <Image source={qrcode} style={{ height: normalize(30), width: normalize(30), left : normalize(100) }} />
-                                </View>
+                                </TouchableOpacity>
                             </View>
                         </View>
                     </View>

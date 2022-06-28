@@ -12,7 +12,7 @@ import WavyHeader from "../../components/Wavyheader";
 function ForgotPassword({ navigation }) {
     return (
         <View style={{ flex: 1, backgroundColor: "#ffffff" }} >
-            <WavyHeader firstTxt={"Forgot"} secTxt={"Password"} />
+            <WavyHeader firstTxt={"Forgot"} secTxt={"Password"} navigation = {navigation} />
             <View style={{ marginTop: normalize(100), alignSelf: "center", paddingHorizontal: normalize(60) }}>
                 <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(20), color: "#9A9393", textAlign: "center" }}>Enter a Regestier Email to rest the password</Text>
             </View>

@@ -12,7 +12,7 @@ import WavyHeader from "../../components/Wavyheader";
 function Login({ navigation }) {
     return (
         <View style={{ flex: 1, backgroundColor: "#ffffff" }} >
-            <WavyHeader />
+            <WavyHeader navigation={navigation} />
             <View style={{ marginTop: normalize(100) }} >
                 <Field
                     label="Email"

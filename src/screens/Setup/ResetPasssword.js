@@ -12,7 +12,7 @@ import WavyHeader from "../../components/Wavyheader";
 function ResetPassword({ navigation }) {
     return (
         <View style={{ flex: 1, backgroundColor: "#ffffff" }} >
-            <WavyHeader firstTxt={"Reset"} secTxt={"Password"} />
+            <WavyHeader firstTxt={"Reset"} secTxt={"Password"} navigation = {navigation} />
             <View style={{ marginTop: normalize(100), alignSelf: "center", paddingHorizontal: normalize(60) }}>
                 <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(20), color: "#9A9393", textAlign: "center" }}>Reset new password</Text>
             </View>

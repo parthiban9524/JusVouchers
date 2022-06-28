@@ -22,7 +22,6 @@ import Profile from "./src/screens/Dashboard/Profile/Profile";
 import ContactUs from "./src/screens/Dashboard/Menu/ContactUs";
 import AboutUs from "./src/screens/Dashboard/Menu/AboutUs";
 import Blog from "./src/screens/Dashboard/Menu/Blog"
-import AdminDash from "./src/screens/Admin/AdminDash";
 import Vouchers_detail from "./src/screens/Dashboard/Vouchers/Vouchers_detail";
 import PaymentType from "./src/screens/Dashboard/Payment/PaymentType";
 import PaymentOption from "./src/screens/Dashboard/Payment/PaymentOption";
@@ -32,6 +31,9 @@ import Sales from "./src/screens/Admin/Sales/Sales";
 import SalesDetails from "./src/screens/Admin/Sales/SalesDetails";
 import Favorites from "./src/screens/Dashboard/Profile/Favorites";
 import OrderHistory from "./src/screens/Dashboard/Profile/OrderHistory";
+import QrCodePayment from "./src/screens/Dashboard/Payment/QrCodePayment";
+import HealthForm from "./src/screens/Dashboard/Vouchers/HealthForm";
+import DashboardHome from "./src/screens/Admin/DashboardHome";
 
 export default function App() {
 
@@ -39,18 +41,17 @@ export default function App() {
   const AuthNavigator = createStackNavigator();
   const HomeNavigator = createStackNavigator();
   const VouchersNavigator = createStackNavigator();
-
+  const AdminNavigator = createStackNavigator();
 
   function HomeScreen() {
     return (
       <HomeNavigator.Navigator initialRouteName="Home" screenOptions={{ headerShown: false }} >
         <HomeNavigator.Screen name="Home" component={Home} />
-        <HomeNavigator.Screen name="ContactUs" component={ContactUs} />
         <HomeNavigator.Screen name="AboutUs" component={AboutUs} />
         <HomeNavigator.Screen name="Blog" component={Blog} />
         <HomeNavigator.Screen name="Favorites" component={Favorites} />
         <HomeNavigator.Screen name="OrderHistory" component={OrderHistory} />
-
+        <HomeNavigator.Screen name="Profile" component={Profile} />
       </HomeNavigator.Navigator>
     )
   }
@@ -59,10 +60,12 @@ export default function App() {
     return (
       <VouchersNavigator.Navigator initialRouteName="Vouchers" screenOptions={{ headerShown: false }} >
         <VouchersNavigator.Screen name="Vouchers" component={Vouchers} />
+        <VouchersNavigator.Screen name="HealthForm" component={HealthForm} />
         <VouchersNavigator.Screen name="Vouchers_detail" component={Vouchers_detail} />
         <VouchersNavigator.Screen name="PaymentType" component={PaymentType} />
         <VouchersNavigator.Screen name="PaymentOption" component={PaymentOption} />
         <VouchersNavigator.Screen name="Payment" component={Payment} />
+        <VouchersNavigator.Screen name="QrCodePayment" component={QrCodePayment} />
         <VouchersNavigator.Screen name="RedeemedVoucher" component={RedeemedVoucher} />
       </VouchersNavigator.Navigator>
     )
@@ -76,7 +79,18 @@ export default function App() {
         <AuthNavigator.Screen name="Signup" component={Signup} />
         <AuthNavigator.Screen name="ForgotPassword" component={ForgotPassword} />
         <AuthNavigator.Screen name="ResetPassword" component={ResetPassword} />
+        <AuthNavigator.Screen name="ContactUs" component={ContactUs} />
       </AuthNavigator.Navigator>
+    )
+  }
+
+  function AdminScreen() {
+    return(
+      <AdminNavigator.Navigator initialRouteName="DashboardHome" screenOptions={{ headerShown: false }} >
+        <AdminNavigator.Screen name="DashboardHome" component={DashboardHome} />
+        <AdminNavigator.Screen name="SalesDetails" component={SalesDetails} />
+        <AdminNavigator.Screen name="Sales" component={Sales} />
+      </AdminNavigator.Navigator>
     )
   }
 
@@ -84,7 +98,7 @@ export default function App() {
 
   function DashboardNavigation() {
     return (
-      <Tab.Navigator screenOptions={{ headerShown: false, tabBarShowLabel: false, tabBarHideOnKeyboard: true, tabBarStyle: { height: normalize(50), backgroundColor: "#F9AA44" } }} initialRouteName = "HomeScreen"  >
+      <Tab.Navigator screenOptions={{ headerShown: false, tabBarShowLabel: false, tabBarHideOnKeyboard: true, tabBarStyle: { height: normalize(50), backgroundColor: "#F9AA44" } }} initialRouteName="HomeScreen"  >
         <Tab.Screen name="HomeScreen" component={HomeScreen}
           listeners={({ navigation }) => ({
             tabPress: e => {
@@ -168,16 +182,13 @@ export default function App() {
   return (
     <NavigationContainer>
       <Provider store={Store}>
-        {/* <Stack.Navigator initialRouteName="AuthScreen" screenOptions={{ headerShown: false }} >
+        <Stack.Navigator initialRouteName="AdminScreen" screenOptions={{ headerShown: false }} >
           <Stack.Screen name="AuthScreen" component={AuthScreen} />
           <Stack.Screen name="DashboardNavigation" component={DashboardNavigation} />
           <Stack.Screen name="Profile" component={Profile} />
-          <Stack.Screen name="AdminDash" component={AdminDash} />
-          <Stack.Screen name="Sales" component={Sales} />
-          <Stack.Screen name="SalesDetails" component={SalesDetails} />
-
-        </Stack.Navigator> */}
-        <AdminDash/>
+          <Stack.Screen name="AdminScreen" component={AdminScreen} />
+        </Stack.Navigator>
+        {/* <AdminDash /> */}
       </Provider>
     </NavigationContainer>
   )

@@ -1,28 +1,27 @@
 import React from "react";
-import { View, ScrollView } from "react-native";
+import { View, ScrollView, TouchableOpacity, Image } from "react-native";
 import { connect } from "react-redux";
 import { Field, reduxForm } from "redux-form";
 
 import { normalize } from "../../../components/Utils";
-import { message, mail, phone, user } from "../../../components/Icons"
+import { message, mail, phone, user, left } from "../../../components/Icons"
 import Input from "../../../components/Input";
 import Submitbutton from "../../../components/Submitbutton"
 import WavyHeader from "../../../components/Wavyheader";
-import Header from "../../../components/Header";
 
 function Contactus({ navigation }) {
     return (
         <ScrollView style={{ flex: 1, backgroundColor: "#ffffff" }} >
-            <View style={{marginleft:20}}>
-            <WavyHeader firstTxt={"Contact"} secTxt={"Us"}/>
+            <View style={{ marginleft: 20 }}>
+                <WavyHeader firstTxt={"Contact"} secTxt={"Us"} navigation = {navigation} dash = {true} />
             </View>
-            <View style={{marginTop:normalize(35) }} >
+            <View style={{ marginTop: normalize(35) }} >
                 <Field
                     label="Full Name"
                     name="Full name"
                     component={Input}
                     img={user}
-                    id = {1}
+                    id={1}
                 />
             </View>
             <View style={{ marginTop: normalize(5) }} >
@@ -31,7 +30,7 @@ function Contactus({ navigation }) {
                     name="phone"
                     component={Input}
                     img={phone}
-                    id = {1}
+                    id={1}
                 />
             </View>
             <View style={{ marginTop: normalize(5) }} >
@@ -40,7 +39,7 @@ function Contactus({ navigation }) {
                     name="email"
                     component={Input}
                     img={mail}
-                    id = {1}
+                    id={1}
                 />
             </View>
             <View style={{ marginTop: normalize(5) }} >
@@ -49,7 +48,7 @@ function Contactus({ navigation }) {
                     name="message"
                     component={Input}
                     img={message}
-                    id = {1}
+                    id={1}
                 />
             </View>
             <View style={{ marginTop: normalize(10) }} >

@@ -1,11 +1,15 @@
 import React from 'react';
-import { View, StatusBar, Image, Text } from 'react-native';
+import { View, StatusBar, Image, Text, TouchableOpacity, } from 'react-native';
 import Svg, { Path } from 'react-native-svg';
+import { StackActions } from '@react-navigation/native';
 
-import { logo } from './Icons';
+import { logo, left } from './Icons';
 import { fonts, normalize } from './Utils';
 
-export default function WavyHeader({ customStyles, firstTxt = "Welcome", secTxt = "Back" }) {
+export default function WavyHeader({ customStyles, firstTxt = "Welcome", secTxt = "Back", navigation, dash }) {
+ 
+    const popAction = StackActions.pop(1);
+    
     return (
         <>
             <StatusBar backgroundColor={"#FA9C22"} translucent={false} />
@@ -24,6 +28,9 @@ export default function WavyHeader({ customStyles, firstTxt = "Welcome", secTxt 
                     </Svg>
                 </View>
             </View>
+            <TouchableOpacity style={{ position : "absolute", marginTop: normalize(20), marginLeft: normalize(20), }} onPress={ dash ? () => navigation.navigate('DashboardNavigation')  : () => navigation.goBack()} >
+                <Image source={left} style={{ height: normalize(30), width: normalize(30), tintColor : "#ffffff" }} />
+            </TouchableOpacity>
             <View style={{ position: "absolute", alignSelf: "center", marginTop: normalize(10) }} >
                 <View style={{ height: normalize(46), width: normalize(105), backgroundColor: "#ffffff", borderBottomLeftRadius: normalize(40), borderTopRightRadius: normalize(40), justifyContent: "center", }} >
                     <Image source={logo} style={{ height: normalize(35), width: normalize(65), alignSelf: "center" }} />

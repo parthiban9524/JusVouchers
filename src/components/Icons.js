@@ -61,6 +61,14 @@ import order_history from "../assest/images/order_history.png"
 import white_heart from "../assest/images/white_heart.png"
 import red_heart from "../assest/images/red_heart.png"
 import qrcode from "../assest/images/qrcode.png"
+import qr from "../assest/images/qr.png"
+import admin_blog from "../assest/images/admin_blog.png"
+import admin_queries from "../assest/images/admin_queries.png"
+import admin_voucher from "../assest/images/admin_voucher.png"
+import admin_user from "../assest/images/admin_user.png"
+import vendor from "../assest/images/vendor.png"
+
+
 
 export {
     logo,
@@ -125,5 +133,11 @@ export {
     order_history,
     white_heart,
     red_heart,
-    qrcode
+    qrcode,
+    qr,
+    admin_blog,
+    admin_queries,
+    admin_voucher,
+    admin_user,
+    vendor
 }

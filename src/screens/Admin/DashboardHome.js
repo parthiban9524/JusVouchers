@@ -6,9 +6,12 @@ import GraphUser from "../../components/GraphUser";
 import GraphOrderCancel from "../../components/GraphOrderCancel"
 import { card, leader, new_user, order_cancel, rising, sale1, user } from "../../components/Icons";
 import { normalize, fonts } from "../../components/Utils";
+import AdminHeader from "../../components/AdminHeader";
 
-export default function Demp({navigation}) {
+export default function DashboardHome({navigation}) {
     return (
+        <>
+        <AdminHeader navigation={navigation} />
         <ScrollView>
             <View style={{ margin: 20 }} >
                 <Text style={{ fontSize: normalize(22), fontWeight: 'bold', color: "#000000" }}>Dashboard</Text>
@@ -17,7 +20,7 @@ export default function Demp({navigation}) {
                 <Text style={{ fontSize: normalize(19), fontWeight: 'bold', color: 'green' }}>15 June 2022 Wednesday</Text>
             </View>
             <View style={{ flexDirection: "row", justifyContent: "space-evenly", marginTop: 12 }}>
-                <TouchableOpacity style={{ borderRadius: 10, backgroundColor: '#FFDCAE99', width: 155, height: 95 }} onPress={() => navigation.navigate("SalesDetails")} >
+                <TouchableOpacity style={{ borderRadius: 10, backgroundColor: '#FFDCAE99', width: 155, height: 95 }} onPress={() => navigation.navigate("Sales")} >
                     <View style={{ flexDirection: "row", flexWrap: "wrap" }}>
                         <Image source={sale1} style={{ height: normalize(35), width: normalize(35), resizeMode: "contain", alignSelf: "center", marginLeft: normalize(8), marginTop: 5 }} />
                         <Text style={{ fontSize: normalize(14), fontWeight: '500', marginLeft: 5, marginTop: 10 }}  >Today Sale</Text>
@@ -75,6 +78,7 @@ export default function Demp({navigation}) {
                 <GraphOrderCancel/>
             </View>
         </ScrollView>
+        </>
     )
 }
 const styles = StyleSheet.create({
