@@ -34,6 +34,9 @@ import OrderHistory from "./src/screens/Dashboard/Profile/OrderHistory";
 import QrCodePayment from "./src/screens/Dashboard/Payment/QrCodePayment";
 import HealthForm from "./src/screens/Dashboard/Vouchers/HealthForm";
 import DashboardHome from "./src/screens/Admin/DashboardHome";
+import AddVoucher from "./src/screens/Admin/AdminVoucher/AddVoucher";
+import Adminupload from "./src/screens/Admin/AdminVoucher/Adminupload";
+import AdminBlog from "./src/screens/Admin/AdminBlog/AdminBlog";
 
 export default function App() {
 
@@ -90,6 +93,8 @@ export default function App() {
         <AdminNavigator.Screen name="DashboardHome" component={DashboardHome} />
         <AdminNavigator.Screen name="SalesDetails" component={SalesDetails} />
         <AdminNavigator.Screen name="Sales" component={Sales} />
+        <AdminNavigator.Screen name="AddVoucher" component={AddVoucher} />
+        <AdminNavigator.Screen name="Adminupload" component={Adminupload} />
       </AdminNavigator.Navigator>
     )
   }
@@ -182,13 +187,14 @@ export default function App() {
   return (
     <NavigationContainer>
       <Provider store={Store}>
-        <Stack.Navigator initialRouteName="AdminScreen" screenOptions={{ headerShown: false }} >
+        {/* <Stack.Navigator initialRouteName="AdminScreen" screenOptions={{ headerShown: false }} >
           <Stack.Screen name="AuthScreen" component={AuthScreen} />
           <Stack.Screen name="DashboardNavigation" component={DashboardNavigation} />
           <Stack.Screen name="Profile" component={Profile} />
           <Stack.Screen name="AdminScreen" component={AdminScreen} />
-        </Stack.Navigator>
-        {/* <AdminDash /> */}
+        </Stack.Navigator> */}
+        {/* <AdminDash /><Adminupload/> */}
+        <AdminBlog/>
       </Provider>
     </NavigationContainer>
   )

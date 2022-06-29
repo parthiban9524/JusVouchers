@@ -109,7 +109,7 @@ const DATA = [
 ];
 
 const Item = ({ item, navigation }) => (
-  <TouchableOpacity onPress={() => navigation.navigate("SalesDetails")} style={{ backgroundColor: '#03cffc', marginRight: 12, marginLeft: 12, borderRadius: 4 }}>
+  <TouchableOpacity onPress={() => alert("id is" + item.id)} style={{ backgroundColor: '#03cffc', marginRight: 12, marginLeft: 12, borderRadius: 4 }}>
     <View style={{ flexDirection: 'row', justifyContent: 'space-around', marginTop: 15 }}>
       <Text style={{ fontSize: normalize(16), fontWeight: "400" }}>{item.Date}</Text>
       <Text style={{ fontSize: normalize(16), fontWeight: "400" }}>{item.Sale}</Text>
@@ -155,14 +155,14 @@ const Sales = (navigation) => {
             </View>
           </View>
         </TouchableOpacity>
-        <View style={{ height: normalize(500), width: normalize(340), borderRadius: normalize(10), backgroundColor: "#D0E3FFB0", marginTop: normalize(20), alignSelf : "center" }}>
+        {/* <View style={{ height: normalize(500), width: normalize(340), borderRadius: normalize(10), backgroundColor: "#D0E3FFB0", marginTop: normalize(20), alignSelf : "center" }}>
            <View style = {{flexDirection : "row"}}>
 <Text>Date</Text>
 <Text>Sales in Day</Text>
 
            </View>
-        </View>
-        {/* <View style={{ flexDirection: "row", justifyContent: 'space-around', backgroundColor: '#5ad1b9', marginLeft: 12, marginRight: 12, borderTopEndRadius: 6, borderTopLeftRadius: 6 }}>
+        </View> */}
+        <View style={{ flexDirection: "row", justifyContent: 'space-around', backgroundColor: '#5ad1b9', marginLeft: 12, marginRight: 12, borderTopEndRadius: 6, borderTopLeftRadius: 6 ,marginTop:10}}>
           <Text style={{ fontSize: normalize(16), fontWeight: "600", marginLeft: 45 }}>Date</Text>
           <Text style={{ fontSize: normalize(16), fontWeight: "600", marginLeft: 70 }}>Sales in Days</Text>
 
@@ -173,7 +173,7 @@ const Sales = (navigation) => {
           renderItem={renderItem}
           keyExtractor={(item) => item.id}
           extraData={selectedId}
-        /> */}
+        />
       </SafeAreaView>
     </>
   );
