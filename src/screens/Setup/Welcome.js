@@ -11,7 +11,7 @@ export default function Welcome({ navigation }) {
     <>
       <StatusBar backgroundColor={"#F9AA44"} translucent={false} />
       <View style={{ flex: 1, backgroundColor: "#ffffff" }} >
-        <View style={{ alignSelf: "center", marginTop: normalize(160) }} >
+        <View style={{ alignSelf: "center", marginTop: normalize(80) }} >
           <Image source={logo} style={{ height: normalize(142), width: normalize(220), resizeMode: "contain" }} />
         </View>
         <View style={{ marginHorizontal: normalize(30), marginTop: normalize(65) }} >

@@ -42,7 +42,7 @@ import Venders from "./src/screens/Admin/Venders/Venders";
 import VendersDetails from "./src/screens/Admin/Venders/VendersDetails";
 import BlogUpload from "./src/screens/Admin/AdminBlog/BlogUpload";
 import AdminBlog from "./src/screens/Admin/AdminBlog/AdminBlog";
-import AdminUpload from "./src/screens/Admin/AdminVoucher/AdminUpload";
+import AdminUpload from "./src/screens/Admin/AdminVoucher/Adminupload";
 import VenderDash from "./src/screens/Vender/VenderDash";
 import VenderSale from "./src/screens/Vender/VenderSale/VenderSale";
 import VenderSaleDetails from "./src/screens/Vender/VenderSale/VenderSaleDetails";

@@ -13,7 +13,7 @@ function Login({ navigation }) {
     return (
         <View style={{ flex: 1, backgroundColor: "#ffffff" }} >
             <WavyHeader navigation={navigation} />
-            <View style={{ marginTop: normalize(100) }} >
+            <View style={{ marginTop: normalize(48) }} >
                 <Field
                     label="Email"
                     name="email"
@@ -22,7 +22,7 @@ function Login({ navigation }) {
                     id = {1}
                 />
             </View>
-            <View style={{ marginTop: normalize(10) }} >
+            <View style={{ marginTop: normalize(9) }} >
                 <Field
                     label="Password"
                     name="email"
@@ -34,7 +34,7 @@ function Login({ navigation }) {
             <TouchableOpacity style={{ alignSelf: "flex-end", marginRight: normalize(35) }} onPress={() => navigation.navigate('ForgotPassword')} >
                 <Text style={{ fontSize: normalize(18), fontFamily: fonts.lato_regular, color: "#F58220" }}>Forgot password </Text>
             </TouchableOpacity>
-            <View style={{ marginTop: normalize(110) }} >
+            <View style={{ marginTop: normalize(80) }} >
                 <Submitbutton bg={"#f69632"} text={"Log in"} txtclr={"#ffffff"} big={true} onpress = {() => navigation.navigate('DashboardNavigation')} />
             </View>
             <View style={{ flexDirection: "row", alignSelf: "center", justifyContent: "center" }} >

@@ -11,9 +11,11 @@ import WavyHeader from "../../components/Wavyheader";
 
 function Signup({ navigation }) {
     return (
+        
         <ScrollView style={{ flex: 1, backgroundColor: "#ffffff" }} >
+            <View style={{}}>
             <WavyHeader firstTxt={"Create"} secTxt={"Account"} navigation={navigation} />
-            <View style={{ marginTop: normalize(60) }} >
+            </View><View style={{ marginTop: normalize(48) }} >
                 <Field
                     label="Full Name"
                     name="Full name"
@@ -22,7 +24,7 @@ function Signup({ navigation }) {
                     id={1}
                 />
             </View>
-            <View>
+            <View style={{ marginTop: normalize(0) }}>
                 <Field
                     label="Phone"
                     name="phone"
@@ -31,7 +33,7 @@ function Signup({ navigation }) {
                     id={1}
                 />
             </View>
-            <View>
+            <View  style={{ marginTop: normalize(0) }}>
                 <Field
                     label="Email"
                     name="email"
@@ -40,7 +42,7 @@ function Signup({ navigation }) {
                     id={1}
                 />
             </View>
-            <View>
+            <View  style={{ marginTop: normalize(0) }}>
                 <Field
                     label="Password"
                     name="email"
@@ -49,7 +51,7 @@ function Signup({ navigation }) {
                     id={1}
                 />
             </View>
-            <View style = {{marginTop : normalize(25), marginLeft : normalize(35)}}>
+            <View style = {{marginTop : normalize(3), marginLeft : normalize(35)}}>
                 <Text style = {{fontFamily : fonts.lato_regular, fontSize : normalize(18)}} >Register as Vender <Text style = {{color : "#F58220", textDecorationLine : "underline"}} onPress = {() => navigation.navigate("VenderScreen")} > click here</Text> </Text>
             </View>
             <View style={{ marginTop: normalize(25) }} >
@@ -60,7 +62,7 @@ function Signup({ navigation }) {
                 <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(20), top: 10 }}> or </Text>
                 <View style={{ width: normalize(130), borderBottomWidth: 1, borderColor: "#938C8C" }} />
             </View>
-            <View style={{ marginTop: normalize(30) }}>
+            <View style={{ marginTop: normalize(25) }}>
                 <Submitbutton bg={"#ffffff"} text={"Log in"} txtclr={"#f69632"} onpress={() => navigation.navigate("Login")} big={true} />
             </View>
         </ScrollView>
