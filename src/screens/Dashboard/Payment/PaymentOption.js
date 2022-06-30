@@ -17,14 +17,14 @@ function PaymentOption({ navigation }) {
                 <TouchableOpacity style={{ marginTop: normalize(20), marginLeft: normalize(20) }} onPress={() => navigation.navigate("PaymentType")} >
                     <Image source={left} style={{ height: normalize(30), width: normalize(30) }} />
                 </TouchableOpacity>
-                <View style={{ marginTop: normalize(40), marginLeft: normalize(45) }} >
+                <View style={{ marginTop: normalize(25), marginLeft: normalize(45) }} >
                     <Text style={{ fontFamily: fonts.montserrat_regular, fontWeight: '600', fontSize: normalize(20), color: "#000000" }} >Payment Option</Text>
                 </View>
                 <View style={{ flexDirection: "row", marginTop: normalize(18), marginLeft: normalize(45) }} >
                     <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(12), fontWeight: "500" }} > Debit card </Text>
                     <Image source={triangle} style={{ height: normalize(10), width: normalize(10), alignSelf: "center", left: 10 }} />
                 </View>
-                <View style={{ flexDirection: "row", marginTop: normalize(30), marginLeft: normalize(15), justifyContent: "space-evenly" }}>
+                <View style={{ flexDirection: "row", marginTop: normalize(25), marginLeft: normalize(15), justifyContent: "space-evenly" }}>
                     <View style={{ height: normalize(43), width: normalize(75), borderColor: "#08D635", borderWidth: 1, borderRadius: 5, justifyContent: "center" }} >
                         <Image source={visa} style={{ height: normalize(25), width: normalize(53), resizeMode: "contain", alignSelf: "center" }} />
                     </View>

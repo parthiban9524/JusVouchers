@@ -21,10 +21,10 @@ export default function PaymentType({ navigation }) {
         <>
             <Header navigation={navigation} />
             <View>
-                <TouchableOpacity style={{ marginTop: normalize(20), marginLeft: normalize(20) }} onPress={() => navigation.navigate("Vouchers")} >
+                <TouchableOpacity style={{ marginTop: normalize(10), marginLeft: normalize(20) }} onPress={() => navigation.navigate("Vouchers")} >
                     <Image source={left} style={{ height: normalize(30), width: normalize(30) }} />
                 </TouchableOpacity>
-                <View style={{ marginTop: normalize(40) }} >
+                <View style={{ marginTop: normalize(15) }} >
                     <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(20), fontWeight: "500", textAlign: "center" }} >Select a Payment Method</Text>
                     <View style={{ alignSelf: "center", marginTop: normalize(15) }}>
                         <Image style={{ height: normalize(165), width: normalize(320) }} source={payment_card} />

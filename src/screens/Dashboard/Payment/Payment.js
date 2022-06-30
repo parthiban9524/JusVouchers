@@ -16,7 +16,7 @@ export default function Payment({ navigation }) {
                 <View>
                     <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(20), fontWeight: "500", textAlign: "center" }} >Success</Text>
                 </View>
-                <View style={{ justifyContent: "center", marginTop: normalize(120) }} >
+                <View style={{ justifyContent: "center", marginTop: normalize(60) }} >
                     <Image source={ok} style={{ height: normalize(120), width: normalize(120), alignSelf: "center" }} />
                 </View>
                 <View style={{ marginTop: normalize(25), alignSelf: "center" }} >

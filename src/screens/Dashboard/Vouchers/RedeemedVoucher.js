@@ -10,11 +10,11 @@ import barcode from "../../../assest/images/barcode.png"
 
 
 
-export default function RedeemedVoucher() {
+export default function RedeemedVoucher({navigation}) {
     return (
         <>
             <Header />
-            <View style={{ marginHorizontal: normalize(30), marginTop: normalize(60) }}>
+            <View style={{ marginHorizontal: normalize(30), marginTop: normalize(20) }}>
                 <Image source={cart_bg} style={{ height: normalize(530), width: normalize(317) }} />
                 <View style={{ position: "absolute", alignSelf: "center" }} >
                     <View style={{ marginTop: normalize(35) }} >
@@ -34,8 +34,8 @@ export default function RedeemedVoucher() {
                         <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(12), color: "#ffffff" }} >Validty - 1 June to 30 Aug 2022</Text>
                     </View>
                 </View>
-                <View style={{ marginTop: normalize(35) }} >
-                    <Submitbutton voucher={true} bg={"#6854ED"} text={"Back to Home"} txtclr={"#ffffff"} onpress={() => navigation.navigate("RedeemedVoucher")} />
+                <View style={{ marginTop: normalize(15) }} >
+                    <Submitbutton voucher={true} bg={"#6854ED"} text={"Back to Home"} txtclr={"#ffffff"} onpress={() => navigation.navigate("Home")} />
                 </View>
             </View>
         </>
