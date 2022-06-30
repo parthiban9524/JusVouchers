@@ -9,7 +9,7 @@ import { lines } from "../../../components/Icons";
 
 const fileTypes = ["JPEG", "PNG", "GIF"];
 
-export default function AddVoucher({ navigation }) {
+export default function VenderAddVoucher({ navigation }) {
 
     const [voucher, addVoucher] = React.useState(null);
     const [voucherCategory, addVoucherCategory] = React.useState(null);
@@ -56,7 +56,7 @@ export default function AddVoucher({ navigation }) {
                     </View>
                 </View>
                 <View style={{ marginTop: normalize(46) }} >
-                    <Submitbutton voucher={true} bg={"#F58220"} text={"Upload"} txtclr={"#ffffff"} onpress={() => navigation.navigate("AdminUpload")} />
+                    <Submitbutton voucher={true} bg={"#F58220"} text={"Upload"} txtclr={"#ffffff"} onpress={() => navigation.navigate("VenderVoucherUpload")} />
                 </View>
             </View>
         </>

@@ -1,13 +1,15 @@
 import React from "react";
-import { View, Text, TextInput, StyleSheet, TouchableOpacity, ScrollView } from "react-native";
+import { View, Text, TextInput, StyleSheet, TouchableOpacity, ScrollView, Image } from "react-native";
 import { Colors } from "react-native/Libraries/NewAppScreen";
 import AdminHeader from "../../../components/AdminHeader";
 import { fonts, normalize } from "../../../components/Utils";
+import { lines } from "../../../components/Icons";
 import { FileUploader } from "react-drag-drop-file";
+import Submitbutton from "../../../components/Submitbutton";
 
 const fileTypes = ["JPEG", "PNG", "GIF"];
 
-export default function AdminBlog(navigation) {
+export default function AdminBlog({ navigation }) {
     const [Blog, setBlog] = React.useState(null);
     const [Blogcategory, setBlogCategory] = React.useState(null);
     const [BlogUpload, setBlogUpload] = React.useState(null);
@@ -16,12 +18,12 @@ export default function AdminBlog(navigation) {
     return (
         <>
             <AdminHeader navigation={navigation} />
-            <ScrollView>
-                <View>
-                    <Text style={{ fontSize: normalize(20), fontFamily: fonts.inter_bold, alignSelf: 'center', marginTop: 10 }}>Add Blog</Text>
+            <ScrollView style = {{flex : 1, backgroundColor : "#ffffff"}} >
+                <View style={{ marginTop: normalize(10) }} >
+                    <Text style={{ fontSize: normalize(20), fontFamily: fonts.montserrat_semibold, alignSelf: 'center', marginTop: 10 }}>Add Blog</Text>
                 </View>
-                <View style={{ marginTop: 20, marginLeft: 25, marginRight: 25, }}>
-                    <Text style={{ marginLeft: 27, fontSize: normalize(15), fontWeight: '700', color: '#2958c4' }}>Blog Name</Text>
+                <View style={{ marginTop: 20, }}>
+                    <Text style={{ marginLeft: normalize(65), fontSize: normalize(15), fontWeight: '700', color: '#2958c4' }}>Blog Name</Text>
                     <TextInput
                         style={styles.input}
                         onChangeText={setBlog}
@@ -30,8 +32,8 @@ export default function AdminBlog(navigation) {
 
                     />
                 </View>
-                <View style={{ marginTop: 20, marginLeft: 25, marginRight: 25, }}>
-                    <Text style={{ marginLeft: 27, fontSize: normalize(15), fontWeight: '700', color: '#2958c4' }}>Blog Category</Text>
+                <View style={{ marginTop: 20,  }}>
+                    <Text style={{ marginLeft: normalize(65), fontSize: normalize(15), fontWeight: '700', color: '#2958c4' }}>Blog Category</Text>
                     <TextInput
                         style={styles.input}
                         onChangeText={Blogcategory}
@@ -40,47 +42,28 @@ export default function AdminBlog(navigation) {
 
                     />
                 </View>
-                <View style={{ marginTop: 20, marginLeft: 25, marginRight: 25, }}>
-                    <Text style={{ marginLeft: 27, fontSize: normalize(15), fontWeight: '700', color: '#2958c4' }}>Upload Blog Image</Text>
-                    <TextInput
-                        style={{
-                            height: 85,
-                            marginTop: 1,
-                            marginLeft: 15,
-                            marginRight: 15,
-                            borderWidth: 1,
-                            padding: 10,
-                            borderRadius: 18,
-                            borderColor: '#c7c1b1',
-                        }}
-                        onChangeText={setBlogUpload}
-                        value={BlogUpload}
-                        placeholder="Drag here from"
-
-                    />
+                <View style={{ marginTop: normalize(20), }}>
+                    <Text style={{ marginLeft: normalize(65), fontSize: normalize(15), fontWeight: '700', color: '#2958c4', }}>Upload Blog Image</Text>
+                    <Image source={lines} style={{ height: normalize(90), width: normalize(270), alignSelf: "center", top: 5 }} />
+                    <View style={{ position: "absolute", alignSelf: "center", marginTop: normalize(45) }} >
+                        <TextInput
+                            style={styles.input_one}
+                            placeholder="Drag here from Upload"
+                        />
+                    </View>
                 </View>
-                <View style={{ marginTop: 20, marginLeft: 25, marginRight: 25, }}>
-                    <Text style={{ marginLeft: 27, fontSize: normalize(15), fontWeight: '700', color: '#2958c4' }}>Blog Content</Text>
+                <View style={{ marginTop: 20, }}>
+                    <Text style={{ marginLeft: normalize(65), fontSize: normalize(15), fontWeight: '700', color: '#2958c4' }}>Blog Content</Text>
                     <TextInput
-                        style={{
-                            height: 180,
-                            marginTop: 1,
-                            marginLeft: 15,
-                            marginRight: 15,
-                            borderWidth: 1,
-                            borderRadius: 18,
-                            borderColor: '#c7c1b1',
-                        }}
+                        style={styles.input_two}
                         onChangeText={setBlogUpload}
                         value={BlogUpload}
                         placeholder="Enter Blog Content"
 
                     />
                 </View>
-                <View>
-                    <TouchableOpacity style={{ height: normalize(50), width: normalize(300), backgroundColor: "#F9AA44", justifyContent: "center", borderRadius: normalize(10), alignSelf: "center", marginTop: 30 }} onPress={() => alert("data upload")} >
-                        <Text style={{ color: 'white', alignSelf: "center", fontSize: normalize(18), fontWeight: "600", fontFamily: fonts.montserrat_semibold }}>Upload</Text>
-                    </TouchableOpacity>
+                <View style={{ marginTop: normalize(30) }} >
+                    <Submitbutton voucher={true} bg={"#F58220"} text={"Upload"} txtclr={"#ffffff"} onpress={() => navigation.navigate("BlogUpload")} />
                 </View>
             </ScrollView>
         </>
@@ -89,13 +72,35 @@ export default function AdminBlog(navigation) {
 }
 const styles = StyleSheet.create({
     input: {
-        height: 40,
-        marginTop: 1,
-        marginLeft: 15,
-        marginRight: 15,
-        borderWidth: 1,
-        padding: 10,
-        borderRadius: 18,
-        borderColor: '#c7c1b1'
+        height: normalize(35),
+        width: normalize(270),
+        elevation: 5,
+        backgroundColor: "#ffffff",
+        borderRadius: normalize(18),
+        alignSelf: "center",
+        paddingLeft: normalize(15),
+        marginTop: 5,
+        fontFamily: fonts.lato_regular,
+        fontSize: normalize(12),
+        fontWeight: "500"
+    },
+    input_one: {
+        fontFamily: fonts.lato_regular,
+        fontSize: normalize(12),
+        fontWeight: "500"
+    },
+    input_two: {
+        height: normalize(275),
+        width: normalize(270),
+        elevation: 5,
+        backgroundColor: "#ffffff",
+        borderRadius: normalize(18),
+        alignSelf : "center",
+        paddingBottom : normalize(240),
+        paddingLeft: normalize(15),
+        marginTop: 5,
+        fontFamily: fonts.lato_regular,
+        fontSize: normalize(12),
+        fontWeight: "500"
     },
 });

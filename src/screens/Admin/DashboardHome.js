@@ -11,7 +11,7 @@ import AdminHeader from "../../components/AdminHeader";
 export default function DashboardHome({navigation}) {
     return (
         <>
-        <AdminHeader navigation={navigation} />
+        <AdminHeader navigation={navigation}  />
         <ScrollView>
             <View style={{ margin: 20 }} >
                 <Text style={{ fontSize: normalize(22), fontWeight: 'bold', color: "#000000" }}>Dashboard</Text>
@@ -32,7 +32,7 @@ export default function DashboardHome({navigation}) {
 
                     </View>
                 </TouchableOpacity>
-                <TouchableOpacity style={{ borderRadius: 10, backgroundColor: '#FFDCAE99', width: 155, height: 95 }}>
+                <TouchableOpacity style={{ borderRadius: 10, backgroundColor: '#FFDCAE99', width: 155, height: 95 }} onPress = {() => navigation.navigate("Venders")} >
                     <View style={{ flexDirection: "row", flexWrap: "wrap" }}>
                         <Image source={leader} style={{ height: normalize(35), width: normalize(35), resizeMode: "contain", alignSelf: "center", marginLeft: normalize(8), marginTop: 5 }} />
                         <Text style={{ fontSize: normalize(14), fontWeight: '500', marginLeft: 5, marginTop: 10 }} >New Vender</Text>
@@ -58,7 +58,7 @@ export default function DashboardHome({navigation}) {
 
                     </View>
                 </TouchableOpacity>
-                <TouchableOpacity style={{ borderRadius: 10, backgroundColor: '#FFDCAE99', width: 155, height: 95 }}>
+                <TouchableOpacity style={{ borderRadius: 10, backgroundColor: '#FFDCAE99', width: 155, height: 95 }} onPress = { () => navigation.navigate("User")}>
                     <View style={{ flexDirection: "row", flexWrap: "wrap" }}>
                         <Image source={new_user} style={{ height: normalize(35), width: normalize(35), resizeMode: "contain", alignSelf: "center", marginLeft: normalize(8), marginTop: 5 }} />
                         <Text style={{ fontSize: normalize(14), fontWeight: '500', marginLeft: 5, marginTop: 10 }} >New User</Text>

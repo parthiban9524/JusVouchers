@@ -97,7 +97,6 @@ export default function PaymentType({ navigation }) {
                     <TouchableOpacity style={{ height: normalize(15), width: normalize(15), borderColor: "#797877", borderWidth: 1, top: 2 }} />
                     <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(16), left: normalize(12) }} >I accept terms and policies.</Text>
                 </View>
-
                 <View style={{ marginTop: normalize(42) }} >
                     <Submitbutton voucher={true} bg={"#6854ED"} text={"Continue"} txtclr={"#ffffff"} onpress={() => navigation.navigate("PaymentOption")} />
                 </View>

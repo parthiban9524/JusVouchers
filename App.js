@@ -33,10 +33,22 @@ import Favorites from "./src/screens/Dashboard/Profile/Favorites";
 import OrderHistory from "./src/screens/Dashboard/Profile/OrderHistory";
 import QrCodePayment from "./src/screens/Dashboard/Payment/QrCodePayment";
 import HealthForm from "./src/screens/Dashboard/Vouchers/HealthForm";
+
 import DashboardHome from "./src/screens/Admin/DashboardHome";
 import AddVoucher from "./src/screens/Admin/AdminVoucher/AddVoucher";
-import Adminupload from "./src/screens/Admin/AdminVoucher/Adminupload";
+import UserDetails from "./src/screens/Admin/User/UserDetails";
+import User from "./src/screens/Admin/User/User";
+import Venders from "./src/screens/Admin/Venders/Venders";
+import VendersDetails from "./src/screens/Admin/Venders/VendersDetails";
+import BlogUpload from "./src/screens/Admin/AdminBlog/BlogUpload";
 import AdminBlog from "./src/screens/Admin/AdminBlog/AdminBlog";
+import AdminUpload from "./src/screens/Admin/AdminVoucher/AdminUpload";
+import VenderDash from "./src/screens/Vender/VenderDash";
+import VenderSale from "./src/screens/Vender/VenderSale/VenderSale";
+import VenderSaleDetails from "./src/screens/Vender/VenderSale/VenderSaleDetails";
+import Details from "./src/screens/Vender/VenderSale/Details";
+import VenderAddVoucher from "./src/screens/Vender/AdminVoucher/AddVoucher";
+import VenderVoucherUpload from "./src/screens/Vender/AdminVoucher/AdminUpload";
 
 export default function App() {
 
@@ -45,6 +57,8 @@ export default function App() {
   const HomeNavigator = createStackNavigator();
   const VouchersNavigator = createStackNavigator();
   const AdminNavigator = createStackNavigator();
+  const VenderNavigator = createStackNavigator();
+
 
   function HomeScreen() {
     return (
@@ -88,14 +102,34 @@ export default function App() {
   }
 
   function AdminScreen() {
-    return(
+    return (
       <AdminNavigator.Navigator initialRouteName="DashboardHome" screenOptions={{ headerShown: false }} >
         <AdminNavigator.Screen name="DashboardHome" component={DashboardHome} />
         <AdminNavigator.Screen name="SalesDetails" component={SalesDetails} />
         <AdminNavigator.Screen name="Sales" component={Sales} />
+        <AdminNavigator.Screen name="UserDetails" component={UserDetails} />
+        <AdminNavigator.Screen name="User" component={User} />
+        <AdminNavigator.Screen name="Venders" component={Venders} />
+        <AdminNavigator.Screen name="VendersDetails" component={VendersDetails} />
         <AdminNavigator.Screen name="AddVoucher" component={AddVoucher} />
-        <AdminNavigator.Screen name="Adminupload" component={Adminupload} />
+        <AdminNavigator.Screen name="AdminUpload" component={AdminUpload} />
+        <AdminNavigator.Screen name="AdminBlog" component={AdminBlog} />
+        <AdminNavigator.Screen name="BlogUpload" component={BlogUpload} />
       </AdminNavigator.Navigator>
+    )
+  }
+
+  function VenderScreen() {
+    return (
+      <VenderNavigator.Navigator initialRouteName="VenderDash" screenOptions={{ headerShown: false }} >
+        <VenderNavigator.Screen name="VenderDash" component={VenderDash} />
+        <VenderNavigator.Screen name="VenderSale" component={VenderSale} />
+        <VenderNavigator.Screen name="VenderSaleDetails" component={VenderSaleDetails} />
+        <VenderNavigator.Screen name="Details" component={Details} />
+        <VenderNavigator.Screen name="VenderAddVoucher" component={VenderAddVoucher} />
+        <VenderNavigator.Screen name="VenderVoucherUpload" component={VenderVoucherUpload} />
+      </VenderNavigator.Navigator>
+
     )
   }
 
@@ -187,14 +221,13 @@ export default function App() {
   return (
     <NavigationContainer>
       <Provider store={Store}>
-        {/* <Stack.Navigator initialRouteName="AdminScreen" screenOptions={{ headerShown: false }} >
+        <Stack.Navigator initialRouteName="AuthScreen" screenOptions={{ headerShown: false }} >
           <Stack.Screen name="AuthScreen" component={AuthScreen} />
           <Stack.Screen name="DashboardNavigation" component={DashboardNavigation} />
           <Stack.Screen name="Profile" component={Profile} />
           <Stack.Screen name="AdminScreen" component={AdminScreen} />
-        </Stack.Navigator> */}
-        {/* <AdminDash /><Adminupload/> */}
-        <AdminBlog/>
+          <Stack.Screen name="VenderScreen" component={VenderScreen} />
+        </Stack.Navigator>
       </Provider>
     </NavigationContainer>
   )

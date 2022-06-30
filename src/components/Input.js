@@ -41,6 +41,7 @@ export default function Input({ label, img, id, wid }) {
                         style={{ width: normalize(wid), borderColor: "#000000", borderBottomWidth: 1, marginLeft : normalize(10), fontFamily: fonts.lato_regular, fontSize: normalize(20) }}
                         onChangeText={onChangeNumber}
                         placeholder={label}
+                        placeholderTextColor = {"#000000"}
                     />
                 </>
                 )

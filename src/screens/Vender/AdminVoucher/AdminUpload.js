@@ -1,15 +1,17 @@
 import React from "react";
-import { View, Text, Image, TouchableOpacity } from "react-native"
+import { View, Text, Image, TouchableOpacity,ScrollView} from "react-native"
+import Header from "../../../components/Header";
 import { normalize, fonts } from "../../../components/Utils";
 import { left, ok } from "../../../components/Icons";
 import Submitbutton from "../../../components/Submitbutton";
 import AdminHeader from "../../../components/AdminHeader";
 
-export default function BlogUpload({ navigation }) {
+export default function VenderVoucherUpload({ navigation }) {
     return (
         <>
             <AdminHeader navigation={navigation} />
-            <View style = {{flex :1, backgroundColor : "#ffffff"}} >
+            <ScrollView style = {{backgroundColor : "#ffffff", flex : 1}} >
+            <View>
                 <TouchableOpacity style={{ marginTop: normalize(20), marginLeft: normalize(20) }} onPress={() => navigation.goBack()} >
                     <Image source={left} style={{ height: normalize(30), width: normalize(30) }} />
                 </TouchableOpacity>
@@ -20,12 +22,13 @@ export default function BlogUpload({ navigation }) {
                     <Image source={ok} style={{ height: normalize(120), width: normalize(120), alignSelf: "center" }} />
                 </View>
                 <View style={{ marginTop: normalize(25), alignSelf: "center" }} >
-                    <Text style={{ fontFamily: fonts.montserrat_semibold, fontSize: normalize(20), color: "#000000" }} >Blog Uploaded</Text>
+                    <Text style={{ fontFamily: fonts.montserrat_semibold, fontSize: normalize(20), color: "#000000" }} >Voucher Uploaded</Text>
                 </View>
                 <View style={{ marginTop: normalize(42) }} >
                     <Submitbutton voucher={true} bg={"#F9AA44"} text={"Back to Dashboard"} txtclr={"#ffffff"} onpress={() => navigation.navigate("DashboardHome")} />
                 </View>
             </View>
+            </ScrollView>
         </>
     )
 }

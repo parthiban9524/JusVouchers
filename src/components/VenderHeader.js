@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { View, Text, StatusBar, Image, TouchableOpacity, Modal } from "react-native"
 
 import { fonts, normalize } from "./Utils"
-import { menu, close, logout_dark, admin_user, vendor, admin_voucher, admin_blog, admin_queries } from "./Icons";
+import { menu, close, logout_dark, admin_user, admin_voucher, customer } from "./Icons";
 import man from "../assest/images/man.png"
 
-export default function AdminHeader({ navigation }) {
+export default function VenderHeader({ navigation }) {
 
     const [sidemenu, setsidemenu] = useState(false)
     const [select,setselect] = useState(false)
@@ -24,7 +24,7 @@ export default function AdminHeader({ navigation }) {
     }
 
     const onDash = () => {
-     navigation.navigate("DashboardHome")
+     navigation.navigate("VenderDash")
      setselect(false)
     }
 
@@ -51,7 +51,7 @@ export default function AdminHeader({ navigation }) {
                                     <Image source={man} style={{ height: normalize(55), width: normalize(55), resizeMode: "contain", alignSelf: "center" }} />
                                 </View>
                                 <View style={{ marginLeft: normalize(20), justifyContent: "center" }} >
-                                    <Text style={{ fontFamily: fonts.montserrat_semibold, fontSize: normalize(15), color: "#3D3C3B", fontWeight: "600" }} >Admin</Text>
+                                    <Text style={{ fontFamily: fonts.montserrat_semibold, fontSize: normalize(15), color: "#3D3C3B", fontWeight: "600" }} >Vender</Text>
                                     <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(12), color: "#3D3C3B", fontWeight: "600" }}  >Bhopal , india</Text>
                                 </View>
                             </TouchableOpacity>
@@ -61,28 +61,16 @@ export default function AdminHeader({ navigation }) {
                                     <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(15), color: "#3D3C3B", fontWeight: "700", marginLeft: normalize(30), top: 2 }} >Dashboard</Text>
                                 </View>
                             </TouchableOpacity>
-                            <TouchableOpacity style={{height: normalize(30), width: normalize(180),backgroundColor: select ? "rgba(245, 130, 32, 0.39)" : null, borderRadius : normalize(20), marginLeft: normalize(30), marginTop: normalize(25), justifyContent: "center" }} onPress = {onVender } >
-                                <View style={{ flexDirection: "row", }} >
-                                    <Image source={vendor} style={{ height: normalize(25), width: normalize(25), resizeMode: 'contain', left: normalize(25) }} />
-                                    <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(15), color: "#3D3C3B", fontWeight: "700", marginLeft: normalize(30), top: 2 }} >Venders</Text>
-                                </View>
-                            </TouchableOpacity>
-                            <TouchableOpacity style={{height: normalize(30), width: normalize(180), marginLeft: normalize(30), marginTop: normalize(25), justifyContent: "center" }} onPress={() => navigation.navigate("AddVoucher")} >
+                            <TouchableOpacity style={{height: normalize(30), width: normalize(180), marginLeft: normalize(30), marginTop: normalize(25), justifyContent: "center" }} onPress={() => navigation.navigate("VenderAddVoucher")} >
                                 <View style={{ flexDirection: "row", }} >
                                     <Image source={admin_voucher} style={{ height: normalize(25), width: normalize(25), resizeMode: 'contain', left: normalize(25) }} />
                                     <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(15), color: "#3D3C3B", fontWeight: "700", marginLeft: normalize(30), top: 2 }} >Add Voucher</Text>
                                 </View>
                             </TouchableOpacity>
-                            <TouchableOpacity style={{height: normalize(30), width: normalize(180), marginLeft: normalize(30), marginTop: normalize(25), justifyContent: "center" }} onPress={() => navigation.navigate("AdminBlog")} >
+                            <TouchableOpacity style={{height: normalize(30), width: normalize(180),backgroundColor: select ? "rgba(245, 130, 32, 0.39)" : null, borderRadius : normalize(20), marginLeft: normalize(30), marginTop: normalize(25), justifyContent: "center" }} onPress = {onVender } >
                                 <View style={{ flexDirection: "row", }} >
-                                    <Image source={admin_blog} style={{ height: normalize(25), width: normalize(25), resizeMode: 'contain', left: normalize(25) }} />
-                                    <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(15), color: "#3D3C3B", fontWeight: "700", marginLeft: normalize(30), top: 2 }} >Add Blog</Text>
-                                </View>
-                            </TouchableOpacity>
-                            <TouchableOpacity style={{ marginLeft: normalize(30), marginTop: normalize(25), justifyContent: "center" }} activeOpacity = {1} >
-                                <View style={{ flexDirection: "row", }} >
-                                    <Image source={admin_queries} style={{ height: normalize(25), width: normalize(25), resizeMode: 'contain', left: normalize(25) }} />
-                                    <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(15), color: "#3D3C3B", fontWeight: "700", marginLeft: normalize(30), top: 2 }} > Queries</Text>
+                                    <Image source={man} style={{ height: normalize(25), width: normalize(25), resizeMode: 'contain', left: normalize(25),}} />
+                                    <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(15), color: "#3D3C3B", fontWeight: "700", marginLeft: normalize(30), top: 2 }} >Customer info</Text>
                                 </View>
                             </TouchableOpacity>
                             <TouchableOpacity style={{ marginLeft: normalize(30), marginTop: normalize(25), justifyContent: "center" }} onPress={() => navigation.navigate("AuthScreen")} >

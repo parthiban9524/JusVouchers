@@ -67,7 +67,8 @@ import admin_queries from "../assest/images/admin_queries.png"
 import admin_voucher from "../assest/images/admin_voucher.png"
 import admin_user from "../assest/images/admin_user.png"
 import vendor from "../assest/images/vendor.png"
-
+import lines from "../assest/images/lines.png"
+import customer from "../assest/images/customer.png"
 
 
 export {
@@ -139,5 +140,7 @@ export {
     admin_queries,
     admin_voucher,
     admin_user,
-    vendor
+    vendor,
+    lines,
+    customer
 }

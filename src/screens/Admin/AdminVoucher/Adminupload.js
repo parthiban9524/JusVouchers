@@ -4,14 +4,15 @@ import Header from "../../../components/Header";
 import { normalize, fonts } from "../../../components/Utils";
 import { left, ok } from "../../../components/Icons";
 import Submitbutton from "../../../components/Submitbutton";
+import AdminHeader from "../../../components/AdminHeader";
 
-export default function Adminupload({ navigation }) {
+export default function AdminUpload({ navigation }) {
     return (
         <>
-            <Header navigation={navigation} />
-            <ScrollView>
+            <AdminHeader navigation={navigation} />
+            <ScrollView style = {{backgroundColor : "#ffffff", flex : 1}} >
             <View>
-                <TouchableOpacity style={{ marginTop: normalize(20), marginLeft: normalize(20) }} onPress={() => navigation.navigate("Vouchers")} >
+                <TouchableOpacity style={{ marginTop: normalize(20), marginLeft: normalize(20) }} onPress={() => navigation.goBack()} >
                     <Image source={left} style={{ height: normalize(30), width: normalize(30) }} />
                 </TouchableOpacity>
                 <View>

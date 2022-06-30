@@ -50,10 +50,10 @@ function Signup({ navigation }) {
                 />
             </View>
             <View style = {{marginTop : normalize(25), marginLeft : normalize(35)}}>
-                <Text style = {{fontFamily : fonts.lato_regular, fontSize : normalize(18)}} >Register as Vender <Text style = {{color : "#F58220", textDecorationLine : "underline"}} > click here</Text> </Text>
+                <Text style = {{fontFamily : fonts.lato_regular, fontSize : normalize(18)}} >Register as Vender <Text style = {{color : "#F58220", textDecorationLine : "underline"}} onPress = {() => navigation.navigate("VenderScreen")} > click here</Text> </Text>
             </View>
             <View style={{ marginTop: normalize(25) }} >
-                <Submitbutton bg={"#f69632"} text={"Sign up"} txtclr={"#ffffff"} onpress={() => navigation.navigate('AdminDash')} big={true} />
+                <Submitbutton bg={"#f69632"} text={"Sign up"} txtclr={"#ffffff"} onpress={() => navigation.navigate('DashboardHome')} big={true} />
             </View>
             <View style={{ flexDirection: "row", alignSelf: "center", justifyContent: "center" }} >
                 <View style={{ width: normalize(130), borderBottomWidth: 1, borderColor: "#938C8C" }} />
