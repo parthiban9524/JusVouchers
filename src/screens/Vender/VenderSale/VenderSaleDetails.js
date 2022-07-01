@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { FlatList, SafeAreaView, StatusBar, StyleSheet, Text, TouchableOpacity, View, Image } from "react-native";
 
 import { normalize, fonts } from "../../../components/Utils";
-import { sale1, rising, left } from "../../../components/Icons";
-import AdminHeader from "../../../components/AdminHeader";
+import { sale1, rising, left } from "../../../components/Icons"
+import VenderHeader from "../../../components/VenderHeader";
 
 const VenderSaleDetails = ({ navigation }) => {
 
@@ -13,7 +13,7 @@ const VenderSaleDetails = ({ navigation }) => {
     const renderItem = ({ item }) => {
         console.log("item", item)
         return (
-            <TouchableOpacity style={[styles.data_container]} onPress = {() => navigation.navigate("Details", {data : item})} >
+            <TouchableOpacity style={[styles.data_container]} onPress={() => navigation.navigate("Details", { data: item })} >
                 <View style={{ justifyContent: "center", marginLeft: normalize(40) }}>
                     <Text style={styles.data_text}>{item.name}</Text>
                 </View>
@@ -26,7 +26,7 @@ const VenderSaleDetails = ({ navigation }) => {
 
     return (
         <>
-            <AdminHeader navigation={navigation} />
+            <VenderHeader navigation={navigation} />
             <SafeAreaView style={styles.container}>
                 <TouchableOpacity style={{ marginTop: normalize(20), marginLeft: normalize(20) }} onPress={() => navigation.goBack()} >
                     <Image source={left} style={{ height: normalize(30), width: normalize(30) }} />
@@ -95,4 +95,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default VenderSaleDetails;
+export default VenderSaleDetails; 

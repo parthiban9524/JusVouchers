@@ -14,12 +14,12 @@ export default function WavyHeader({ customStyles, firstTxt = "Welcome", secTxt 
         <>
             <StatusBar backgroundColor={"#FA9C22"} translucent={false} />
             <View style={customStyles}>
-                <View style={{ backgroundColor: '#FA9C22', height: 200 }}>
+                <View style={{ backgroundColor: '#FA9C22', height: normalize(220) }}>
                     <Svg
                         height="60%"
                         width="100%"
                         viewBox="110 0 1140 220"
-                        style={{ position: 'absolute', top: 170}}
+                        style={{ position: 'absolute', top: normalize(190)}}
                     >
                         <Path
                             fill="#FA9C22"
@@ -31,12 +31,12 @@ export default function WavyHeader({ customStyles, firstTxt = "Welcome", secTxt 
             <TouchableOpacity style={{ position : "absolute", marginTop: normalize(30), marginLeft: normalize(20), }} onPress={ dash ? () => navigation.navigate('DashboardNavigation')  : () => navigation.goBack()} >
                 <Image source={left} style={{ height: normalize(30), width: normalize(30), tintColor : "#ffffff" }} />
             </TouchableOpacity>
-            <View style={{ position: "absolute", alignSelf: "center", marginTop: normalize(30) }} >
+            <View style={{ position: "absolute", alignSelf: "center", marginTop: normalize(20) }} >
                 <View style={{ height: normalize(46), width: normalize(105), backgroundColor: "#ffffff", borderBottomLeftRadius: normalize(40), borderTopRightRadius: normalize(40), justifyContent: "center", }} >
                     <Image source={logo} style={{ height: normalize(35), width: normalize(65), alignSelf: "center" }} />
                 </View>
             </View>
-            <View style={{ position: "absolute", marginTop: normalize(90), marginHorizontal: normalize(32) }}>
+            <View style={{ position: "absolute", marginTop: normalize(120), marginHorizontal: normalize(32) }}>
                 <Text style={{ fontSize: normalize(40), fontFamily: fonts.montserrat_semibold, fontWeight: "600", color: "#ffffff" }} >{firstTxt}</Text>
                 <Text style={{ fontSize: normalize(40), fontFamily: fonts.montserrat_semibold, fontWeight: "600", color: "#ffffff" }} >{secTxt}</Text>
             </View>

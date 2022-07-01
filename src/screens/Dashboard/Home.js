@@ -15,7 +15,6 @@ import saloon from "../../assest/images/saloon.png"
 import diet from "../../assest/images/diet.png"
 import exclusive from "../../assest/images/exclusive.png"
 import Slider from "../../components/Slider";
-import Card from "../../components/Card";
 
 export default function Home({ navigation }) {
 

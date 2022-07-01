@@ -4,6 +4,7 @@ import { normalize, fonts } from "../../../components/Utils";
 import { sale1, rising } from "../../../components/Icons";
 import { left } from "../../../components/Icons";
 import AdminHeader from "../../../components/AdminHeader";
+import VenderHeader from "../../../components/VenderHeader";
 
 const DATA = [
     {
@@ -201,7 +202,7 @@ const VenderSale = ({ navigation }) => {
 
     return (
         <>
-            <AdminHeader navigation={navigation} />
+            <VenderHeader navigation={navigation} />
             <SafeAreaView style={styles.container}>
                 <View style={{ flexDirection: "row" }}>
                     <TouchableOpacity style={{ marginTop: normalize(20), marginLeft: normalize(20) }} onPress={() => navigation.goBack()} >

@@ -6,7 +6,6 @@ import { left } from "../../../components/Icons";
 import { normalize, fonts } from "../../../components/Utils";
 
 import gym1 from "../../../assest/images/gym1.png"
-import Submitbutton from "../../../components/Submitbutton";
 
 export default function OrderHistory({ navigation }) {
     return (

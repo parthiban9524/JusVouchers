@@ -9,12 +9,12 @@ import Input from "../../components/Input";
 import Submitbutton from "../../components/Submitbutton"
 import WavyHeader from "../../components/Wavyheader";
 
-function Signup({ navigation }) {
+function VenderSignup({ navigation }) {
     return (
         
         <ScrollView style={{ flex: 1, backgroundColor: "#ffffff" }} >
             <View style={{}}>
-            <WavyHeader firstTxt={"Create"} secTxt={"Account"} navigation={navigation} />
+            <WavyHeader firstTxt={"Vender"} secTxt={"Account"} navigation={navigation} />
             </View>
             <View style={{ marginTop: normalize(60) }} >
                 <Field
@@ -52,11 +52,9 @@ function Signup({ navigation }) {
                     id={1}
                 />
             </View>
-            <View style = {{marginTop : normalize(20), marginLeft : normalize(30)}}>
-                <Text style = {{fontFamily : fonts.lato_regular, fontSize : normalize(18)}} >Register as Vender <Text style = {{color : "#F58220", textDecorationLine : "underline"}} onPress = {() => navigation.navigate("VenderSignup")} > click here</Text> </Text>
-            </View>
-            <View style={{ marginTop: normalize(20) }} >
-                <Submitbutton bg={"#f69632"} text={"Sign up"} txtclr={"#ffffff"} onpress={() => navigation.navigate('AdminScreen')} big={true} />
+
+            <View style={{ marginTop: normalize(30) }} >
+                <Submitbutton bg={"#f69632"} text={"Sign up"} txtclr={"#ffffff"} onpress={() => navigation.navigate('VenderScreen')} big={true} />
             </View>
             <View style={{ flexDirection: "row", alignSelf: "center", justifyContent: "center" }} >
                 <View style={{ width: normalize(130), borderBottomWidth: 1, borderColor: "#938C8C" }} />
@@ -64,12 +62,11 @@ function Signup({ navigation }) {
                 <View style={{ width: normalize(130), borderBottomWidth: 1, borderColor: "#938C8C" }} />
             </View>
             <View style={{ marginTop: normalize(25) }}>
-                <Submitbutton bg={"#ffffff"} text={"Log in"} txtclr={"#f69632"} onpress={() => navigation.navigate("Login")} big={true} />
+                <Submitbutton bg={"#ffffff"} text={"Log in"} txtclr={"#f69632"} onpress={() => navigation.navigate("VenderScreen")} big={true} />
             </View>
         </ScrollView>
     )
 }
 export default connect(null, null)(reduxForm({
-    form: 'Signup',
-    enableReinitialize: true
-})(Signup));
+    form: 'VenderSignup',
+})(VenderSignup));

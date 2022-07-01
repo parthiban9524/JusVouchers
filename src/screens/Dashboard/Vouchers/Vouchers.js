@@ -37,12 +37,12 @@ export default function Vouchers({ navigation }) {
 
     }
 
-    useEffect(() => {
-        page === false && (
-            navigation.navigate('HealthForm')
-        )   
-        setpage(true)   
-    })
+    // useEffect(() => {
+    //     page === false && (
+    //         navigation.navigate('HealthForm')
+    //     )   
+    //     setpage(true)   
+    // })
 
 const renderItem = ({ item }) => (
     <View style={{ marginLeft: normalize(20), marginTop: normalize(36), }} >

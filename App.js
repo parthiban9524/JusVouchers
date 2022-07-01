@@ -42,13 +42,15 @@ import Venders from "./src/screens/Admin/Venders/Venders";
 import VendersDetails from "./src/screens/Admin/Venders/VendersDetails";
 import BlogUpload from "./src/screens/Admin/AdminBlog/BlogUpload";
 import AdminBlog from "./src/screens/Admin/AdminBlog/AdminBlog";
-import AdminUpload from "./src/screens/Admin/AdminVoucher/Adminupload";
+import AdminUpload from "./src/screens/Admin/AdminVoucher/AdminUpload";
 import VenderDash from "./src/screens/Vender/VenderDash";
 import VenderSale from "./src/screens/Vender/VenderSale/VenderSale";
 import VenderSaleDetails from "./src/screens/Vender/VenderSale/VenderSaleDetails";
 import Details from "./src/screens/Vender/VenderSale/Details";
 import VenderAddVoucher from "./src/screens/Vender/AdminVoucher/AddVoucher";
 import VenderVoucherUpload from "./src/screens/Vender/AdminVoucher/AdminUpload";
+import VenderSignup from "./src/screens/Setup/VenderSignup";
+import Exclusive from "./src/screens/Dashboard/Menu/Exclusive";
 
 export default function App() {
 
@@ -69,6 +71,8 @@ export default function App() {
         <HomeNavigator.Screen name="Favorites" component={Favorites} />
         <HomeNavigator.Screen name="OrderHistory" component={OrderHistory} />
         <HomeNavigator.Screen name="Profile" component={Profile} />
+        <HomeNavigator.Screen name="Exclusive" component={Exclusive} />
+
       </HomeNavigator.Navigator>
     )
   }
@@ -97,6 +101,7 @@ export default function App() {
         <AuthNavigator.Screen name="ForgotPassword" component={ForgotPassword} />
         <AuthNavigator.Screen name="ResetPassword" component={ResetPassword} />
         <AuthNavigator.Screen name="ContactUs" component={ContactUs} />
+        <AuthNavigator.Screen name="VenderSignup" component={VenderSignup} />
       </AuthNavigator.Navigator>
     )
   }

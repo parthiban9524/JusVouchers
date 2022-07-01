@@ -6,8 +6,8 @@ import { Field, reduxForm } from "redux-form";
 import { normalize, fonts } from "../../../components/Utils";
 import { sale1, left, new_user } from "../../../components/Icons";
 import gym1 from "../../../assest/images/gym1.png"
-import AdminHeader from "../../../components/AdminHeader";
 import Input from "../../../components/Input";
+import VenderHeader from "../../../components/VenderHeader";
 
 const Details = ({ navigation }) => {
 
@@ -15,7 +15,7 @@ const Details = ({ navigation }) => {
 
     return (
         <>
-            <AdminHeader navigation={navigation} />
+            <VenderHeader navigation={navigation} />
             <SafeAreaView style={styles.container}>
                 <TouchableOpacity style={{ marginTop: normalize(20), marginLeft: normalize(20) }} onPress={() => navigation.goBack()} >
                     <Image source={left} style={{ height: normalize(30), width: normalize(30) }} />

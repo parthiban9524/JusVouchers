@@ -4,12 +4,12 @@ import Header from "../../../components/Header";
 import { normalize, fonts } from "../../../components/Utils";
 import { left, ok } from "../../../components/Icons";
 import Submitbutton from "../../../components/Submitbutton";
-import AdminHeader from "../../../components/AdminHeader";
+import VenderHeader from "../../../components/VenderHeader";
 
 export default function VenderVoucherUpload({ navigation }) {
     return (
         <>
-            <AdminHeader navigation={navigation} />
+            <VenderHeader navigation={navigation} />
             <ScrollView style = {{backgroundColor : "#ffffff", flex : 1}} >
             <View>
                 <TouchableOpacity style={{ marginTop: normalize(20), marginLeft: normalize(20) }} onPress={() => navigation.goBack()} >

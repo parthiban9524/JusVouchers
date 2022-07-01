@@ -22,7 +22,7 @@ export default function Profile({ navigation }) {
         <View style={{ flex: 1 }} >
             <View style={{ height: "100%", width: "100%", backgroundColor: "#F9AA44" }} >
                 <View style={{ marginTop: normalize(20), flexDirection: "row", justifyContent: "space-evenly" }} >
-                    <TouchableOpacity onPress={() => navigation.navigate("DashboardNavigation")} >
+                    <TouchableOpacity onPress={() => navigation.goBack()} >
                         <Image source={profile_back} style={{ height: normalize(30), width: normalize(30), right: normalize(40) }} />
                     </TouchableOpacity>
                     <View style={{ height: normalize(90), width: normalize(90), borderRadius: normalize(50), top: normalize(50), borderColor: "#ffffff", borderWidth: 3 }} >

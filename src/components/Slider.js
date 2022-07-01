@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react'
-import { View, Text, Dimensions, Image, TouchableOpacity } from 'react-native'
+import { View, Text, Dimensions, Image, } from 'react-native'
 import Carousel from "react-native-snap-carousel";
 
 import { arrow_left, arrow_right } from './Icon';
@@ -16,11 +16,11 @@ export default function Swiper({ navigation, id = 1, }) {
             <View style={{ alignSelf: "center", marginTop: normalize(40), }}>
                 <Image source={{ uri: item.image }} style={{ height: normalize(150), width: normalize(270), resizeMode: "cover", borderRadius: 10 }} />
                 <View style={{ marginTop: normalize(10), alignSelf: "center", flexDirection: "row", }} >
-                    <View style={{ height: normalize(8), width: normalize(8), backgroundColor: "#F58220", borderRadius: normalize(8) }} />
-                    <View style={{ height: normalize(8), width: normalize(8), backgroundColor: index[1] ? "#F58220" : "#C4C4C4", borderRadius: normalize(8), marginLeft: 5 }} />
-                    <View style={{ height: normalize(8), width: normalize(8), backgroundColor: index[2] ? "#F58220" : "#C4C4C4", borderRadius: normalize(8), marginLeft: 5 }} />
-                    <View style={{ height: normalize(8), width: normalize(8), backgroundColor: index[3] ? "#F58220" : "#C4C4C4", borderRadius: normalize(8), marginLeft: 5 }} />
-                    <View style={{ height: normalize(8), width: normalize(8), backgroundColor: index[4] ? "#F58220" : "#C4C4C4", borderRadius: normalize(8), marginLeft: 5 }} />
+                    <View style={{ height: normalize(8), width: normalize(8), backgroundColor: item.id == 1 ? "#F58220" : "#C4C4C4", borderRadius: normalize(8) }} />
+                    <View style={{ height: normalize(8), width: normalize(8), backgroundColor: item.id == 2 ? "#F58220" : "#C4C4C4", borderRadius: normalize(8), marginLeft: 5 }} />
+                    <View style={{ height: normalize(8), width: normalize(8), backgroundColor: item.id == 3 ? "#F58220" : "#C4C4C4", borderRadius: normalize(8), marginLeft: 5 }} />
+                    <View style={{ height: normalize(8), width: normalize(8), backgroundColor: item.id == 4? "#F58220" : "#C4C4C4", borderRadius: normalize(8), marginLeft: 5 }} />
+                    <View style={{ height: normalize(8), width: normalize(8), backgroundColor: item.id == 5 ? "#F58220" : "#C4C4C4", borderRadius: normalize(8), marginLeft: 5 }} />
                 </View>
             </View>
         )

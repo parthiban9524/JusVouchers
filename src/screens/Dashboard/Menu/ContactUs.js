@@ -1,5 +1,5 @@
 import React from "react";
-import { View, ScrollView, TouchableOpacity, Image } from "react-native";
+import { View, ScrollView,} from "react-native";
 import { connect } from "react-redux";
 import { Field, reduxForm } from "redux-form";
 

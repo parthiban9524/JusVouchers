@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, TextInput, StyleSheet, TouchableOpacity, ScrollView, Image } from "react-native";
+import { View, Text, TextInput, StyleSheet, ScrollView, Image } from "react-native";
 import { Colors } from "react-native/Libraries/NewAppScreen";
 import AdminHeader from "../../../components/AdminHeader";
 import { fonts, normalize } from "../../../components/Utils";

@@ -1,11 +1,12 @@
 import React from "react";
 import { View, Text, TextInput, StyleSheet, Image } from "react-native";
 import { Colors } from "react-native/Libraries/NewAppScreen";
-import AdminHeader from "../../../components/AdminHeader";
+
 import { fonts, normalize } from "../../../components/Utils";
 import Submitbutton from "../../../components/Submitbutton";
 import { FileUploader } from "react-drag-drop-file";
 import { lines } from "../../../components/Icons";
+import VenderHeader from "../../../components/VenderHeader";
 
 const fileTypes = ["JPEG", "PNG", "GIF"];
 
@@ -18,7 +19,7 @@ export default function VenderAddVoucher({ navigation }) {
 
     return (
         <>
-            <AdminHeader navigation={navigation} />
+            <VenderHeader navigation={navigation} />
             <View style={{ flex: 1, backgroundColor: "#ffffff" }} >
                 <View>
                     <Text style={{ fontSize: normalize(20), fontFamily: fonts.montserrat_semibold, alignSelf: 'center', marginTop: normalize(20), color : "#000000" }}>Add Voucher</Text>

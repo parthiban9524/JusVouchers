@@ -35,7 +35,7 @@ export default function Cart({ navigation }) {
                     <View style={{ flexDirection: "row", alignSelf: "center", marginLeft: normalize(60), }}>
                         <Submitbutton exclusive={true} bg={"#FFDCAE99"} text={"Remove"} txtclr={"#3D3C3B"} />
                         <View style={{ left: normalize(30) }} >
-                            <Submitbutton exclusive={true} bg={"#FFDCAE99"} text={"Buy this now"} txtclr={"#3D3C3B"} />
+                            <Submitbutton exclusive={true} bg={"#FFDCAE99"} text={"Buy this now"} txtclr={"#3D3C3B"} onpress = { () =>  navigation.navigate("PaymentType")} />
                         </View>
                     </View>
                 </View>
