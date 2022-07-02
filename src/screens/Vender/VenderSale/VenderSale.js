@@ -3,7 +3,6 @@ import { FlatList, SafeAreaView, StatusBar, StyleSheet, Text, TouchableOpacity, 
 import { normalize, fonts } from "../../../components/Utils";
 import { sale1, rising } from "../../../components/Icons";
 import { left } from "../../../components/Icons";
-import AdminHeader from "../../../components/AdminHeader";
 import VenderHeader from "../../../components/VenderHeader";
 
 const DATA = [
@@ -13,6 +12,7 @@ const DATA = [
         "voucher": [
             {
                 "name": "Aakash",
+                "id" : 1,
                 "email": "mohit@gmail.com",
                 "phone": "7895631245",
                 "address": "axcvbhnmjgfddsfdrsffddettew",
@@ -20,13 +20,15 @@ const DATA = [
             },
             {
                 "name": "Tejas",
+                "id" : 2,
                 "email": "mohit@gmail.com",
                 "phone": "7895631245",
                 "address": "axcvbhnmjgfddsfdrsffddettew",
-                "status": "Completed"
+                "status": "Cancel"
             },
             {
                 "name": "Ronak",
+                "id" : 3,
                 "email": "mohit@gmail.com",
                 "phone": "7895631245",
                 "address": "axcvbhnmjgfddsfdrsffddettew",
@@ -34,13 +36,15 @@ const DATA = [
             },
             {
                 "name": "Sunny",
+                "id" : 4,
                 "email": "mohit@gmail.com",
                 "phone": "7895631245",
                 "address": "axcvbhnmjgfddsfdrsffddettew",
-                "status": "Completed"
+                "status": "Cancel"
             },
             {
                 "name": "Pranay",
+                "id" : 5,
                 "email": "mohit@gmail.com",
                 "phone": "7895631245",
                 "address": "axcvbhnmjgfddsfdrsffddettew",
@@ -55,6 +59,7 @@ const DATA = [
         "voucher": [
             {
                 "name": "Aakash",
+                "id" : 1,
                 "email": "mohit@gmail.com",
                 "phone": "7895631245",
                 "address": "axcvbhnmjgfddsfdrsffddettew",
@@ -62,6 +67,7 @@ const DATA = [
             },
             {
                 "name": "Tejas",
+                "id" : 2,
                 "email": "mohit@gmail.com",
                 "phone": "7895631245",
                 "address": "axcvbhnmjgfddsfdrsffddettew",
@@ -69,6 +75,7 @@ const DATA = [
             },
             {
                 "name": "Ronak",
+                "id" : 3,
                 "email": "mohit@gmail.com",
                 "phone": "7895631245",
                 "address": "axcvbhnmjgfddsfdrsffddettew",
@@ -76,6 +83,7 @@ const DATA = [
             },
             {
                 "name": "Sunny",
+                "id" : 4,
                 "email": "mohit@gmail.com",
                 "phone": "7895631245",
                 "address": "axcvbhnmjgfddsfdrsffddettew",
@@ -83,6 +91,7 @@ const DATA = [
             },
             {
                 "name": "Pranay",
+                "id" : 5,
                 "email": "mohit@gmail.com",
                 "phone": "7895631245",
                 "address": "axcvbhnmjgfddsfdrsffddettew",
@@ -98,22 +107,42 @@ const DATA = [
         "voucher": [
             {
                 "name": "Aakash",
+                "id" : 1,
+                "email": "mohit@gmail.com",
+                "phone": "7895631245",
+                "address": "axcvbhnmjgfddsfdrsffddettew",
                 "status": "Completed"
             },
             {
                 "name": "Tejas",
-                "status": "Completed"
+                "id" : 2,
+                "email": "mohit@gmail.com",
+                "phone": "7895631245",
+                "address": "axcvbhnmjgfddsfdrsffddettew",
+                "status": "Cancel"
             },
             {
                 "name": "Ronak",
+                "id" : 3,
+                "email": "mohit@gmail.com",
+                "phone": "7895631245",
+                "address": "axcvbhnmjgfddsfdrsffddettew",
                 "status": "Completed"
             },
             {
                 "name": "Sunny",
-                "status": "Completed"
+                "id" : 4,
+                "email": "mohit@gmail.com",
+                "phone": "7895631245",
+                "address": "axcvbhnmjgfddsfdrsffddettew",
+                "status": "Cancel"
             },
             {
                 "name": "Pranay",
+                "id" : 5,
+                "email": "mohit@gmail.com",
+                "phone": "7895631245",
+                "address": "axcvbhnmjgfddsfdrsffddettew",
                 "status": "Completed"
             },
         ],
@@ -125,22 +154,42 @@ const DATA = [
         "voucher": [
             {
                 "name": "Aakash",
+                "id" : 1,
+                "email": "mohit@gmail.com",
+                "phone": "7895631245",
+                "address": "axcvbhnmjgfddsfdrsffddettew",
                 "status": "Completed"
             },
             {
                 "name": "Tejas",
-                "status": "Completed"
+                "id" : 2,
+                "email": "mohit@gmail.com",
+                "phone": "7895631245",
+                "address": "axcvbhnmjgfddsfdrsffddettew",
+                "status": "Cancel"
             },
             {
                 "name": "Ronak",
+                "id" : 3,
+                "email": "mohit@gmail.com",
+                "phone": "7895631245",
+                "address": "axcvbhnmjgfddsfdrsffddettew",
                 "status": "Completed"
             },
             {
                 "name": "Sunny",
-                "status": "Completed"
+                "id" : 4,
+                "email": "mohit@gmail.com",
+                "phone": "7895631245",
+                "address": "axcvbhnmjgfddsfdrsffddettew",
+                "status": "Cancel"
             },
             {
                 "name": "Pranay",
+                "id" : 5,
+                "email": "mohit@gmail.com",
+                "phone": "7895631245",
+                "address": "axcvbhnmjgfddsfdrsffddettew",
                 "status": "Completed"
             },
         ],
@@ -152,22 +201,42 @@ const DATA = [
         "voucher": [
             {
                 "name": "Aakash",
+                "id" : 1,
+                "email": "mohit@gmail.com",
+                "phone": "7895631245",
+                "address": "axcvbhnmjgfddsfdrsffddettew",
                 "status": "Completed"
             },
             {
                 "name": "Tejas",
-                "status": "Completed"
+                "id" : 2,
+                "email": "mohit@gmail.com",
+                "phone": "7895631245",
+                "address": "axcvbhnmjgfddsfdrsffddettew",
+                "status": "Cancel"
             },
             {
                 "name": "Ronak",
+                "id" : 3,
+                "email": "mohit@gmail.com",
+                "phone": "7895631245",
+                "address": "axcvbhnmjgfddsfdrsffddettew",
                 "status": "Completed"
             },
             {
                 "name": "Sunny",
-                "status": "Completed"
+                "id" : 4,
+                "email": "mohit@gmail.com",
+                "phone": "7895631245",
+                "address": "axcvbhnmjgfddsfdrsffddettew",
+                "status": "Cancel"
             },
             {
                 "name": "Pranay",
+                "id" : 5,
+                "email": "mohit@gmail.com",
+                "phone": "7895631245",
+                "address": "axcvbhnmjgfddsfdrsffddettew",
                 "status": "Completed"
             },
         ],
@@ -186,7 +255,6 @@ const VenderSale = ({ navigation }) => {
 
     const renderItem = ({ item }) => {
         const backgroundColor = item.id === selectedId ? "#FB8B0766" : null;
-        const color = item.id === selectedId ? 'white' : 'black';
 
         return (
             <TouchableOpacity style={[styles.data_container, { backgroundColor: backgroundColor }]} onPress={() => onDate(item)} >
@@ -210,7 +278,7 @@ const VenderSale = ({ navigation }) => {
                     </TouchableOpacity>
                     <Text style={{ fontFamily: fonts.montserrat_bold, fontSize: normalize(22), fontWeight: 'bold', marginLeft: normalize(120), marginTop: normalize(20), color: "#000000" }}>Sales</Text>
                 </View>
-                <TouchableOpacity style={{ borderRadius: normalize(20), backgroundColor: '#FFDCAE99', width: normalize(340), height: normalize(83), alignSelf: "center", marginTop: normalize(15) }} onPress={() => navigation.navigate("SalesDetails")} >
+                <View style={{ borderRadius: normalize(20), backgroundColor: '#FFDCAE99', width: normalize(340), height: normalize(83), alignSelf: "center", marginTop: normalize(15) }} onPress={() => navigation.navigate("SalesDetails")} >
                     <View style={{ flexDirection: "row", alignSelf: "center", marginTop: normalize(15) }}>
                         <Image source={sale1} style={{ height: normalize(50), width: normalize(50), resizeMode: "contain", alignSelf: "center", marginLeft: normalize(8), marginTop: 5 }} />
                         <Text style={{ fontSize: normalize(18), fontWeight: '500', marginLeft: 10, marginTop: 10, color: "#000000" }}  >Total Revenue <Text style={{ fontSize: normalize(17), fontWeight: '500', marginLeft: 3, color: '#08D635', fontWeight: '800', fontFamily: fonts.montserrat_regular }}>₹6,45,960.00</Text></Text>
@@ -219,7 +287,7 @@ const VenderSale = ({ navigation }) => {
                             <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(16), color: "#08D635", top: normalize(20) }} >5.6%</Text>
                         </View>
                     </View>
-                </TouchableOpacity>
+                </View>
                 <View style={{ width: normalize(340), borderRadius: normalize(10), backgroundColor: "#D0E3FFB0", marginVertical: normalize(20), alignSelf: "center" }}>
                     <View style={{ flexDirection: "row", justifyContent: "space-around", marginTop: normalize(20), marginLeft: normalize(20) }}>
                         <Text style={styles.data_text}>Date</Text>

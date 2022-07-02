@@ -20,12 +20,12 @@ const Details = ({ navigation }) => {
                 <TouchableOpacity style={{ marginTop: normalize(20), marginLeft: normalize(20) }} onPress={() => navigation.goBack()} >
                     <Image source={left} style={{ height: normalize(30), width: normalize(30) }} />
                 </TouchableOpacity>
-                <TouchableOpacity style={{ borderRadius: 20, backgroundColor: '#FFDCAE99', width: normalize(300), height: normalize(83), marginTop: normalize(20), alignSelf: "center", justifyContent: "center" }} onPress={() => navigation.navigate("SalesDetails")} >
+                <View style={{ borderRadius: 20, backgroundColor: '#FFDCAE99', width: normalize(300), height: normalize(83), marginTop: normalize(20), alignSelf: "center", justifyContent: "center" }} >
                     <View style={{ flexDirection: "row", alignSelf: "center" }}>
                         <Image source={new_user} style={{ height: normalize(50), width: normalize(50), resizeMode: "contain",left : normalize(20) }} />
                         <Text style={{ fontSize: normalize(18), fontWeight: '500', marginHorizontal: normalize(50), marginTop: 10, textAlign : "center" }}  >Pranay has’t Purchese anything yet. </Text>
                     </View>
-                </TouchableOpacity>
+                </View>
                 <View>
                     <Text style={{ fontFamily: fonts.montserrat_semibold, fontSize: normalize(18), color: "#348847", alignSelf: "center", marginTop: normalize(20) }} >02 June 2022 Wednesday</Text>
                 </View>

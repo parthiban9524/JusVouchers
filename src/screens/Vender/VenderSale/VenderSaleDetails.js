@@ -10,10 +10,18 @@ const VenderSaleDetails = ({ navigation }) => {
     const [selectedId, setSelectedId] = useState(null);
     const DATA = navigation.getState().routes[2].params.data.voucher
 
+    const onDate = (data) => {
+        setSelectedId(data.id);
+        navigation.navigate("Details", { data: data })
+    }
+
     const renderItem = ({ item }) => {
-        console.log("item", item)
+
+        const backgroundColor = item.id === selectedId ? "#FB8B0766" : null;
+        const color = item.id === selectedId ? 'white' : 'black';
+
         return (
-            <TouchableOpacity style={[styles.data_container]} onPress={() => navigation.navigate("Details", { data: item })} >
+            <TouchableOpacity style={[styles.data_container,{backgroundColor : backgroundColor}]} onPress={() => onDate(item)} >
                 <View style={{ justifyContent: "center", marginLeft: normalize(40) }}>
                     <Text style={styles.data_text}>{item.name}</Text>
                 </View>
@@ -31,7 +39,7 @@ const VenderSaleDetails = ({ navigation }) => {
                 <TouchableOpacity style={{ marginTop: normalize(20), marginLeft: normalize(20) }} onPress={() => navigation.goBack()} >
                     <Image source={left} style={{ height: normalize(30), width: normalize(30) }} />
                 </TouchableOpacity>
-                <TouchableOpacity style={{ borderRadius: 20, backgroundColor: '#FFDCAE99', width: normalize(340), height: normalize(83), marginTop: normalize(20), alignSelf: "center", justifyContent: "center" }} onPress={() => navigation.navigate("SalesDetails")} >
+                <View style={{ borderRadius: 20, backgroundColor: '#FFDCAE99', width: normalize(340), height: normalize(83), marginTop: normalize(20), alignSelf: "center", justifyContent: "center" }} onPress={() => navigation.navigate("SalesDetails")} >
                     <View style={{ flexDirection: "row", alignSelf: "center" }}>
                         <Image source={sale1} style={{ height: normalize(50), width: normalize(50), resizeMode: "contain", }} />
                         <Text style={{ fontSize: normalize(18), fontWeight: '500', marginLeft: 25, marginTop: 10 }}  >Today Sale</Text>
@@ -41,7 +49,7 @@ const VenderSaleDetails = ({ navigation }) => {
                             <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(16), color: "#08D635", top: normalize(20) }} >5.6%</Text>
                         </View>
                     </View>
-                </TouchableOpacity>
+                </View>
                 <View style={{}}>
                     <Text style={{ fontFamily: fonts.montserrat_semibold, fontSize: normalize(18), color: "#348847", alignSelf: "center", marginTop: normalize(20) }} >02 June 2022 Wednesday</Text>
                 </View>
@@ -55,7 +63,7 @@ const VenderSaleDetails = ({ navigation }) => {
                         data={DATA}
                         renderItem={renderItem}
                         keyExtractor={(item) => item.id}
-
+                        extraData={selectedId}
                     />
                 </View>
             </SafeAreaView>
@@ -81,6 +89,8 @@ const styles = StyleSheet.create({
         justifyContent: "space-between",
         marginVertical: normalize(10),
         width: normalize(320),
+        borderRadius: normalize(25),
+        alignSelf : "center"
     },
     data_text: {
         fontFamily: fonts.montserrat_semibold,

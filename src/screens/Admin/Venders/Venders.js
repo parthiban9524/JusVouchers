@@ -103,7 +103,7 @@ const Venders = ({ navigation }) => {
                     </TouchableOpacity>
                     <Text style={{ fontFamily: fonts.montserrat_bold, fontSize: normalize(22), fontWeight: 'bold', marginLeft: normalize(100), marginTop: normalize(20) }}>Venders</Text>
                 </View>
-                <TouchableOpacity style={{ borderRadius: normalize(20), backgroundColor: '#FFDCAE99', width: normalize(340), height: normalize(83), alignSelf: "center", marginTop: normalize(15) }} onPress={() => navigation.navigate("SalesDetails")} >
+                <View style={{ borderRadius: normalize(20), backgroundColor: '#FFDCAE99', width: normalize(340), height: normalize(83), alignSelf: "center", marginTop: normalize(15) }} onPress={() => navigation.navigate("SalesDetails")} >
                     <View style={{ flexDirection: "row", alignSelf: "center", marginTop: normalize(15) }}>
                         <Image source={leader} style={{ height: normalize(50), width: normalize(50), resizeMode: "contain", alignSelf: "center", marginLeft: normalize(8), marginTop: 5 }} />
                         <View>
@@ -115,7 +115,7 @@ const Venders = ({ navigation }) => {
                             <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(16), color: "#08D635", alignSelf: "center", top: 10, right: 10 }} >2.6%</Text>
                         </View>
                     </View>
-                </TouchableOpacity>
+                </View>
                 <View style={{ width: normalize(340), borderRadius: normalize(10), backgroundColor: "#D0E3FFB0", marginVertical: normalize(20), alignSelf: "center" }}>
                     <View style={{ flexDirection: "row", justifyContent: "space-around", marginTop: normalize(20), }}>
                         <Text style={styles.data_text}>Name</Text>
