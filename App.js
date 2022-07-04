@@ -66,6 +66,7 @@ export default function App() {
   const VouchersNavigator = createStackNavigator();
   const AdminNavigator = createStackNavigator();
   const VenderNavigator = createStackNavigator();
+  const SalesNavigator = createStackNavigator();
 
 
   function HomeScreen() {
@@ -140,6 +141,18 @@ export default function App() {
         <VenderNavigator.Screen name="VenderAddVoucher" component={VenderAddVoucher} />
         <VenderNavigator.Screen name="VenderVoucherUpload" component={VenderVoucherUpload} />
       </VenderNavigator.Navigator>
+
+    )
+  }
+
+  function SalesScreen() {
+    return (
+      <SalesNavigator.Navigator initialRouteName="SalePerson" screenOptions={{ headerShown: false }} >
+        <SalesNavigator.Screen name="SalePerson" component={Saleperson} />
+        <SalesNavigator.Screen name="TodaySale" component={TodaySale}/>
+        <SalesNavigator.Screen name="TodayTargetDetails" component={TodayTargetDetails}/>
+        <SalesNavigator.Screen name="CustomerForm" component={CustomerForm}/>
+         </SalesNavigator.Navigator>
 
     )
   }
@@ -232,14 +245,15 @@ export default function App() {
   return (
     <NavigationContainer>
       <Provider store={Store}>
-        {/* <Stack.Navigator initialRouteName="AuthScreen" screenOptions={{ headerShown: false }} >
+        {/* <Stack.Navigator initialRouteName="SalePerson" screenOptions={{ headerShown: false }} >
           <Stack.Screen name="AuthScreen" component={AuthScreen} />
           <Stack.Screen name="DashboardNavigation" component={DashboardNavigation} />
           <Stack.Screen name="Profile" component={Profile} />
           <Stack.Screen name="AdminScreen" component={AdminScreen} />
           <Stack.Screen name="VenderScreen" component={VenderScreen} />
+          <Stack.Screen name="SalePerson" component={Saleperson} />
         </Stack.Navigator> */}
-        {/* <Saleperson/> */}
+        <Saleperson/>
         {/* <CustomerForm/> */}
         {/* <TodaySale/> */}
         <TodayTargetDetails/>

@@ -9,7 +9,7 @@ import Input from "../../components/Input";
 import Submitbutton from "../../components/Submitbutton"
 import SalesHeader from "../../components/SalesHeader"
 
-function Signup({ navigation }) {
+function CustomerForm({ navigation }) {
     return (
 
         <ScrollView style={{ flex: 1, backgroundColor: "#ffffff" }} >
@@ -55,6 +55,6 @@ function Signup({ navigation }) {
     )
 }
 export default connect(null, null)(reduxForm({
-    form: 'Signup',
+    form: 'CustomerForm',
     enableReinitialize: true
-})(Signup));
+})(CustomerForm));
