@@ -55,6 +55,8 @@ import Exclusive from "./src/screens/Dashboard/Menu/Exclusive";
 
 import Saleperson from "./src/screens/SalesPerson/saleperson";
 import CustomerForm from "./src/screens/SalesPerson/CustomerForm";
+import TodaySale from "./src/screens/SalesPerson/TodaySale";
+import TodayTargetDetails from "./src/screens/SalesPerson/TodayTargetDetails";
 
 export default function App() {
 
@@ -237,8 +239,10 @@ export default function App() {
           <Stack.Screen name="AdminScreen" component={AdminScreen} />
           <Stack.Screen name="VenderScreen" component={VenderScreen} />
         </Stack.Navigator> */}
-        <Saleperson/>
+        {/* <Saleperson/> */}
         {/* <CustomerForm/> */}
+        {/* <TodaySale/> */}
+        <TodayTargetDetails/>
       </Provider>
     </NavigationContainer>
   )

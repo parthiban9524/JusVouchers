@@ -1,11 +1,8 @@
 import React from "react";
 import { View, Text, TouchableOpacity, Image, ScrollView } from "react-native"
 
-import VenderHeader from "../../components/VenderHeader";
 import { normalize, fonts } from "../../components/Utils";
 import { sale1, rising, order_cancel } from "../../components/Icons";
-import GraphSales from "../../components/GraphSales";
-import GraphOrderCancel from "../../components/GraphOrderCancel";
 import SalesHeader from "../../components/SalesHeader";
 
 export default function Saleperson({ navigation }) {
