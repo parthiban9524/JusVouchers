@@ -92,7 +92,7 @@ const styles = StyleSheet.create({
     input_two: {
         height: normalize(275),
         width: normalize(270),
-        elevation: 5,
+        elevation: 3,
         backgroundColor: "#ffffff",
         borderRadius: normalize(18),
         alignSelf : "center",

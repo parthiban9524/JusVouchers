@@ -14,8 +14,8 @@ export default function Blog({navigation}) {
             </View>
             <View>
                 <View style={{ marginTop: normalize(15), backgroundColor: "#F9AA44", flexDirection: 'row', alignItems: "stretch", borderRadius: normalize(10), marginLeft: 14, marginRight: 14 }} >
-                    <Image source={logo} style={{ height: normalize(100), width: normalize(150), resizeMode: "contain", marginLeft: 10 }} />
-                    <View><Image source={card} style={{ height: normalize(100), width: normalize(150), resizeMode: "contain", marginleft: 80 }} />
+                    <Image source={logo} style={{ height: normalize(100), width: normalize(150), resizeMode: "contain", marginLeft: 20 }} />
+                    <View style={{marginLeft:25}}><Image source={card} style={{ height: normalize(100), width: normalize(150), resizeMode: "contain" }} />
                     </View>
                 </View>
             </View>

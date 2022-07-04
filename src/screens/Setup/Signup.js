@@ -16,7 +16,7 @@ function Signup({ navigation }) {
             <View style={{}}>
             <WavyHeader firstTxt={"Create"} secTxt={"Account"} navigation={navigation} />
             </View>
-            <View style={{ marginTop: normalize(60) }} >
+            <View style={{ marginTop: normalize(50) }} >
                 <Field
                     label="Full Name"
                     name="Full name"
@@ -52,18 +52,18 @@ function Signup({ navigation }) {
                     id={1}
                 />
             </View>
-            <View style = {{marginTop : normalize(20), marginLeft : normalize(30)}}>
+            <View style = {{marginTop : normalize(5), marginLeft : normalize(30)}}>
                 <Text style = {{fontFamily : fonts.lato_regular, fontSize : normalize(18)}} >Register as Vender <Text style = {{color : "#F58220", textDecorationLine : "underline"}} onPress = {() => navigation.navigate("VenderSignup")} > click here</Text> </Text>
             </View>
-            <View style={{ marginTop: normalize(20) }} >
+            <View style={{ marginTop: normalize(12) }} >
                 <Submitbutton bg={"#f69632"} text={"Sign up"} txtclr={"#ffffff"} onpress={() => navigation.navigate('AdminScreen')} big={true} />
             </View>
             <View style={{ flexDirection: "row", alignSelf: "center", justifyContent: "center" }} >
                 <View style={{ width: normalize(130), borderBottomWidth: 1, borderColor: "#938C8C" }} />
-                <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(20), top: 10 }}> or </Text>
+                <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(18), top:8}}> or </Text>
                 <View style={{ width: normalize(130), borderBottomWidth: 1, borderColor: "#938C8C" }} />
             </View>
-            <View style={{ marginTop: normalize(25) }}>
+            <View style={{ marginTop: normalize(13) }}>
                 <Submitbutton bg={"#ffffff"} text={"Log in"} txtclr={"#f69632"} onpress={() => navigation.navigate("Login")} big={true} />
             </View>
         </ScrollView>

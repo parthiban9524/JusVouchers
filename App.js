@@ -42,7 +42,7 @@ import Venders from "./src/screens/Admin/Venders/Venders";
 import VendersDetails from "./src/screens/Admin/Venders/VendersDetails";
 import BlogUpload from "./src/screens/Admin/AdminBlog/BlogUpload";
 import AdminBlog from "./src/screens/Admin/AdminBlog/AdminBlog";
-import AdminUpload from "./src/screens/Admin/AdminVoucher/AdminUpload";
+import AdminUpload from "./src/screens/Admin/AdminVoucher/Adminupload";
 import VenderDash from "./src/screens/Vender/VenderDash";
 import VenderSale from "./src/screens/Vender/VenderSale/VenderSale";
 import VenderSaleDetails from "./src/screens/Vender/VenderSale/VenderSaleDetails";
@@ -51,6 +51,10 @@ import VenderAddVoucher from "./src/screens/Vender/AdminVoucher/AddVoucher";
 import VenderVoucherUpload from "./src/screens/Vender/AdminVoucher/AdminUpload";
 import VenderSignup from "./src/screens/Setup/VenderSignup";
 import Exclusive from "./src/screens/Dashboard/Menu/Exclusive";
+
+
+import Saleperson from "./src/screens/SalesPerson/saleperson";
+import CustomerForm from "./src/screens/SalesPerson/CustomerForm";
 
 export default function App() {
 
@@ -226,13 +230,15 @@ export default function App() {
   return (
     <NavigationContainer>
       <Provider store={Store}>
-        <Stack.Navigator initialRouteName="AuthScreen" screenOptions={{ headerShown: false }} >
+        {/* <Stack.Navigator initialRouteName="AuthScreen" screenOptions={{ headerShown: false }} >
           <Stack.Screen name="AuthScreen" component={AuthScreen} />
           <Stack.Screen name="DashboardNavigation" component={DashboardNavigation} />
           <Stack.Screen name="Profile" component={Profile} />
           <Stack.Screen name="AdminScreen" component={AdminScreen} />
           <Stack.Screen name="VenderScreen" component={VenderScreen} />
-        </Stack.Navigator>
+        </Stack.Navigator> */}
+        {/* <Saleperson/> */}
+        <CustomerForm/>
       </Provider>
     </NavigationContainer>
   )

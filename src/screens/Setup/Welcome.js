@@ -18,10 +18,10 @@ export default function Welcome({ navigation }) {
           <Text style={{ fontSize: normalize(28), fontFamily: fonts.lato_regular, alignSelf: "center" }} >Huge <Text style={{ color: "#F58220" }} >Discounts</Text><Text> on</Text></Text>
           <Text style={{ fontSize: normalize(28), fontFamily: fonts.lato_regular, alignSelf: "center" }} >Everything</Text>
         </View>
-        <View style={{ marginTop: normalize(180) }} >
+        <View style={{ marginTop: normalize(179) }} >
           <Submitbutton bg={"#f69632"} text={"Log in"} big={true} txtclr={"#ffffff"} onpress={() => navigation.navigate("Login")}/>
         </View>
-        <View style={{ marginTop: normalize(20) }} >
+        <View style={{ marginTop: normalize(22) }} >
           <Submitbutton bg={"#ffffff"} text={"Sign up"} big={true} txtclr={"#f69632"} onpress={() => navigation.navigate("Signup")} />
         </View>
       </View>

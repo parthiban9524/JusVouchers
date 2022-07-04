@@ -16,7 +16,7 @@ function VenderSignup({ navigation }) {
             <View style={{}}>
             <WavyHeader firstTxt={"Vender"} secTxt={"Account"} navigation={navigation} />
             </View>
-            <View style={{ marginTop: normalize(60) }} >
+            <View style={{ marginTop: normalize(50) }} >
                 <Field
                     label="Full Name"
                     name="Full name"
@@ -53,7 +53,7 @@ function VenderSignup({ navigation }) {
                 />
             </View>
 
-            <View style={{ marginTop: normalize(30) }} >
+            <View style={{ marginTop: normalize(15) }} >
                 <Submitbutton bg={"#f69632"} text={"Sign up"} txtclr={"#ffffff"} onpress={() => navigation.navigate('VenderScreen')} big={true} />
             </View>
             <View style={{ flexDirection: "row", alignSelf: "center", justifyContent: "center" }} >
@@ -61,7 +61,7 @@ function VenderSignup({ navigation }) {
                 <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(20), top: 10 }}> or </Text>
                 <View style={{ width: normalize(130), borderBottomWidth: 1, borderColor: "#938C8C" }} />
             </View>
-            <View style={{ marginTop: normalize(25) }}>
+            <View style={{ marginTop: normalize(21) }}>
                 <Submitbutton bg={"#ffffff"} text={"Log in"} txtclr={"#f69632"} onpress={() => navigation.navigate("VenderScreen")} big={true} />
             </View>
         </ScrollView>

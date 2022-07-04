@@ -15,7 +15,7 @@ function Login({ navigation, handleSubmit }) {
     return (
         <View style={{ flex: 1, backgroundColor: "#ffffff" }} >
             <WavyHeader navigation={navigation} />
-            <View style={{ marginTop: normalize(100) }} >
+            <View style={{ marginTop: normalize(75) }} >
                 <Field
                     label="Email"
                     name="email"
