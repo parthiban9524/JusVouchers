@@ -6,6 +6,7 @@ import { left } from "../../components/Icons";
 import { fonts, normalize } from "../../components/Utils";
 import gym1 from "../../assest/images/gym1.png"
 import Submitbutton from "../../components/Submitbutton";
+import Quantity from "../../components/Quantity";
 
 export default function Cart({ navigation }) {
     return (
@@ -20,7 +21,7 @@ export default function Cart({ navigation }) {
                         <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(20), fontWeight: "600", }}>My Cart</Text>
                     </View>
                 </View>
-                <View style={{ height: normalize(110), width: normalize(330), backgroundColor: "#D0E3FFB0", alignSelf: "center", marginTop: normalize(20) }}>
+                <View style={{ height: normalize(120), width: normalize(330), backgroundColor: "#D0E3FFB0", alignSelf: "center", marginTop: normalize(20) }}>
                     <View style={{ flexDirection: "row", marginTop: normalize(20), marginLeft: normalize(15) }}>
                         <Image source={gym1} style={{ height: normalize(50), width: normalize(90) }} />
                         <View style={{ marginLeft: normalize(15) }} >
@@ -29,8 +30,9 @@ export default function Cart({ navigation }) {
                         </View>
                     </View>
                     <View style={{ flexDirection: "row", alignSelf: "center", marginLeft: normalize(35), bottom: normalize(15) }}>
-                        <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(12), }} >Quantity : 1</Text>
-                        <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(12), left: normalize(50) }} >₹799/-  40% off</Text>
+                        <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(12),top : 10, marginLeft : normalize(45) }} >Quantity :</Text>
+                        <Quantity/>
+                        <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(12), left : normalize(25), top : 10 }} >₹799/-  40% off</Text>
                     </View>
                     <View style={{ flexDirection: "row", alignSelf: "center", marginLeft: normalize(60), }}>
                         <Submitbutton exclusive={true} bg={"#FFDCAE99"} text={"Remove"} txtclr={"#3D3C3B"} />

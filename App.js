@@ -237,8 +237,8 @@ export default function App() {
           <Stack.Screen name="AdminScreen" component={AdminScreen} />
           <Stack.Screen name="VenderScreen" component={VenderScreen} />
         </Stack.Navigator> */}
-        {/* <Saleperson/> */}
-        <CustomerForm/>
+        <Saleperson/>
+        {/* <CustomerForm/> */}
       </Provider>
     </NavigationContainer>
   )

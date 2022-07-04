@@ -69,7 +69,8 @@ import admin_user from "../assest/images/admin_user.png"
 import vendor from "../assest/images/vendor.png"
 import lines from "../assest/images/lines.png"
 import customer from "../assest/images/Customer.png"
-
+import down from "../assest/images/down.png"
+import up from "../assest/images/up.png"
 
 export {
     logo,
@@ -142,5 +143,7 @@ export {
     admin_user,
     vendor,
     lines,
-    customer
+    customer,
+    down,
+    up
 }

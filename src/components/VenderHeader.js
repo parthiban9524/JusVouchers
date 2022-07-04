@@ -19,7 +19,7 @@ export default function VenderHeader({ navigation }) {
     }
 
     const onVender = () => {
-        navigation.navigate("Venders")
+        navigation.navigate("VenderSale")
         setselect(true)
     }
 
