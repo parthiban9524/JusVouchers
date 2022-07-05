@@ -245,18 +245,18 @@ export default function App() {
   return (
     <NavigationContainer>
       <Provider store={Store}>
-        {/* <Stack.Navigator initialRouteName="SalePerson" screenOptions={{ headerShown: false }} >
+        <Stack.Navigator initialRouteName="SalePerson" screenOptions={{ headerShown: false }} >
           <Stack.Screen name="AuthScreen" component={AuthScreen} />
           <Stack.Screen name="DashboardNavigation" component={DashboardNavigation} />
           <Stack.Screen name="Profile" component={Profile} />
           <Stack.Screen name="AdminScreen" component={AdminScreen} />
           <Stack.Screen name="VenderScreen" component={VenderScreen} />
           <Stack.Screen name="SalePerson" component={Saleperson} />
-        </Stack.Navigator> */}
-        <Saleperson/>
+        </Stack.Navigator>
+        {/* <Saleperson/> */}
         {/* <CustomerForm/> */}
         {/* <TodaySale/> */}
-        <TodayTargetDetails/>
+        {/* <TodayTargetDetails/> */}
       </Provider>
     </NavigationContainer>
   )

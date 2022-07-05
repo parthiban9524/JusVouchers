@@ -5,6 +5,7 @@ import { normalize, fonts } from "../../components/Utils";
 import { sale1, rising, order_cancel } from "../../components/Icons";
 import SalesHeader from "../../components/SalesHeader";
 
+
 export default function Saleperson({ navigation }) {
     return (
         <>
@@ -16,7 +17,7 @@ export default function Saleperson({ navigation }) {
                 <View style={{ marginLeft: 20 }} >
                     <Text style={{ fontSize: normalize(19), fontWeight: 'bold', color: '#348847' }}>15 June 2022 Wednesday</Text>
                 </View>
-                <TouchableOpacity style={{ borderRadius: 20, backgroundColor: '#FFDCAE99', width: normalize(340), height: normalize(83), marginTop: normalize(20), alignSelf: "center", justifyContent: "center" }} onPress={() => navigation.navigate("VenderSale")} >
+                <TouchableOpacity style={{ borderRadius: 20, backgroundColor: '#FFDCAE99', width: normalize(340), height: normalize(83), marginTop: normalize(20), alignSelf: "center", justifyContent: "center" }} onPress={() => navigation.navigate("TodaySale")} >
                     <View style={{ flexDirection: "row", alignSelf: "center" }}>
                         <Image source={sale1} style={{ height: normalize(50), width: normalize(50), resizeMode: "contain", }} />
                         <Text style={{ fontSize: normalize(20), fontWeight: '500', marginLeft: 25, marginTop: 10 }}  >Total Target</Text>

@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import { Field, reduxForm } from "redux-form";
 
 import { fonts, normalize } from "../../components/Utils";
-import { lock, mail, phone, user } from "../../components/Icons"
+import { admin_voucher, home, lock, mail, phone, user, vendor, voucher } from "../../components/Icons"
 import Input from "../../components/Input";
 import Submitbutton from "../../components/Submitbutton"
 import SalesHeader from "../../components/SalesHeader"
@@ -18,7 +18,7 @@ function CustomerForm({ navigation }) {
             <View style={{ margin: 20,alignSelf:'center' }} >
                 <Text style={{ fontSize: normalize(22), fontWeight: 'bold', color: "#000000" }}>Get Customer Details</Text>
             </View>
-            <View style={{ marginTop: normalize(60) }} >
+            <View style={{ marginTop: normalize(25) }} >
                 <Field
                     label="Customer Full Name"
                     name="Full name"
@@ -46,8 +46,35 @@ function CustomerForm({ navigation }) {
                     id={1}
                 />
             </View>
+            <View  >
+                <Field
+                    label="Address"
+                    name="Address"
+                    component={Input}
+                    img={vendor}
+                    id={1}
+                />
+            </View>
 
-            <View style={{ marginTop: normalize(12) }} >
+            <View  >
+                <Field
+                    label="Voucher Name"
+                    name="VName"
+                    component={Input}
+                    img={admin_voucher}
+                    id={1}
+                />
+            </View>
+            <View  >
+                <Field
+                    label="Voucher Price"
+                    name="VPrice"
+                    component={Input}
+                    img={admin_voucher}
+                    id={1}
+                />
+            </View>
+            <View style={{ marginTop: normalize(13) }} >
                 <Submitbutton bg={"#f69632"} text={"Submit"} txtclr={"#ffffff"} onpress={() => alert("Form Submit")} big={true} />
             </View>
 

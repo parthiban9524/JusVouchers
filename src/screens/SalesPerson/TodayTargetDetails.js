@@ -9,8 +9,8 @@ import TodaySale from "./TodaySale";
 const TodayTargetDetails = ({ navigation }) => {
 
   const [selectedId, setSelectedId] = useState(null);
-  const DATA = navigation.getState().routes[2].params.data.voucher
-  const total = navigation.getState().routes[2].params.data.Sale
+  // const DATA = navigation.getState().routes[2].params.data.voucher
+  // const total = navigation.getState().routes[2].params.data.Sale
 
 
 
@@ -55,16 +55,16 @@ const TodayTargetDetails = ({ navigation }) => {
             <Text style={{ fontFamily: fonts.montserrat_semibold, fontSize: normalize(16), color: "#000000" }}>Sales Details</Text>
           </View>
           <View style={{ width: normalize(340), borderColor: "#797877", borderBottomWidth: 1.2, alignSelf: "center", marginTop: normalize(10) }} />
-          <FlatList
+          {/* <FlatList
             data={DATA}
             renderItem={renderItem}
             keyExtractor={(item) => item.id}
             
-          />
+          /> */}
           <View style={{ width: normalize(340), borderColor: "#348847", borderBottomWidth: 1.2, alignSelf: "center",  }} />
           <View style = {{flexDirection : "row", justifyContent : "space-between",marginVertical : normalize(15)}}>
-<Text style = {[styles.data_text,{color : "#348847",marginLeft : normalize(40)}]} >Total Sale</Text>
-<Text style = {[styles.data_text,{color : "#348847", marginRight : normalize(55)}]}  >{total}</Text>
+{/* <Text style = {[styles.data_text,{color : "#348847",marginLeft : normalize(40)}]} >Total Sale</Text>
+<Text style = {[styles.data_text,{color : "#348847", marginRight : normalize(55)}]}  >{total}</Text> */}
 
           </View>
 
