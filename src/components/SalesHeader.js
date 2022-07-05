@@ -18,8 +18,8 @@ export default function SalesHeader({ navigation }) {
         setsidemenu(false)
     }
 
-    const onVender = () => {
-        navigation.navigate("CustomerForm")
+    const onCustomer = () => {
+        navigation.navigate("CustomerInfo")
         setselect(true)
     }
 
@@ -61,7 +61,7 @@ export default function SalesHeader({ navigation }) {
                                     <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(15), color: "#3D3C3B", fontWeight: "700", marginLeft: normalize(30), top: 2 }} >Dashboard</Text>
                                 </View>
                             </TouchableOpacity>
-                            <TouchableOpacity style={{height: normalize(30), width: normalize(180),backgroundColor: select ? "rgba(245, 130, 32, 0.39)" : null, borderRadius : normalize(20), marginLeft: normalize(30), marginTop: normalize(25), justifyContent: "center" }} onPress = {onVender } >
+                            <TouchableOpacity style={{height: normalize(30), width: normalize(180),backgroundColor: select ? "rgba(245, 130, 32, 0.39)" : null, borderRadius : normalize(20), marginLeft: normalize(30), marginTop: normalize(25), justifyContent: "center" }} onPress = {onCustomer } >
                                 <View style={{ flexDirection: "row", }} >
                                     <Image source={man} style={{ height: normalize(25), width: normalize(25), resizeMode: 'contain', left: normalize(25),}} />
                                     <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(15), color: "#3D3C3B", fontWeight: "700", marginLeft: normalize(30), top: 2 }} >Customer info View</Text>

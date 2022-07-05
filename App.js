@@ -56,6 +56,7 @@ import CustomerForm from "./src/screens/SalesPerson/CustomerForm";
 import TodaySale from "./src/screens/SalesPerson/TodaySale";
 import TodayTargetDetails from "./src/screens/SalesPerson/TodayTargetDetails";
 import SalesPersonSignup from "./src/screens/Setup/SalesPersonSignup";
+import CustomerInfo from "./src/screens/SalesPerson/CustomerInfo";
 import Approve from "./src/screens/Vender/Approve";
 
 export default function App() {
@@ -153,6 +154,7 @@ export default function App() {
         <SalesNavigator.Screen name="TodaySale" component={TodaySale} />
         <SalesNavigator.Screen name="TodayTargetDetails" component={TodayTargetDetails} />
         <SalesNavigator.Screen name="CustomerForm" component={CustomerForm} />
+        <SalesNavigator.Screen name="CustomerInfo" component={CustomerInfo} />
       </SalesNavigator.Navigator>
 
     )
@@ -252,11 +254,6 @@ export default function App() {
           <Stack.Screen name="Profile" component={Profile} />
           <Stack.Screen name="AdminScreen" component={AdminScreen} />
           <Stack.Screen name="VenderScreen" component={VenderScreen} />
-         
-        {/* <Saleperson/> */}
-        {/* <CustomerForm/> */}
-        {/* <TodaySale/> */}
-        {/* <TodayTargetDetails/> */}
           <Stack.Screen name="SalesScreen" component={SalesScreen} />
         </Stack.Navigator>
       </Provider>

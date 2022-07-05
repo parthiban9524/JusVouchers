@@ -1,10 +1,10 @@
 import React from "react";
-import { View, Text, StatusBar, ScrollView } from "react-native";
+import { View, Text, StatusBar, ScrollView,TouchableOpacity,Image} from "react-native";
 import { connect } from "react-redux";
 import { Field, reduxForm } from "redux-form";
 
 import { fonts, normalize } from "../../components/Utils";
-import { admin_voucher, home, lock, mail, phone, user, vendor, voucher } from "../../components/Icons"
+import { admin_voucher, home, lock, mail, phone, user, vendor, left } from "../../components/Icons"
 import Input from "../../components/Input";
 import Submitbutton from "../../components/Submitbutton"
 import SalesHeader from "../../components/SalesHeader"
@@ -15,7 +15,11 @@ function CustomerForm({ navigation }) {
         <ScrollView style={{ flex: 1, backgroundColor: "#ffffff" }} >
             <StatusBar backgroundColor={"#F9AA44"} translucent={false} />
             <SalesHeader navigation={navigation} />
-            <View style={{ margin: 20,alignSelf:'center' }} >
+            <TouchableOpacity style={{ marginTop: normalize(20),marginLeft:normalize(20) }} onPress={() => navigation.goBack()} >
+            <Image source={left} style={{ height: normalize(30), width: normalize(30) }} />
+          </TouchableOpacity>
+            <View style={{alignSelf:'center' }} >
+          
                 <Text style={{ fontSize: normalize(22), fontWeight: 'bold', color: "#000000" }}>Get Customer Details</Text>
             </View>
             <View style={{ marginTop: normalize(25) }} >

@@ -36,7 +36,7 @@ const DATA = [
         "price": "25/-",
       },
     ],
-    Sale: '24',
+    Sale: '33',
 
   },
   {

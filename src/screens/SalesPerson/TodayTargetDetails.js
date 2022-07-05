@@ -9,8 +9,8 @@ import TodaySale from "./TodaySale";
 const TodayTargetDetails = ({ navigation }) => {
 
   const [selectedId, setSelectedId] = useState(null);
-  // const DATA = navigation.getState().routes[2].params.data.voucher
-  // const total = navigation.getState().routes[2].params.data.Sale
+  const DATA = navigation.getState().routes[2].params.data.voucher
+  const total = navigation.getState().routes[2].params.data.Sale
 
 
 
@@ -39,9 +39,9 @@ const TodayTargetDetails = ({ navigation }) => {
         <View style={{ borderRadius: 20, backgroundColor: '#FFDCAE99', width: normalize(340), height: normalize(83), marginTop: normalize(20), alignSelf: "center", justifyContent: "center" }} >
           <View style={{ flexDirection: "row", alignSelf: "center" }}>
             <Image source={sale1} style={{ height: normalize(50), width: normalize(50), resizeMode: "contain", }} />
-            <Text style={{ fontSize: normalize(18), fontWeight: '500', marginLeft: 25, marginTop: 10 }}  >Today Sale</Text>
+            <Text style={{ fontSize: normalize(18), fontWeight: '500', marginLeft: 25, marginTop: 10 }}  >Today Target</Text>
             <View style={{ flexDirection: "row", marginTop: 10, }} >
-              <Text style={{ fontSize: normalize(19), fontWeight: '500', marginLeft: normalize(15), }}>$6960</Text>
+              <Text style={{ fontSize: normalize(19), fontWeight: '500', marginLeft: normalize(15), }}>960</Text>
               <Image source={rising} style={{ width: normalize(40), height: normalize(25), marginLeft: normalize(20), alignSelf: "center", }} />
               <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(16), color: "#08D635", top: normalize(20) }} >5.6%</Text>
             </View>
