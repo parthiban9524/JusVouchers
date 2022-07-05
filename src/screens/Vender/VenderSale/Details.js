@@ -77,26 +77,6 @@ const Details = ({ navigation }) => {
                         id={3}
                     />
                 </View>   
-                <View style={{  alignSelf: "center", marginTop : normalize(20) }} >
-                        <Text style={{ fontFamily: fonts.montserrat_semibold, fontSize: normalize(18), color: "#FA9C22" }}>Order History</Text>
-                    </View>
-
-                    <View style={{ height: normalize(110), width: normalize(330), backgroundColor: "#FD040421", alignSelf: "center", marginTop: normalize(20) }}>
-                    <View style={{ flexDirection: "row", justifyContent: "space-between", marginTop: normalize(10), marginHorizontal: normalize(40) }}>
-                        <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(10), }} >order Id 15985zs</Text>
-                        <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(10), }} >12 April 2022</Text>
-                    </View>
-                    <View style={{ flexDirection: "row" }} >
-                        <View style={{ marginTop: normalize(20), marginHorizontal: normalize(40) }}>
-                            <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(12), }} >Quantity : 1</Text>
-                            <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(12),top : 5}} >Total : ₹799</Text>
-                        </View>
-                        <View style={{ marginLeft: normalize(90), marginTop: normalize(10) }}>
-                            <Image source={gym1} style={{ height: normalize(50), width: normalize(90), }} />
-                            <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(14), top: 5, fontWeight: "500", alignSelf : "center" }} >Completed</Text>
-                        </View>
-                    </View>
-                </View>
             </SafeAreaView>
         </>
     );
