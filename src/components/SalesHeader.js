@@ -19,12 +19,12 @@ export default function SalesHeader({ navigation }) {
     }
 
     const onVender = () => {
-        navigation.navigate("Venders")
+        navigation.navigate("CustomerForm")
         setselect(true)
     }
 
     const onDash = () => {
-     navigation.navigate("VenderDash")
+     navigation.navigate("SalePerson")
      setselect(false)
     }
 

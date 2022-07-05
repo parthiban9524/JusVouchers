@@ -175,7 +175,7 @@ const TodaySale = ({ navigation }) => {
 
   const onDate = (data) => {
     setSelectedId(data.id);
-    navigation.navigate("SalesDetails", { data: data })
+    navigation.navigate("TodayTargetDetails", { data: data })
   }
 
   const renderItem = ({ item }) => {
@@ -202,14 +202,15 @@ const TodaySale = ({ navigation }) => {
           <TouchableOpacity style={{ marginTop: normalize(20), marginLeft: normalize(20) }} onPress={() => navigation.goBack()} >
             <Image source={left} style={{ height: normalize(30), width: normalize(30) }} />
           </TouchableOpacity>
-          <Text style={{ fontFamily: fonts.montserrat_bold, fontSize: normalize(22), fontWeight: 'bold', marginLeft: normalize(120), marginTop: normalize(20) }}>Total Target</Text>
+          <Text style={{ fontFamily: fonts.montserrat_bold, fontSize: normalize(22), fontWeight: 'bold', marginLeft: normalize(100), marginTop: normalize(20) }}>Total Target</Text>
         </View>
-        <View style={{ borderRadius: normalize(20), backgroundColor: '#FFDCAE99', width: normalize(340), height: normalize(83), alignSelf: "center", marginTop: normalize(15) }}>
-          <View style={{ flexDirection: "row", alignSelf: "center", marginTop: normalize(15) }}>
-            <Image source={sale1} style={{ height: normalize(50), width: normalize(50), resizeMode: "contain", alignSelf: "center", marginLeft: normalize(8), marginTop: 5 }} />
-            <Text style={{ fontSize: normalize(18), fontWeight: '500', marginLeft: 10, marginTop: 10, color: "#000000" }}  >Total Target <Text style={{ fontSize: normalize(17), fontWeight: '500', marginLeft: 3, color: '#08D635', fontWeight: '800', fontFamily: fonts.montserrat_regular }}>350</Text></Text>
-            <View style={{ flexDirection: "row", marginTop: normalize(10), }} >
-              <Image source={rising} style={{ width: normalize(40), height: normalize(25), marginLeft: normalize(5), alignSelf: "center" }} />
+        <View style={{ borderRadius: 20, backgroundColor: '#FFDCAE99', width: normalize(340), height: normalize(83), marginTop: normalize(20), alignSelf: "center", justifyContent: "center" }} >
+          <View style={{ flexDirection: "row", alignSelf: "center" }}>
+            <Image source={sale1} style={{ height: normalize(50), width: normalize(50), resizeMode: "contain", }} />
+            <Text style={{ fontSize: normalize(20), fontWeight: '500', marginLeft: 25, marginTop: 10 }}  >Total Target</Text>
+            <View style={{ flexDirection: "row", marginTop: 10, }} >
+              <Text style={{ fontSize: normalize(20), fontWeight: '500', marginLeft: normalize(15), color: "#00B028" }}>50</Text>
+              <Image source={rising} style={{ width: normalize(40), height: normalize(25), marginLeft: normalize(20), alignSelf: "center", }} />
               <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(16), color: "#08D635", top: normalize(20) }} >5.6%</Text>
             </View>
           </View>

@@ -36,7 +36,7 @@ const TodayTargetDetails = ({ navigation }) => {
         <TouchableOpacity style={{ marginTop: normalize(20), marginLeft: normalize(20) }} onPress={() => navigation.goBack()} >
           <Image source={left} style={{ height: normalize(30), width: normalize(30) }} />
         </TouchableOpacity>
-        <View style={{ borderRadius: 20, backgroundColor: '#FFDCAE99', width: normalize(340), height: normalize(83), marginTop: normalize(20), alignSelf: "center", justifyContent: "center" }} onPress={() => navigation.navigate("SalesDetails")} >
+        <View style={{ borderRadius: 20, backgroundColor: '#FFDCAE99', width: normalize(340), height: normalize(83), marginTop: normalize(20), alignSelf: "center", justifyContent: "center" }} >
           <View style={{ flexDirection: "row", alignSelf: "center" }}>
             <Image source={sale1} style={{ height: normalize(50), width: normalize(50), resizeMode: "contain", }} />
             <Text style={{ fontSize: normalize(18), fontWeight: '500', marginLeft: 25, marginTop: 10 }}  >Today Sale</Text>
@@ -47,24 +47,24 @@ const TodayTargetDetails = ({ navigation }) => {
             </View>
           </View>
         </View>
-        <View style = {{}}>
-<Text style = {{fontFamily : fonts.montserrat_semibold, fontSize : normalize(18),color : "#348847", alignSelf : "center", marginTop: normalize(20)}} >02 June 2022 Wednesday</Text>
+        <View style={{}}>
+          <Text style={{ fontFamily: fonts.montserrat_semibold, fontSize: normalize(18), color: "#348847", alignSelf: "center", marginTop: normalize(20) }} >02 June 2022 Wednesday</Text>
         </View>
         <View style={{ width: normalize(340), borderRadius: normalize(10), backgroundColor: "#D0E3FFB0", marginVertical: normalize(20), alignSelf: "center" }}>
           <View style={{ flexDirection: "row", justifyContent: "space-around", marginTop: normalize(20), marginLeft: normalize(20) }}>
             <Text style={{ fontFamily: fonts.montserrat_semibold, fontSize: normalize(16), color: "#000000" }}>Sales Details</Text>
           </View>
           <View style={{ width: normalize(340), borderColor: "#797877", borderBottomWidth: 1.2, alignSelf: "center", marginTop: normalize(10) }} />
-          {/* <FlatList
+           <FlatList
             data={DATA}
             renderItem={renderItem}
             keyExtractor={(item) => item.id}
-            
-          /> */}
-          <View style={{ width: normalize(340), borderColor: "#348847", borderBottomWidth: 1.2, alignSelf: "center",  }} />
-          <View style = {{flexDirection : "row", justifyContent : "space-between",marginVertical : normalize(15)}}>
-{/* <Text style = {[styles.data_text,{color : "#348847",marginLeft : normalize(40)}]} >Total Sale</Text>
-<Text style = {[styles.data_text,{color : "#348847", marginRight : normalize(55)}]}  >{total}</Text> */}
+
+          />
+          <View style={{ width: normalize(340), borderColor: "#348847", borderBottomWidth: 1.2, alignSelf: "center", }} />
+          <View style={{ flexDirection: "row", justifyContent: "space-between", marginVertical: normalize(15) }}>
+            <Text style={[styles.data_text, { color: "#348847", marginLeft: normalize(40) }]} >Total Sale</Text>
+            <Text style={[styles.data_text, { color: "#348847", marginRight: normalize(55) }]}  >{total}</Text>
 
           </View>
 

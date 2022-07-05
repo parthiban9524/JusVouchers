@@ -47,8 +47,6 @@ import VenderDash from "./src/screens/Vender/VenderDash";
 import VenderSale from "./src/screens/Vender/VenderSale/VenderSale";
 import VenderSaleDetails from "./src/screens/Vender/VenderSale/VenderSaleDetails";
 import Details from "./src/screens/Vender/VenderSale/Details";
-import VenderAddVoucher from "./src/screens/Vender/AdminVoucher/AddVoucher";
-import VenderVoucherUpload from "./src/screens/Vender/AdminVoucher/AdminUpload";
 import VenderSignup from "./src/screens/Setup/VenderSignup";
 import Exclusive from "./src/screens/Dashboard/Menu/Exclusive";
 
@@ -57,6 +55,8 @@ import Saleperson from "./src/screens/SalesPerson/saleperson";
 import CustomerForm from "./src/screens/SalesPerson/CustomerForm";
 import TodaySale from "./src/screens/SalesPerson/TodaySale";
 import TodayTargetDetails from "./src/screens/SalesPerson/TodayTargetDetails";
+import SalesPersonSignup from "./src/screens/Setup/SalesPersonSignup";
+import Approve from "./src/screens/Vender/Approve";
 
 export default function App() {
 
@@ -105,10 +105,12 @@ export default function App() {
         <AuthNavigator.Screen name="Welcome" component={Welcome} />
         <AuthNavigator.Screen name="Login" component={Login} />
         <AuthNavigator.Screen name="Signup" component={Signup} />
+        <AuthNavigator.Screen name="VenderSignup" component={VenderSignup} />
+        <AuthNavigator.Screen name="SalesPersonSignup" component={SalesPersonSignup} />
         <AuthNavigator.Screen name="ForgotPassword" component={ForgotPassword} />
         <AuthNavigator.Screen name="ResetPassword" component={ResetPassword} />
         <AuthNavigator.Screen name="ContactUs" component={ContactUs} />
-        <AuthNavigator.Screen name="VenderSignup" component={VenderSignup} />
+
       </AuthNavigator.Navigator>
     )
   }
@@ -138,8 +140,7 @@ export default function App() {
         <VenderNavigator.Screen name="VenderSale" component={VenderSale} />
         <VenderNavigator.Screen name="VenderSaleDetails" component={VenderSaleDetails} />
         <VenderNavigator.Screen name="Details" component={Details} />
-        <VenderNavigator.Screen name="VenderAddVoucher" component={VenderAddVoucher} />
-        <VenderNavigator.Screen name="VenderVoucherUpload" component={VenderVoucherUpload} />
+        <VenderNavigator.Screen name="Approve" component={Approve} />
       </VenderNavigator.Navigator>
 
     )
@@ -149,10 +150,10 @@ export default function App() {
     return (
       <SalesNavigator.Navigator initialRouteName="SalePerson" screenOptions={{ headerShown: false }} >
         <SalesNavigator.Screen name="SalePerson" component={Saleperson} />
-        <SalesNavigator.Screen name="TodaySale" component={TodaySale}/>
-        <SalesNavigator.Screen name="TodayTargetDetails" component={TodayTargetDetails}/>
-        <SalesNavigator.Screen name="CustomerForm" component={CustomerForm}/>
-         </SalesNavigator.Navigator>
+        <SalesNavigator.Screen name="TodaySale" component={TodaySale} />
+        <SalesNavigator.Screen name="TodayTargetDetails" component={TodayTargetDetails} />
+        <SalesNavigator.Screen name="CustomerForm" component={CustomerForm} />
+      </SalesNavigator.Navigator>
 
     )
   }
@@ -245,18 +246,19 @@ export default function App() {
   return (
     <NavigationContainer>
       <Provider store={Store}>
-        <Stack.Navigator initialRouteName="SalePerson" screenOptions={{ headerShown: false }} >
+        <Stack.Navigator initialRouteName="AuthScreen" screenOptions={{ headerShown: false }} >
           <Stack.Screen name="AuthScreen" component={AuthScreen} />
           <Stack.Screen name="DashboardNavigation" component={DashboardNavigation} />
           <Stack.Screen name="Profile" component={Profile} />
           <Stack.Screen name="AdminScreen" component={AdminScreen} />
           <Stack.Screen name="VenderScreen" component={VenderScreen} />
-          <Stack.Screen name="SalePerson" component={Saleperson} />
-        </Stack.Navigator>
+         
         {/* <Saleperson/> */}
         {/* <CustomerForm/> */}
         {/* <TodaySale/> */}
         {/* <TodayTargetDetails/> */}
+          <Stack.Screen name="SalesScreen" component={SalesScreen} />
+        </Stack.Navigator>
       </Provider>
     </NavigationContainer>
   )
