@@ -70,7 +70,7 @@ return (
     <>
         <Header navigation={navigation} />
         <ScrollView style={{ flex: 1, backgroundColor: "#ffffff" }} >
-            <ScrollView style={{ marginTop: normalize(20), marginLeft: normalize(15), flexDirection: "row", }} horizontal={true} >
+            <ScrollView style={{ marginTop: normalize(20), marginLeft: normalize(15), flexDirection: "row",marginBottom:15 }} horizontal={true} >
                 <TouchableOpacity style={{ height: normalize(30), width: normalize(90), backgroundColor: "#FFDCAE", borderRadius: normalize(20), justifyContent: "center", }} onPress={onSet}>
                     <Text style={{ fontSize: normalize(18), fontFamily: fonts.montserrat_regular, fontWeight: "500", textAlign: "center" }} >All</Text>
                 </TouchableOpacity>
