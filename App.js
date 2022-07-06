@@ -60,6 +60,9 @@ import CustomerInfo from "./src/screens/SalesPerson/CustomerInfo";
 import Approve from "./src/screens/Vender/Approve";
 import CustomerData from "./src/screens/SalesPerson/CustomerData";
 
+import OrderCancellation from "./src/screens/Dashboard/Vouchers/OrderCancellation";
+import CancellationConfirm from "./src/screens/Dashboard/Vouchers/CancellationConfirm";
+
 export default function App() {
 
   const Stack = createStackNavigator();
@@ -250,14 +253,15 @@ export default function App() {
   return (
     <NavigationContainer>
       <Provider store={Store}>
-        <Stack.Navigator initialRouteName="AuthScreen" screenOptions={{ headerShown: false }} >
+        {/* <Stack.Navigator initialRouteName="AuthScreen" screenOptions={{ headerShown: false }} >
           <Stack.Screen name="AuthScreen" component={AuthScreen} />
           <Stack.Screen name="DashboardNavigation" component={DashboardNavigation} />
           <Stack.Screen name="Profile" component={Profile} />
           <Stack.Screen name="AdminScreen" component={AdminScreen} />
           <Stack.Screen name="VenderScreen" component={VenderScreen} />
           <Stack.Screen name="SalesScreen" component={SalesScreen} />
-        </Stack.Navigator>
+        </Stack.Navigator> */}
+       <CancellationConfirm/>
       </Provider>
     </NavigationContainer>
   )
