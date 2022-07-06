@@ -19,7 +19,7 @@ export default function SalesHeader({ navigation }) {
     }
 
     const onCustomer = () => {
-        navigation.navigate("CustomerInfo")
+        navigation.navigate("CustomerData")
         setselect(true)
     }
 
