@@ -20,7 +20,7 @@ export default function Profile({ navigation }) {
 
     return (
         <View style={{ flex: 1 }} >
-            <View style={{ height: "100%", width: "100%", backgroundColor: "#F9AA44" }} >
+            <View style={{ height: "100%", width: "100%", backgroundColor: "#3e729c" }} >
                 <View style={{ marginTop: normalize(20), flexDirection: "row", justifyContent: "space-evenly" }} >
                     <TouchableOpacity onPress={() => navigation.goBack()} >
                         <Image source={profile_back} style={{ height: normalize(30), width: normalize(30), right: normalize(40) }} />
@@ -123,7 +123,7 @@ const addSpotScreenStyles = StyleSheet.create({
         backgroundColor: 'rgba(0, 0, 0, 0.7)',
     },
     innerContainerTransparentStyle: {
-        backgroundColor: '#F9BB6B', height: normalize(200), width: normalize(300), borderRadius: 10
+        backgroundColor: '#75b6eb', height: normalize(200), width: normalize(300), borderRadius: 10
     },
     alertbody: { textAlign: "center", fontFamily: fonts.lato_regular, fontSize: normalize(18), color: "#000000", paddingHorizontal: 20 },
 });
