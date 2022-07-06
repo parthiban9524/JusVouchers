@@ -1,25 +1,14 @@
 import React from "react";
-import { View, Text, Image,ScrollView,TouchableOpacity } from "react-native"
-import { fonts, normalize,getDistinctCategory } from "../../../components/Utils";
+import { View, Text, Image,ScrollView } from "react-native"
+import { fonts, normalize } from "../../../components/Utils";
 import { logo, blog } from "../../../components/Icons";
 import { card } from "../../../components/Icons";
-import { Data } from "../Data";
 import Header from "../../../components/Header";
 import word from "../../../assest/images/word.png"
 import blog_image from "../../../assest/images/blog_image.png"
-import Categorybutton from "../../../components/Categorybutton";
+import BlogCategoryHeader from "./Blog/BlogCategoryHeader"
 
 export default function Blog({ navigation }) {
-    const [category, setcategory] = React.useState([]);
-    const [all, setall] = React.useState(false)
-    
-    React.useEffect(() => {
-        setcategory(getDistinctCategory(Data))
-    }, [])
-
-    const onSet = () => {
-        setall(true)
-    }
     return (
 
         <View style={{ flex: 1, alignSelf: "center" }} >
@@ -28,16 +17,12 @@ export default function Blog({ navigation }) {
                 <Text style={{ fontSize: normalize(22), color: "#000000", fontFamily: fonts.montserrat_regular, fontWeight: "800", marginTop: 6 }}>Blog</Text>
             </View>
             <ScrollView>
-            <ScrollView style={{ marginTop: normalize(20), marginLeft: normalize(15), flexDirection: "row", marginBottom:15}} horizontal={true} >
-                <TouchableOpacity style={{ height: normalize(30), width: normalize(90), backgroundColor: "#FFDCAE", borderRadius: normalize(20), justifyContent: "center", }} onPress={onSet}>
-                    <Text style={{ fontSize: normalize(18), fontFamily: fonts.montserrat_regular, fontWeight: "500", textAlign: "center" }} >All</Text>
-                </TouchableOpacity>
-                <View>
-                    <Categorybutton data={category}  />
-                </View>
-            </ScrollView>
-            <View >
-                <View style={{  backgroundColor: "#FFDCAE", flexDirection: 'row', alignItems: "stretch", borderRadius: normalize(10), marginLeft: 14, marginRight: 14 }} >
+            <BlogCategoryHeader/>
+           
+           
+            <View>
+       
+                <View style={{ marginTop: normalize(15), backgroundColor: "#FFDCAE", flexDirection: 'row', alignItems: "stretch", borderRadius: normalize(10), marginLeft: 14, marginRight: 14 }} >
                     <View style={{ justifyContent: "center", marginLeft: normalize(50) }} >
                         <Image source={logo} style={{ height: normalize(62), width: normalize(104), resizeMode: "contain", }} />
                     </View>
