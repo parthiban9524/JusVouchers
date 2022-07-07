@@ -10,6 +10,8 @@ import Login from "./src/screens/Setup/Login";
 import Signup from "./src/screens/Setup/Signup";
 import ForgotPassword from "./src/screens/Setup/ForgotPassword";
 import ResetPassword from "./src/screens/Setup/ResetPasssword";
+import LoginotpAuth from "./src/screens/Setup/LoginotpAuth";
+import InputOTPScreen from "./src/screens/Setup/InputOTPScreen";
 import Store from "./src/components/Store";
 import Home from "./src/screens/Dashboard/Home";
 
@@ -114,6 +116,8 @@ export default function App() {
         <AuthNavigator.Screen name="ForgotPassword" component={ForgotPassword} />
         <AuthNavigator.Screen name="ResetPassword" component={ResetPassword} />
         <AuthNavigator.Screen name="ContactUs" component={ContactUs} />
+        <AuthNavigator.Screen name="LoginotpAuth" component={LoginotpAuth}/>
+        <AuthNavigator.Screen name="InputOTPScreen" component={InputOTPScreen}/>
 
       </AuthNavigator.Navigator>
     )
@@ -260,6 +264,7 @@ export default function App() {
           <Stack.Screen name="VenderScreen" component={VenderScreen} />
           <Stack.Screen name="SalesScreen" component={SalesScreen} />
         </Stack.Navigator>
+       
       </Provider>
     </NavigationContainer>
   )
