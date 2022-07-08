@@ -38,10 +38,15 @@ function Login({ navigation, handleSubmit }) {
                     secureTextEntry={true}
                 />
             </View>
-            <TouchableOpacity style={{ alignSelf: "flex-end", marginRight: normalize(35) }} onPress={() => navigation.navigate('ForgotPassword')} >
+            <View style={{flexDirection:'row',justifyContent:'space-around'}}>
+            <TouchableOpacity style={{ alignSelf: "flex-end", marginLeft:20 }} onPress={() => navigation.navigate('LoginotpAuth')} >
+                <Text style={{ fontSize: normalize(18), fontFamily: fonts.lato_regular, color: "#F58220" }}>Login with OTP </Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={{ alignSelf: "flex-end", marginRight: normalize(15) }} onPress={() => navigation.navigate('ForgotPassword')} >
                 <Text style={{ fontSize: normalize(18), fontFamily: fonts.lato_regular, color: "#F58220" }}>Forgot password </Text>
             </TouchableOpacity>
-            <View style={{ marginTop: normalize(90) }} >
+            </View>
+            <View style={{ marginTop: normalize(69) }} >
                 <Submitbutton bg={"#f69632"} text={"Log in"} txtclr={"#ffffff"} big={true}  onpress={() => navigation.navigate("DashboardNavigation")} />
             </View>
             <View style={{ flexDirection: "row", alignSelf: "center", justifyContent: "center" }} >
@@ -49,7 +54,7 @@ function Login({ navigation, handleSubmit }) {
                 <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(20), top: 10 }}> or </Text>
                 <View style={{ width: normalize(130), borderBottomWidth: 1, borderColor: "#938C8C" }} />
             </View>
-            <View style={{ marginTop: normalize(20) }}>
+            <View style={{ marginTop: normalize(23) }}>
                 <Submitbutton bg={"#ffffff"} text={"Sign up"} txtclr={"#f69632"} onpress={() => navigation.navigate("Signup")} big={true} />
             </View>
         </View>
