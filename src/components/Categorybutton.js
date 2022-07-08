@@ -14,8 +14,8 @@ export default function Categorybutton({ parentCallBack = () => { }, data = {} }
 
 
     const renderItem = ({ item }) => (
-        <TouchableOpacity style={{ height: normalize(30), width: normalize(90), backgroundColor: "#FFDCAE", borderRadius: normalize(20), justifyContent: "center", marginLeft : 9 }} onPress={() => func(item.name)}>
-            <Text style={{ fontSize: normalize(18), fontFamily: fonts.montserrat_regular, fontWeight: "500", textAlign: "center" }} >{item.name}</Text>
+        <TouchableOpacity style={{ height : normalize(35), width: normalize(100), backgroundColor: "#FFDCAE", borderRadius: normalize(20), justifyContent: "center", marginLeft : 9 }} onPress={() => func(item.name)}>
+            <Text style={{ fontSize: normalize(15), fontFamily: fonts.montserrat_regular, fontWeight: "500", textAlign: "center" }} >{item.name}</Text>
         </TouchableOpacity>
     );
 

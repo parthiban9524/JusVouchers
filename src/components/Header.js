@@ -58,7 +58,7 @@ export default function Header({ navigation }) {
                         <TouchableOpacity onPress={Onclose} style={{ paddingTop: normalize(20), paddingLeft: normalize(20), backgroundColor: "white", width: normalize(250) }} >
                             <Image source={close} style={{ height: normalize(30), width: normalize(30) }} />
                         </TouchableOpacity>
-                        <View style={{ backgroundColor: "white", width: normalize(250), paddingBottom: normalize(268) }} >
+                        <View style={{ backgroundColor: "white", width: normalize(250), paddingBottom: normalize(312) }} >
                             <TouchableOpacity style={{ marginTop: normalize(15), paddingLeft: normalize(50), flexDirection: "row", }} onPress={() => navigation.navigate("Profile")} >
                                 <View style={{ height: normalize(60), width: normalize(60), backgroundColor: "#F58220", borderRadius: normalize(30), justifyContent: "center", }} >
                                     <Image source={man} style={{ height: normalize(55), width: normalize(55), resizeMode: "contain", alignSelf: "center" }} />

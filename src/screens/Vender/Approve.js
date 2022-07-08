@@ -28,7 +28,6 @@ export default function Approve({navigation}) {
                             <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(12), }}>Fitness Habit</Text>
                         </View>
                         <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(12), left : normalize(25), top : 10 }} >₹799/-  40% off</Text>
-
                     </View>
                     <View style={{ flexDirection: "row", alignSelf: "center", marginLeft: normalize(80), }}>
                         <Submitbutton exclusive={true} bg={"#FFDCAE99"} text={"Cancel"} txtclr={"#3D3C3B"} />

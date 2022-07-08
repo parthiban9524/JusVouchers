@@ -41,6 +41,9 @@ export default function VenderDash({ navigation }) {
                 </TouchableOpacity>
                 <GraphSales />
                 <GraphOrderCancel />
+                <TouchableOpacity style = {{height : normalize(30), width : normalize(250), borderRadius : normalize(20), backgroundColor : "#FFDCAE99", alignSelf : "center", marginTop : normalize(30), justifyContent : "center"}} onPress = {() => navigation.navigate("VoucherQuantity")} >
+                    <Text style = {{textAlign : "center",fontFamily : fonts.lato_bold, fontSize : normalize(15), }}>Check The Quantity of Vouchers </Text>
+                </TouchableOpacity>
                 <View style = {{paddingBottom : normalize(120)}} />
             </ScrollView>
         </>

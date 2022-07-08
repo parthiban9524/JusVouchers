@@ -5,6 +5,10 @@ import path from "../../assest/images/1.png"
 import physio from "../../assest/images/4.png"
 import diet from "../../assest/images/5.png"
 import radio from "../../assest/images/2.png"
+import online from "../../assest/images/online.png"
+import offline from "../../assest/images/offline.png"
+import health from "../../assest/images/health_card.png"
+
 
 import yoga1 from "../../assest/images/yoga1.png"
 import yoga2 from "../../assest/images/yoga2.png"
@@ -15,6 +19,51 @@ import gym1 from "../../assest/images/gym1.png"
 import gym2 from "../../assest/images/gym2.png"
 import gym3 from "../../assest/images/gym3.png"
 import gym4 from "../../assest/images/gym4.png"
+
+export const BlogData = [
+    {
+        "category": "Health",
+        "name": "Health Plus Card",
+        "image": health,
+        "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the "
+    },
+    {
+        "category": "Saloon",
+        "name": "Offer Card",
+        "image": beauty1,
+        "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the "
+    },
+    {
+        "category": "SPA",
+        "name": "SPA Offers",
+        "image": beauty2,
+        "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the "
+    },
+    {
+        "category": "Online Marketing",
+        "name": "About Online Marketing",
+        "image": online,
+        "details": "It's a practice of leveraging web-based channels to spread a message about a company’s  to its customers. "
+    },
+    {
+        "category": "Offline Marketing",
+        "name": "About Offline Marketing",
+        "image": offline,
+        "details": "It's a can be just as effective in helping a business grow its reach and increase branding awareness."
+    },
+    {
+        "category": "Saloon",
+        "name": "Favorite Hair Cut Article",
+        "image": saloon,
+        "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the "
+    },
+    {
+        "category": "Discount Vouchers",
+        "name": "Voucher Discounts",
+        "image": health,
+        "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the "
+    },
+]
 
 
 export const Data = [

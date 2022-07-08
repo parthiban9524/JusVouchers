@@ -15,7 +15,7 @@ function CustomerForm({ navigation }) {
         <ScrollView style={{ flex: 1, backgroundColor: "#ffffff" }} >
             <StatusBar backgroundColor={"#F9AA44"} translucent={false} />
             <SalesHeader navigation={navigation} />
-            <TouchableOpacity style={{ marginTop: normalize(20),marginLeft:normalize(20) }} onPress={() => navigation.goBack()} >
+            <TouchableOpacity style={{ marginTop: normalize(20),marginLeft:normalize(20) }} onPress={() => navigation.navigate("SalePerson")} >
             <Image source={left} style={{ height: normalize(30), width: normalize(30) }} />
           </TouchableOpacity>
             <View style={{alignSelf:'center' }} >

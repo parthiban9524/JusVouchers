@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { View, Text, StatusBar, Image, TouchableOpacity, Modal } from "react-native"
 
 import { fonts, normalize } from "./Utils"
-import { menu, close, logout_dark, admin_user, admin_voucher } from "./Icons";
+import { menu, close, logout_dark, admin_user, admin_voucher, voucher } from "./Icons";
 import man from "../assest/images/man.png"
 
 export default function VenderHeader({ navigation }) {
@@ -71,6 +71,12 @@ export default function VenderHeader({ navigation }) {
                                 <View style={{ flexDirection: "row", }} >
                                     <Image source={man} style={{ height: normalize(25), width: normalize(25), resizeMode: 'contain', left: normalize(25),}} />
                                     <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(15), color: "#3D3C3B", fontWeight: "700", marginLeft: normalize(30), top: 2 }} >Customer info</Text>
+                                </View>
+                            </TouchableOpacity>
+                            <TouchableOpacity style={{height: normalize(30), width: normalize(180),backgroundColor: select ? "rgba(245, 130, 32, 0.39)" : null, borderRadius : normalize(20), marginLeft: normalize(30), marginTop: normalize(25), justifyContent: "center" }} onPress = {() => navigation.navigate("VoucherQuantity") } >
+                                <View style={{ flexDirection: "row", }} >
+                                    <Image source={voucher} style={{ height: normalize(25), width: normalize(25), resizeMode: 'contain', left: normalize(25),tintColor : "#000000"}} />
+                                    <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(15), color: "#3D3C3B", fontWeight: "700", marginLeft: normalize(30), top: 2 }} >Voucher Quantity</Text>
                                 </View>
                             </TouchableOpacity>
                             <TouchableOpacity style={{ marginLeft: normalize(30), marginTop: normalize(25), justifyContent: "center" }} onPress={() => navigation.navigate("AuthScreen")} >

@@ -61,6 +61,9 @@ import Approve from "./src/screens/Vender/Approve";
 import CustomerData from "./src/screens/SalesPerson/CustomerData";
 
 import OrderCancellation from "./src/screens/Dashboard/Vouchers/OrderCancellation";
+import VoucherQuantity from "./src/screens/Vender/VoucherQuantity";
+import QuantityDetails from "./src/screens/Vender/QuantityDetails";
+import BlogDetails from "./src/screens/Dashboard/Menu/BlogDetails";
 
 export default function App() {
 
@@ -79,6 +82,7 @@ export default function App() {
         <HomeNavigator.Screen name="Home" component={Home} />
         <HomeNavigator.Screen name="AboutUs" component={AboutUs} />
         <HomeNavigator.Screen name="Blog" component={Blog} />
+        <HomeNavigator.Screen name="BlogDetails" component={BlogDetails} />
         <HomeNavigator.Screen name="Favorites" component={Favorites} />
         <HomeNavigator.Screen name="OrderHistory" component={OrderHistory} />
         <HomeNavigator.Screen name="Profile" component={Profile} />
@@ -145,6 +149,8 @@ export default function App() {
         <VenderNavigator.Screen name="VenderSaleDetails" component={VenderSaleDetails} />
         <VenderNavigator.Screen name="Details" component={Details} />
         <VenderNavigator.Screen name="Approve" component={Approve} />
+        <VenderNavigator.Screen name="VoucherQuantity" component={VoucherQuantity} />
+        <VenderNavigator.Screen name="QuantityDetails" component={QuantityDetails} />
       </VenderNavigator.Navigator>
 
     )
