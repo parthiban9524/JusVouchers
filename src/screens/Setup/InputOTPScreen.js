@@ -97,7 +97,7 @@ const InputOTPScreen = ({navigation}) => {
                 
                 </View>
                 <View style={{ marginTop: normalize(100) }} >
-                <Submitbutton bg={"#f69632"} text={"Verify OTP"} txtclr={"#ffffff"} onpress={() => navigation.navigate("ResetPassword")} big={true} />
+                <Submitbutton bg={"#f69632"} text={"Verify OTP"} txtclr={"#ffffff"} onpress={() => navigation.navigate("DashboardNavigation")} big={true} />
               </View>
             </KeyboardAvoidingView>
         </View>
