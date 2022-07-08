@@ -39,7 +39,7 @@ function Login({ navigation, handleSubmit }) {
                 />
             </View>
             <View style={{flexDirection:'row',justifyContent:'space-around'}}>
-            <TouchableOpacity style={{ alignSelf: "flex-end", marginLeft:20 }} onPress={() => navigation.navigate('InputOTPScreen')} >
+            <TouchableOpacity style={{ alignSelf: "flex-end", marginLeft:20 }} onPress={() => navigation.navigate('LoginotpAuth')} >
                 <Text style={{ fontSize: normalize(18), fontFamily: fonts.lato_regular, color: "#F58220" }}>Login with OTP </Text>
             </TouchableOpacity>
             <TouchableOpacity style={{ alignSelf: "flex-end", marginRight: normalize(15) }} onPress={() => navigation.navigate('ForgotPassword')} >

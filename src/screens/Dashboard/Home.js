@@ -42,16 +42,7 @@ export default function Home({ navigation }) {
         <>
             <Header navigation={navigation} />
             <ScrollView style={{ backfaceVisibility: "visible", backgroundColor: "#ffffff" }} >
-                <View style={{ flexDirection: "row" }} >
-                    <View style={{ marginTop: normalize(30), marginLeft: normalize(30) }} >
-                        <Text style={{ fontSize: normalize(22), color: "#000000", fontFamily: fonts.montserrat_regular, fontWeight: "700" }}>It's raining</Text>
-                        <Text style={{ fontSize: normalize(22), color: "#000000", fontFamily: fonts.montserrat_regular, fontWeight: "700" }} >discounts on</Text>
-                        <Text style={{ fontSize: normalize(24), color: "#F9AA44", fontFamily: fonts.montserrat_regular, fontWeight: "800" }} >JusVouchers!</Text>
-                    </View>
-                    <View style={{ marginTop: normalize(20), marginLeft: normalize(15) }} >
-                        <Image source={card} style={{ height: normalize(120), width: normalize(200), resizeMode: "contain" }} />
-                    </View>
-                </View>
+               <Slider navigation={navigation} id = {1} set = {true} />
                 <View style={{ marginTop: normalize(40), marginLeft: normalize(30) }} >
                     <View style={{ flexDirection: "row", justifyContent: "space-between" }} >
                         <Text style={{ fontFamily: fonts.montserrat_regular, fontWeight: "500", color: "#3D3C3B", fontSize: normalize(18) }} >Latest Offer</Text>

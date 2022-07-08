@@ -5,8 +5,15 @@ import Carousel from "react-native-snap-carousel";
 import { arrow_left, arrow_right } from './Icon';
 import { doctor1, doctor2 } from './Icons';
 import { normalize } from './Utils';
+import beauty1 from "../assest/images/beauty1.png"
+import beauty2 from "../assest/images/beauty2.png"
+import saloon1 from "../assest/images/saloon1.png"
+import health_card from "../assest/images/health_card.png"
+import perfection from "../assest/images/perfection.png"
 
-export default function Swiper({ navigation, id = 1, }) {
+
+
+export default function Swiper({ navigation, id = 1,set = false}) {
 
     const carousel = useRef(null);
     const [activeIndex, setactiveIndex] = useState(0);
@@ -58,6 +65,30 @@ export default function Swiper({ navigation, id = 1, }) {
             }
         ];
 
+     const  val =    
+     [
+        {
+            "id": "1",
+            "image": health_card
+        },
+        {
+            "id": "2",
+            "image": saloon1
+        },
+        {
+            "id": "3",
+            "image": beauty1
+        },
+        {
+            "id": "4",
+            "image": beauty2
+        },
+        {
+            "id": "5",
+            "image": perfection
+        }
+    ];
+
     const items = [
         {
             "id": 1,
@@ -89,7 +120,7 @@ export default function Swiper({ navigation, id = 1, }) {
                         <View style={{ alignSelf: "center", justifyContent: "space-evenly", }} >
                             <Carousel
                                 ref={carousel}
-                                data={data}
+                                data={ set ? val : data}
                                 sliderWidth={480}
                                 itemWidth={350}
                                 renderItem={renderItem}
