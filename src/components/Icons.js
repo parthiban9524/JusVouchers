@@ -71,9 +71,18 @@ import lines from "../assest/images/lines.png"
 import customer from "../assest/images/Customer.png"
 import down from "../assest/images/down.png"
 import up from "../assest/images/up.png"
-
+import DigitalMarketingHome from "../assest/images/DigitalMarketingHome.jpg"
+import GoldPackage from "../assest/images/GoldPackage.jpg"
+import BronzePackage from "../assest/images/BronzePackage.jpg"
+import SilverPackage from "../assest/images/SilverPackage.jpg"
+import Arrow from "../assest/images/Arrow.png"
 export {
     logo,
+    DigitalMarketingHome,
+    Arrow,
+    GoldPackage,
+    SilverPackage,
+    BronzePackage,
     wavy,
     lock,
     mail,

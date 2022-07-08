@@ -92,6 +92,12 @@ export default function Header({ navigation }) {
                                     <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(15), color: "#3D3C3B", fontWeight: "700", marginLeft: normalize(30), top: 2 }} >Blogs</Text>
                                 </View>
                             </TouchableOpacity>
+                            <TouchableOpacity style={{ marginLeft: normalize(30), marginTop: normalize(25), justifyContent: "center" }} onPress={() => navigation.navigate("DigitalMarketing")} >
+                                <View style={{ flexDirection: "row", }} >
+                                    <Image source={support} style={{ height: normalize(20), width: normalize(20), resizeMode: 'contain', left: normalize(25) }} />
+                                    <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(15), color: "#3D3C3B", fontWeight: "700", marginLeft: normalize(30), top: 2 }} >Online Marketing</Text>
+                                </View>
+                            </TouchableOpacity>
                             <TouchableOpacity style={{ marginLeft: normalize(30), marginTop: normalize(25), justifyContent: "center" }} >
                                 <View style={{ flexDirection: "row", }} >
                                     <Image source={more} style={{ height: normalize(20), width: normalize(20), resizeMode: 'contain', left: normalize(25) }} />

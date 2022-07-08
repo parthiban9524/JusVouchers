@@ -67,6 +67,8 @@ import VoucherQuantity from "./src/screens/Vender/VoucherQuantity";
 import QuantityDetails from "./src/screens/Vender/QuantityDetails";
 import BlogDetails from "./src/screens/Dashboard/Menu/BlogDetails";
 
+import DigitalMarketing from "./src/screens/Dashboard/Menu/DigitalMarketing";
+
 export default function App() {
 
   const Stack = createStackNavigator();
@@ -89,6 +91,7 @@ export default function App() {
         <HomeNavigator.Screen name="OrderHistory" component={OrderHistory} />
         <HomeNavigator.Screen name="Profile" component={Profile} />
         <HomeNavigator.Screen name="Exclusive" component={Exclusive} />
+        <HomeNavigator.Screen name="DigitalMarketing" component={DigitalMarketing}/>
 
       </HomeNavigator.Navigator>
     )
@@ -270,7 +273,7 @@ export default function App() {
           <Stack.Screen name="VenderScreen" component={VenderScreen} />
           <Stack.Screen name="SalesScreen" component={SalesScreen} />
         </Stack.Navigator>
-       
+
       </Provider>
     </NavigationContainer>
   )
