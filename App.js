@@ -270,7 +270,6 @@ export default function App() {
           <Stack.Screen name="VenderScreen" component={VenderScreen} />
           <Stack.Screen name="SalesScreen" component={SalesScreen} />
         </Stack.Navigator>
-       
       </Provider>
     </NavigationContainer>
   )
