@@ -90,7 +90,6 @@ const InputOTPScreen = ({ navigation }) => {
                                 </View>
                             </TouchableOpacity>
                         </View>
-
                     </View>
                 </KeyboardAvoidingView >
             </View >
