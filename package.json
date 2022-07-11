@@ -7,7 +7,7 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint .", 
+    "lint": "eslint .",
     "assets": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res",
     "clean": "rm -rf node_modules && watchman watch-del-all && rm -rf $TMPDIR/react-native-packager-cache- && rm -rf $TMPDIR/metro-bundler-cache- && rm -rf node_modules/ && npm cache clean --force && npm install && rm -rf /tmp/haste-map-react-native-packager-* && rm -rf ios/Pods && cd ios && pod install",
     "bundle": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res && cd android && ./gradlew assembleDebug && cd .."
@@ -38,7 +38,8 @@
     "redux-form-validators": "^3.3.2",
     "redux-logger": "^3.0.6",
     "redux-promise-middleware": "^6.1.2",
-    "redux-thunk": "^2.4.1"
+    "redux-thunk": "^2.4.1",
+    "rn-fetch-blob": "^0.12.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",

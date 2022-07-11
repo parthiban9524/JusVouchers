@@ -68,7 +68,7 @@ export const BlogData = [
 
 export const Data = [
     {
-        "category": "Beauty",
+        "category": "Saloon",
         "name": "",
         "offer": "599/-",
         "offer_text": "on Combo pack",
@@ -76,7 +76,7 @@ export const Data = [
         "like": true
     },
     {
-        "category": "Beauty",
+        "category": "SPA",
         "name": "",
         "offer": "699/-",
         "offer_text": "on Combo pack",
@@ -93,7 +93,7 @@ export const Data = [
         "like": false
     },
     {
-        "category": "Health",
+        "category": "Health Card",
         "name": "Pathology",
         "start_offer": "10%",
         "end_offer": "40%",
@@ -102,7 +102,7 @@ export const Data = [
         "like": true
     },
     {
-        "category": "Health",
+        "category": "Health Card",
         "name": "Physiotherapy",
         "offer": "599/-",
         "offer_text": "1 Session Free",
@@ -110,7 +110,7 @@ export const Data = [
         "like": false
     },
     {
-        "category": "Health",
+        "category": "Health Card",
         "name": "Dietician",
         "offer": "599/-",
         "offer_text": "1 Session Free",
@@ -118,7 +118,7 @@ export const Data = [
         "like": false
     },
     {
-        "category": "Health",
+        "category": "Health Card",
         "name": "Radiology",
         "start_offer": "10%",
         "end_offer": "40%",
@@ -127,39 +127,39 @@ export const Data = [
         "like": false
     },
     {
-        "category": "Yoga",
-        "name": "",
+        "category": "Discount Offers",
+        "name": "Yoga",
         "offer": "30%",
         "offer_text": "on 3 months member ship",
         "image": yoga1,
         "like": false
     },
     {
-        "category": "Yoga",
-        "name": "",
+        "category": "Discount Offers",
+        "name": "Yoga",
         "offer": "15%",
         "offer_text": "on 6 months member ship",
         "image": yoga2,
         "like": false
     },
     {
-        "category": "Yoga",
-        "name": "",
+        "category": "Discount Offers",
+        "name": "yoga",
         "offer": "20%",
         "offer_text": "on 1 year member ship",
         "image": yoga3,
         "like": false
     },
     {
-        "category": "Yoga",
-        "name": "",
+        "category": "Discount Offers",
+        "name": "Yoga",
         "offer": "10%",
         "offer_text": "on 3 months member ship",
         "image": yoga4,
         "like": false
     },
     {
-        "category": "Gym",
+        "category": "SPA",
         "name": "Beauty Two",
         "offer": "10%",
         "offer_text": "on 3 months member ship",
@@ -167,7 +167,7 @@ export const Data = [
         "like": false
     },
     {
-        "category": "Gym",
+        "category": "Health Card",
         "name": "Beauty Two",
         "offer": "15%",
         "offer_text": "on 6 months member ship",
@@ -175,7 +175,7 @@ export const Data = [
         "like": false
     },
     {
-        "category": "Gym",
+        "category": "Discount Offers",
         "name": "Beauty Two",
         "offer": "20%",
         "offer_text": "on 1 year member ship",
@@ -183,7 +183,7 @@ export const Data = [
         "like": false
     },
     {
-        "category": "Gym",
+        "category": "SPA",
         "name": "Beauty Two",
         "offer": "10%",
         "offer_text": "on 3 months member ship",

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { View, Text, StatusBar, Image, TouchableOpacity, Modal } from "react-native"
 
 import { fonts, normalize } from "./Utils"
-import { menu, close, logout_dark, admin_user, vendor, admin_voucher, admin_blog, admin_queries } from "./Icons";
+import { menu, close, logout_dark, admin_user, vendor, admin_voucher, admin_blog, admin_queries, paycard } from "./Icons";
 import man from "../assest/images/man.png"
 
 export default function AdminHeader({ navigation }) {
@@ -65,6 +65,12 @@ export default function AdminHeader({ navigation }) {
                                 <View style={{ flexDirection: "row", }} >
                                     <Image source={vendor} style={{ height: normalize(25), width: normalize(25), resizeMode: 'contain', left: normalize(25) }} />
                                     <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(15), color: "#3D3C3B", fontWeight: "700", marginLeft: normalize(30), top: 2 }} >Venders</Text>
+                                </View>
+                            </TouchableOpacity>
+                            <TouchableOpacity style={{height: normalize(30), width: normalize(180), marginLeft: normalize(30), marginTop: normalize(25), justifyContent: "center" }} onPress={() => navigation.navigate("PaymentDetails")} >
+                                <View style={{ flexDirection: "row", }} >
+                                    <Image source={paycard} style={{ height: normalize(25), width: normalize(25), resizeMode: 'contain', left: normalize(25), tintColor : "#000000" }} />
+                                    <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(15), color: "#3D3C3B", fontWeight: "700", marginLeft: normalize(30), top: 2 }} >PaymentDetails</Text>
                                 </View>
                             </TouchableOpacity>
                             <TouchableOpacity style={{height: normalize(30), width: normalize(180), marginLeft: normalize(30), marginTop: normalize(25), justifyContent: "center" }} onPress={() => navigation.navigate("AddVoucher")} >

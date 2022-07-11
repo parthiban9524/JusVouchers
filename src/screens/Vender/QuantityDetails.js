@@ -7,20 +7,24 @@ import VenderHeader from "../../components/VenderHeader";
 
 export default function QuantityDetails({ navigation }) {
 
-    const DATA = navigation.getState().routes[2].params.data
-    const data = [navigation.getState().routes[2].params.data]
+    const DATA = navigation.getState().routes[2].params.data.detail
+    const data = navigation.getState().routes[2].params.data
 
-    console.log("data",navigation.getState().routes[2].params.data)
+
+    console.log("data",DATA)
 
     const renderItem = ({ item }) => {
-
+console.log("Item", item)
         return (
             <TouchableOpacity style={[styles.data_container]} onPress={() => onDate(item)} >
-                <View style={{ justifyContent: "center", marginLeft: normalize(30) }}>
+                <View style={{ justifyContent: "center", marginLeft: normalize(30), }}>
                     <Text style={styles.data_text}>{item.name}</Text>
                 </View>
                 <View style={{ justifyContent: "center", marginRight: normalize(45) }}>
-                    <Text style={styles.data_text} >{item.Quantity}</Text>
+                    <Text style={styles.data_text} >{item.quantity}</Text>
+                </View>
+                <View style={{ justifyContent: "center", marginRight: normalize(45) }}>
+                    <Text style={styles.data_text} >{item.balance}</Text>
                 </View>
             </TouchableOpacity>
         );
@@ -39,13 +43,15 @@ export default function QuantityDetails({ navigation }) {
                     <View style={{ borderRadius: normalize(20), backgroundColor: '#FFDCAE99', width: normalize(340), height: normalize(83), alignSelf: "center", marginTop: normalize(15) }} >
                         <View style={{ flexDirection: "row", marginTop: normalize(15), alignSelf: "center" }}>
                             <Image source={admin_voucher} style={{ height: normalize(40), width: normalize(40), resizeMode: "contain", marginTop: 5 }} />
-                            <Text style={{ fontSize: normalize(18), fontWeight: '500', marginLeft: normalize(20), marginTop: normalize(15), color: "#000000", }}  >{DATA.name} Quantity : <Text style={{ fontSize: normalize(20), fontWeight: '500', marginLeft: 3, color: '#08D635', fontFamily: fonts.lato_bold }}>{DATA.Quantity}</Text></Text>
+                            <Text style={{ fontSize: normalize(18), fontWeight: '500', marginLeft: normalize(20), marginTop: normalize(15), color: "#000000", }}  >{data.name} Quantity : <Text style={{ fontSize: normalize(20), fontWeight: '500', marginLeft: 3, color: '#08D635', fontFamily: fonts.lato_bold }}>{data.Quantity}</Text></Text>
                         </View>
                     </View>
                     <View style={{ width: normalize(340), borderRadius: normalize(10), backgroundColor: "#D0E3FFB0", marginVertical: normalize(20), alignSelf: "center" }}>
                     <View style={{ flexDirection: "row", justifyContent: "space-around", marginTop: normalize(20), marginLeft: normalize(20) }}>
-                        <Text style={styles.data_text}>Purchased</Text>
-                        <Text style={[styles.data_text, { left: 30 }]} >Pending</Text>
+                        <Text style={styles.data_text}>Shop Name</Text>
+                        <Text style={[styles.data_text, { left: 10 }]} >Purchased</Text>
+                        <Text style={[styles.data_text, { left: 10 }]} >Pending</Text>
+
                     </View>
                     <View style={{ width: normalize(340), borderColor: "#797877", borderBottomWidth: 1.2, alignSelf: "center", marginTop: normalize(10) }} />
                     <FlatList
@@ -78,11 +84,11 @@ const styles = StyleSheet.create({
     },
     data_container: {
         flexDirection: "row",
-        justifyContent: "space-between",
         marginTop: normalize(10),
         height: normalize(30),
         width: normalize(320),
         borderRadius: normalize(25),
         alignSelf: "center",
+        justifyContent : "space-around"
     }
 });

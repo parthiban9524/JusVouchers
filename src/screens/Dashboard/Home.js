@@ -13,36 +13,38 @@ import health from "../../assest/images/health.png"
 import yoga from "../../assest/images/yoga.png"
 import saloon from "../../assest/images/saloon.png"
 import diet from "../../assest/images/diet.png"
+import online from "../../assest/images/online.png"
+import offline from "../../assest/images/offline.png"
 import exclusive from "../../assest/images/exclusive.png"
 import Slider from "../../components/Slider";
 
 export default function Home({ navigation }) {
 
     const val1 = [
-        {"bg" : "#E61E6B","img" : health,"txtbg" : "#74002D","text" : "Health"},
-        {"bg" : "#92DAF9","img" : doctor,"txtbg" : "#006895","text" : "Doctor"},
+        { "bg": "#E61E6B", "img": health, "txtbg": "#74002D", "text": "Health" },
+        { "bg": "#92DAF9", "img": doctor, "txtbg": "#006895", "text": "Doctor" },
     ]
 
     const val2 = [
-        {"bg" : "#819CFF","img" : gym,"txtbg" : "#0D2FA9","text" : "GYM"},
-        {"bg" : "#76E28E","img" : yoga,"txtbg" : "#348847","text" : "Yoga"},
+        { "bg": "#819CFF", "img": online, "txtbg": "#0D2FA9", "text": "Online Marketing" },
+        { "bg": "#76E28E", "img": yoga, "txtbg": "#348847", "text": "SPA" },
     ]
 
     const val3 = [
-        {"bg" : "#E61E6B","img" : health,"txtbg" : "#74002D","text" : "Health"},
-        {"bg" : "#92DAF9","img" : saloon,"txtbg" : "#006895","text" : "Saloon"},
+        { "bg": "#E61E6B", "img": offline, "txtbg": "#74002D", "text": "Offline Marketing" },
+        { "bg": "#92DAF9", "img": saloon, "txtbg": "#006895", "text": "Saloon" },
     ]
 
     const val4 = [
-        {"bg" : "#819CFF","img" : gym,"txtbg" : "#0D2FA9","text" : "GYM"},
-        {"bg" : "#76E28E","img" : diet,"txtbg" : "#348847","text" : "Dietician"},
+        { "bg": "#819CFF", "img": health, "txtbg": "#0D2FA9", "text": "Doctor" },
+        { "bg": "#76E28E", "img": doctor, "txtbg": "#348847", "text": "Health" },
     ]
 
     return (
         <>
             <Header navigation={navigation} />
             <ScrollView style={{ backfaceVisibility: "visible", backgroundColor: "#ffffff" }} >
-               <Slider navigation={navigation} id = {1} set = {true} />
+                <Slider navigation={navigation} id={1} />
                 <View style={{ marginTop: normalize(40), marginLeft: normalize(30) }} >
                     <View style={{ flexDirection: "row", justifyContent: "space-between" }} >
                         <Text style={{ fontFamily: fonts.montserrat_regular, fontWeight: "500", color: "#3D3C3B", fontSize: normalize(18) }} >Latest Offer</Text>
@@ -52,10 +54,10 @@ export default function Home({ navigation }) {
                     </View>
                 </View>
                 <View style={{ marginHorizontal: normalize(10), marginTop: 16, flexDirection: "row", justifyContent: "space-around" }} >
-                   <Typecard data={val1} onpress = {() => navigation.navigate("VouchersScreen") } />
+                    <Typecard data={val1} onpress={() => navigation.navigate("VouchersScreen")} />
                 </View>
                 <View style={{ marginHorizontal: normalize(10), marginTop: 16, flexDirection: "row", justifyContent: "space-around" }} >
-                   <Typecard data={val2} />
+                    <Typecard data={val2} onpress = {() => navigation.navigate("DigitalMarketing")} />
                 </View>
                 <View style={{ alignSelf: "center" }} >
                     <Slider navigation={navigation} id={1} />
@@ -86,10 +88,10 @@ export default function Home({ navigation }) {
                     <Text style={{ fontFamily: fonts.montserrat_regular, fontWeight: "500", color: "#3D3C3B", fontSize: normalize(18) }} >Top Selling</Text>
                 </View>
                 <View style={{ marginHorizontal: normalize(10), marginTop: normalize(20), flexDirection: "row", justifyContent: "space-around" }} >
-                  <Typecard data={val3} />
+                    <Typecard data={val3} />
                 </View>
                 <View style={{ marginHorizontal: normalize(10), marginTop: 16, flexDirection: "row", justifyContent: "space-around" }} >
-                   <Typecard data={val4 } />
+                    <Typecard data={val4} />
                 </View>
                 <View style={{ marginTop: normalize(20), marginLeft: normalize(30) }} >
                     <Text style={{ fontFamily: fonts.montserrat_regular, fontWeight: "600", color: "#3D3C3B", fontSize: normalize(18) }} >Exclusive Package</Text>

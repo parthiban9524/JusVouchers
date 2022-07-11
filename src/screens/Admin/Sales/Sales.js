@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FlatList, SafeAreaView, StatusBar, StyleSheet, Text, TouchableOpacity, View, Image } from "react-native";
 import { normalize, fonts } from "../../../components/Utils";
-import { sale1, rising } from "../../../components/Icons";
+import { sale1, rising, admin_voucher } from "../../../components/Icons";
 import { left } from "../../../components/Icons";
 import AdminHeader from "../../../components/AdminHeader";
 
@@ -204,6 +204,14 @@ const Sales = ({ navigation }) => {
           </TouchableOpacity>
           <Text style={{ fontFamily: fonts.montserrat_bold, fontSize: normalize(22), fontWeight: 'bold', marginLeft: normalize(120), marginTop: normalize(20) }}>Sales</Text>
         </View>
+        <TouchableOpacity style={{ borderRadius: normalize(20), backgroundColor: '#FFDCAE99', width: normalize(340), height: normalize(83), alignSelf: "center", marginTop: normalize(15) }} onPress={() => navigation.navigate("MSVouchers")} >
+          <View style={{ flexDirection: "row", alignSelf: "center", marginTop: normalize(15) }}>
+            <Image source={admin_voucher} style={{ height: normalize(40), width: normalize(40), resizeMode: "contain", alignSelf: "center", right: normalize(28), marginTop: 5, tintColor: "red" }} />
+            <View>
+              <Text style={{ fontSize: normalize(18), fontWeight: '500', marginLeft: 10, marginTop: normalize(15), color: "#000000", alignSelf: "center", fontFamily: fonts.montserrat_semibold }}  >Most Selling VoucherList </Text>
+            </View>
+          </View>
+        </TouchableOpacity>
         <View style={{ borderRadius: normalize(20), backgroundColor: '#FFDCAE99', width: normalize(340), height: normalize(83), alignSelf: "center", marginTop: normalize(15) }}>
           <View style={{ flexDirection: "row", alignSelf: "center", marginTop: normalize(15) }}>
             <Image source={sale1} style={{ height: normalize(50), width: normalize(50), resizeMode: "contain", alignSelf: "center", marginLeft: normalize(8), marginTop: 5 }} />

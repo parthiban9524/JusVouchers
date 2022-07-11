@@ -3,7 +3,7 @@ import { View, Text, TouchableOpacity } from "react-native"
 import { voucher } from "./Icons";
 import { fonts, normalize } from "./Utils";
 
-export default function Submitbutton({ bg, text, txtclr, onpress, tiny = false, big = false, exclusive = false , voucher = false}) {
+export default function Submitbutton({ bg, text, txtclr, onpress, tiny = false, big = false, exclusive = false , voucher = false, double = false}) {
     console.log("tiny", tiny)
     return (
         <>
@@ -32,6 +32,14 @@ export default function Submitbutton({ bg, text, txtclr, onpress, tiny = false, 
             {
                 voucher && (
                     <TouchableOpacity style={{ height: normalize(50), width: normalize(257), backgroundColor: bg, justifyContent: "center", borderRadius: normalize(10), alignSelf: "center",  }} onPress={onpress} >
+                    <Text style={{ color: txtclr, alignSelf: "center", fontSize: normalize(18), fontWeight: "600", fontFamily: fonts.montserrat_semibold }}>{text}</Text>
+                </TouchableOpacity>
+                )
+
+            }
+            {
+                double && (
+                    <TouchableOpacity style={{ height: normalize(50), width: normalize(150), backgroundColor: bg, justifyContent: "center", borderRadius: normalize(10), alignSelf: "center",  }} onPress={onpress} >
                     <Text style={{ color: txtclr, alignSelf: "center", fontSize: normalize(18), fontWeight: "600", fontFamily: fonts.montserrat_semibold }}>{text}</Text>
                 </TouchableOpacity>
                 )

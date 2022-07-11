@@ -21,7 +21,7 @@ export default function AddVoucher({ navigation }) {
             <AdminHeader navigation={navigation} />
             <View style={{ flex: 1, backgroundColor: "#ffffff" }} >
                 <View>
-                    <Text style={{ fontSize: normalize(20), fontFamily: fonts.montserrat_semibold, alignSelf: 'center', marginTop: normalize(20), color : "#000000" }}>Add Voucher</Text>
+                    <Text style={{ fontSize: normalize(20), fontFamily: fonts.montserrat_semibold, alignSelf: 'center', marginTop: normalize(20), color: "#000000" }}>Add Voucher</Text>
                 </View>
                 <View style={{ marginTop: 20 }}>
                     <Text style={{ marginLeft: normalize(65), fontSize: normalize(15), fontWeight: '700', color: '#2958c4' }}>Voucher Name</Text>
@@ -57,6 +57,9 @@ export default function AddVoucher({ navigation }) {
                 </View>
                 <View style={{ marginTop: normalize(46) }} >
                     <Submitbutton voucher={true} bg={"#F58220"} text={"Upload"} txtclr={"#ffffff"} onpress={() => navigation.navigate("AdminUpload")} />
+                </View>
+                <View style={{ marginTop: normalize(20) }} >
+                    <Submitbutton voucher={true} bg={"#F58220"} text={"Manage Voucher"} txtclr={"#ffffff"} onpress={() => navigation.navigate("VoucherHandling")} />
                 </View>
             </View>
         </>

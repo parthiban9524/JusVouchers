@@ -27,7 +27,7 @@ export default function Vouchers_detail({ navigation }) {
                         <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(22), fontWeight: '500', color: "#ffffff" }} >XXXXXXXXXXXXXXX</Text>
                     </View>
                     <View style={{ marginTop: normalize(40) }} >
-                        <Submitbutton text={"Buy Now"} txtclr={"#74002D"} bg={"#ffffff"} voucher={true} onpress = { () => navigation.navigate("PaymentType") } />
+                        <Submitbutton text={"Buy Now"} txtclr={"#74002D"} bg={"#ffffff"} voucher={true} onpress = { () => navigation.navigate("CheckOut") } />
                     </View>
                     <View style={{ marginTop: normalize(20), alignSelf: "center" }} >
                         <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(12), color: "#ffffff" }} >Validty - 1 June to 30 Aug 2022</Text>

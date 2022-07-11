@@ -68,6 +68,11 @@ import QuantityDetails from "./src/screens/Vender/QuantityDetails";
 import BlogDetails from "./src/screens/Dashboard/Menu/BlogDetails";
 
 import DigitalMarketing from "./src/screens/Dashboard/Menu/DigitalMarketing";
+import CheckOut from "./src/screens/Dashboard/Vouchers/CheckOut";
+import MSVouchers from "./src/screens/Admin/MSVouchers";
+import VouchersHandling from "./src/screens/Admin/VoucherHandling";
+import RemoveVoucher from "./src/screens/Admin/RemoveVoucher";
+import PaymentDetails from "./src/screens/Admin/PaymentDetails";
 
 export default function App() {
 
@@ -91,7 +96,7 @@ export default function App() {
         <HomeNavigator.Screen name="OrderHistory" component={OrderHistory} />
         <HomeNavigator.Screen name="Profile" component={Profile} />
         <HomeNavigator.Screen name="Exclusive" component={Exclusive} />
-        <HomeNavigator.Screen name="DigitalMarketing" component={DigitalMarketing}/>
+        <HomeNavigator.Screen name="DigitalMarketing" component={DigitalMarketing} />
 
       </HomeNavigator.Navigator>
     )
@@ -108,6 +113,7 @@ export default function App() {
         <VouchersNavigator.Screen name="Payment" component={Payment} />
         <VouchersNavigator.Screen name="QrCodePayment" component={QrCodePayment} />
         <VouchersNavigator.Screen name="RedeemedVoucher" component={RedeemedVoucher} />
+        <VouchersNavigator.Screen name="CheckOut" component={CheckOut} />
       </VouchersNavigator.Navigator>
     )
   }
@@ -123,8 +129,8 @@ export default function App() {
         <AuthNavigator.Screen name="ForgotPassword" component={ForgotPassword} />
         <AuthNavigator.Screen name="ResetPassword" component={ResetPassword} />
         <AuthNavigator.Screen name="ContactUs" component={ContactUs} />
-        <AuthNavigator.Screen name="LoginotpAuth" component={LoginotpAuth}/>
-        <AuthNavigator.Screen name="InputOTPScreen" component={InputOTPScreen}/>
+        <AuthNavigator.Screen name="LoginotpAuth" component={LoginotpAuth} />
+        <AuthNavigator.Screen name="InputOTPScreen" component={InputOTPScreen} />
 
       </AuthNavigator.Navigator>
     )
@@ -144,6 +150,10 @@ export default function App() {
         <AdminNavigator.Screen name="AdminUpload" component={AdminUpload} />
         <AdminNavigator.Screen name="AdminBlog" component={AdminBlog} />
         <AdminNavigator.Screen name="BlogUpload" component={BlogUpload} />
+        <AdminNavigator.Screen name="MSVouchers" component={MSVouchers} />
+        <AdminNavigator.Screen name="VoucherHandling" component={VouchersHandling} />
+        <AdminNavigator.Screen name="RemoveVoucher" component={RemoveVoucher} />
+        <AdminNavigator.Screen name="PaymentDetails" component={PaymentDetails} />
       </AdminNavigator.Navigator>
     )
   }
