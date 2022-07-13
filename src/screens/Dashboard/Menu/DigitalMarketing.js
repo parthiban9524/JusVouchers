@@ -5,7 +5,7 @@ import { Arrow, BronzePackage, DigitalMarketingHome, GoldPackage, left, SilverPa
 import { normalize, fonts } from '../../../components/Utils'
 import Header from '../../../components/Header'
 import download from "../../../assest/images/download.png"
-import RNFetchBlob from "rn-fetch-blob";
+
 
 const DigitalMarketing = ({ navigation }) => {
 

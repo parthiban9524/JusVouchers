@@ -21,7 +21,7 @@ export default function VoucherQuantity({ navigation }) {
                     "balance": 0,
                 },
                 {
-                    "name": " Doctor",
+                    "name": "ABC Doctor",
                     "quantity": 10,
                     "balance": 10,
                 },
@@ -31,7 +31,7 @@ export default function VoucherQuantity({ navigation }) {
                     "balance": 10,
                 },
                 {
-                    "name": "Doctor",
+                    "name": "ABC Doctor",
                     "quantity": 10,
                     "balance": 10,
                 }
@@ -108,7 +108,7 @@ export default function VoucherQuantity({ navigation }) {
                 <View style={{ width: normalize(340), borderRadius: normalize(10), backgroundColor: "#D0E3FFB0", marginVertical: normalize(20), alignSelf: "center" }}>
                     <View style={{ flexDirection: "row", justifyContent: "space-around", marginTop: normalize(20) }}>
                         <Text style={styles.data_text}>Voucher Name</Text>
-                        <Text style={[styles.data_text, { left: 30 }]} >Voucher Quantity</Text>
+                        <Text style={[styles.data_text, { left: 20 }]} >Voucher Quantity</Text>
                     </View>
                     <View style={{ width: normalize(340), borderColor: "#797877", borderBottomWidth: 1.2, alignSelf: "center", marginTop: normalize(10) }} />
                     <FlatList

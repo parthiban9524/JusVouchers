@@ -63,16 +63,17 @@ export default function PaymentType({ navigation }) {
                                     <View style={{ justifyContent: "center", flexDirection : "row" }} >
                                         <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(18), left: 10, bottom: 5 }} >Scan QR </Text>
                                     </View>
-                                    <Image source={qrcode} style={{ height: normalize(30), width: normalize(30), left : normalize(100) }} />
+
+                                    <Image source={qrcode} style={{ height: normalize(38), width: normalize(38), left : normalize(130),bottom:14}} />
                                 </TouchableOpacity>
                             </View>
                         </View>
                     </View>
                 </View>
 
-                <View style={{ marginTop: normalize(80), alignSelf: "center" }}>
-                    <Image source={payment_card1} style={{ height: normalize(135), width: normalize(320) }} />
-                    <View style={{ position: "absolute", marginTop: normalize(10) }} >
+                <View style={{ marginTop: normalize(30), alignSelf: "center" }}>
+                    <Image source={payment_card1} style={{ height: normalize(150), width: normalize(330) }} />
+                    <View style={{ position: "absolute", marginTop: normalize(15) }} >
                         <View style={{ marginLeft: normalize(35), }} >
                             <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(18), fontWeight: "600", color: "#000000" }} >Price Details</Text>
                         </View>

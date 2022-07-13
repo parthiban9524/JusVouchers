@@ -16,7 +16,7 @@ function ForgotPassword({ navigation }) {
             <ScrollView>
             <WavyHeader firstTxt={"Forgot"} secTxt={"Password"} navigation = {navigation} />
             <View style={{ marginTop: normalize(100), alignSelf: "center", paddingHorizontal: normalize(50) }}>
-                <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(20), color: "#9A9393", textAlign: "center" }}>Enter The Regestier Email to rest the password</Text>
+                <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(20), color: "#9A9393", textAlign: "center" }}>Enter The Register Email to reset the password</Text>
             </View>
             <View style={{ marginTop: normalize(40) }} >
                 <Field

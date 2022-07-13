@@ -17,7 +17,7 @@ export default function Vouchers_detail({ navigation }) {
                 <Image source={cart_bg} style={{ height: normalize(530), width: normalize(317) }} />
                 <View style={{ position: "absolute", alignSelf: "center" }} >
                     <View style={{ marginTop: normalize(35) }} >
-                        <Image source={img} style={{ height: normalize(180), width: normalize(240), resizeMode : "contain" }} />
+                        <Image source={img} style={{ height: normalize(180), width: normalize(258), resizeMode : "contain" }} />
                     </View>
                     <View style={{ width: normalize(245), borderColor: "#ffffff", borderBottomWidth: 1, marginTop: normalize(30) }} />
                     <View style={{ marginTop: normalize(60), alignSelf: "center" }} >

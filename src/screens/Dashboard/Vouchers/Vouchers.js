@@ -54,7 +54,7 @@ export default function Vouchers({ navigation }) {
                 <TouchableOpacity style={{ left: normalize(145), top: 5 }} onPress={Onpress(item.like)} >
                     <Image source={item.like ? red_heart : white_heart} style={{ height: normalize(18), width: normalize(18), }} />
                 </TouchableOpacity>
-                <TouchableOpacity style={{ marginTop: normalize(20), right: 10 }} onPress={() => navigation.navigate("Vouchers_detail", { image: item.image })} >
+                <TouchableOpacity style={{ marginTop: normalize(10), right: 10 }} onPress={() => navigation.navigate("Vouchers_detail", { image: item.image })} >
 
                     {
                         item.start_offer && (

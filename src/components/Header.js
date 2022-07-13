@@ -65,7 +65,7 @@ export default function Header({ navigation }) {
                                 </View>
                                 <View style={{ marginLeft: normalize(20), justifyContent: "center" }} >
                                     <Text style={{ fontFamily: fonts.montserrat_semibold, fontSize: normalize(15), color: "#3D3C3B", fontWeight: "600" }} >Shruti Shukla</Text>
-                                    <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(12), color: "#3D3C3B", fontWeight: "600" }}  >lucknow , india</Text>
+                                    <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(12), color: "#3D3C3B", fontWeight: "600" }}  >lucknow, india</Text>
                                 </View>
                             </TouchableOpacity>
                             <TouchableOpacity style={{ height: normalize(30), width: normalize(180), backgroundColor: "rgba(245, 130, 32, 0.39)", marginLeft: normalize(30), marginTop: normalize(40), borderRadius: normalize(20), justifyContent: "center" }} >

@@ -225,7 +225,7 @@ export default function App() {
                   resizeMode='contain'
                   style={{ width: normalize(35), height: normalize(35), }}
                 />
-                <Text style={{ textAlign: 'center', fontSize: normalize(12), fontFamily: fonts.inter_bold, color: "#ffffff", right: 10 }}>{"Voucher"}</Text>
+                <Text style={{ textAlign: 'center', fontSize: normalize(12), fontFamily: fonts.inter_bold, color: "#ffffff", right: 6 }}>{"Voucher"}</Text>
               </View>
             )
           }}
@@ -242,9 +242,9 @@ export default function App() {
               <View>
                 <Image source={cart}
                   resizeMode='contain'
-                  style={{ width: normalize(35), height: normalize(35), }}
+                  style={{ width: normalize(35), height: normalize(35), marginRight:9}}
                 />
-                <Text style={{ textAlign: 'center', fontSize: normalize(12), fontFamily: fonts.inter_bold, color: "#ffffff" }}>{"Cart"}</Text>
+                <Text style={{ textAlign: 'center', fontSize: normalize(12), fontFamily: fonts.inter_bold, color: "#ffffff" ,right:6}}>{"Cart"}</Text>
               </View>
             )
           }}

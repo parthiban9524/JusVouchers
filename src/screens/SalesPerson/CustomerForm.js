@@ -39,6 +39,7 @@ function CustomerForm({ navigation }) {
                     component={Input}
                     img={phone}
                     id={1}
+                    
                 />
             </View>
             <View  >

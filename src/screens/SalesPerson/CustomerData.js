@@ -19,7 +19,7 @@ const DATA = [
         "Vprice": "500/-"
       },
     ],
-Name : 'Rahul'
+Name : 'Rahul Rajput'
 
   },
   {
@@ -35,7 +35,7 @@ Name : 'Rahul'
         },
       ],
     Email: "raman@gmail.com",
-    Name : 'Raman'
+    Name : 'Raman Kumar'
   },
   {
     id: "3",
@@ -50,7 +50,7 @@ Name : 'Rahul'
           "Vprice": "500/-"
         },
       ],
-       Name : 'Priya'
+       Name : 'Priya Singh'
   },
   {
     id: "4",
@@ -65,7 +65,7 @@ Name : 'Rahul'
           "Vprice": "500/-"
         },
       ],
-    Name : 'Amit'
+    Name : 'Amit Kumar'
   },
   {
     id: "5",
@@ -80,7 +80,7 @@ Name : 'Rahul'
           "Vprice": "500/-"
         },
       ],
-    Name : 'Vivek'
+    Name : 'Vivek Rajput'
   },
 ];
 
@@ -122,9 +122,9 @@ const CustomerData = ({ navigation }) => {
         <View style={{ borderRadius: normalize(20), backgroundColor: '#FFDCAE99', width: normalize(340), height: normalize(83), alignSelf: "center", marginTop: normalize(15) }}>
           <View style={{ flexDirection: "row", alignSelf: "center", marginTop: normalize(15) }}>
             <Image source={sale1} style={{ height: normalize(50), width: normalize(50), resizeMode: "contain", alignSelf: "center", marginLeft: normalize(8), marginTop: 5 }} />
-            <Text style={{ fontSize: normalize(18), fontWeight: '500', marginLeft: 10, marginTop: 10, color: "#000000" }}  >Total Customer <Text style={{ fontSize: normalize(17), fontWeight: '500', marginLeft: 3, color: '#08D635', fontWeight: '800', fontFamily: fonts.montserrat_regular }}>960</Text></Text>
+            <Text style={{ fontSize: normalize(18), fontWeight: '500', marginLeft: 25, marginTop: 10, color: "#000000" }}  >Total Customer <Text style={{ fontSize: normalize(17), fontWeight: '500', marginLeft: 5, color: '#08D635', fontWeight: '800', fontFamily: fonts.montserrat_regular }}>960</Text></Text>
             <View style={{ flexDirection: "row", marginTop: normalize(10), }} >
-              <Image source={rising} style={{ width: normalize(40), height: normalize(25), marginLeft: normalize(5), alignSelf: "center" }} />
+              <Image source={rising} style={{ width: normalize(40), height: normalize(25), marginLeft: normalize(10), alignSelf: "center" }} />
               <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(16), color: "#08D635", top: normalize(20) }} >5.6%</Text>
             </View>
           </View>
@@ -140,6 +140,7 @@ const CustomerData = ({ navigation }) => {
             renderItem={renderItem}
             keyExtractor={(item) => item.id}
             extraData={selectedId}
+            style={{marginLeft:30}}
           />
         </View>
       </SafeAreaView>

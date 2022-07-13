@@ -17,13 +17,13 @@ export default function QuantityDetails({ navigation }) {
 console.log("Item", item)
         return (
             <TouchableOpacity style={[styles.data_container]} onPress={() => onDate(item)} >
-                <View style={{ justifyContent: "center", marginLeft: normalize(30), }}>
+                <View style={{ justifyContent: "center",marginRight:30 }}>
                     <Text style={styles.data_text}>{item.name}</Text>
                 </View>
-                <View style={{ justifyContent: "center", marginRight: normalize(45) }}>
+                <View style={{ justifyContent: "center",marginRight:70}}>
                     <Text style={styles.data_text} >{item.quantity}</Text>
                 </View>
-                <View style={{ justifyContent: "center", marginRight: normalize(45) }}>
+                <View style={{ justifyContent: "center", marginRight: normalize(0) }}>
                     <Text style={styles.data_text} >{item.balance}</Text>
                 </View>
             </TouchableOpacity>
