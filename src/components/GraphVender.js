@@ -14,7 +14,7 @@ export default function GraphVender() {
     return (
 
         <View style={{ alignSelf: "center", marginTop: normalize(40), elevation: normalize(5), shadowColor: "#000000", backgroundColor: "white", borderRadius: normalize(10) }}>
-            <View style={{ flexDirection: "row", justifyContent: 'space-between' }}><Text style={{ fontSize: normalize(20), fontWeight: 'bold', color: "black", marginLeft: normalize(10), marginTop: normalize(10) }}>New Vender</Text>
+            <View style={{ flexDirection: "row", justifyContent: 'space-between' }}><Text style={{ fontSize: normalize(20), fontWeight: 'bold', color: "black", marginLeft: normalize(10), marginTop: normalize(10) }}>New Vendor</Text>
                 <Text style={{ fontSize: normalize(18), fontWeight: 'bold', color: "black", marginRight: normalize(10), marginTop: normalize(10) }} >01 May-31 May </Text></View>
             <LineChart
                 data={{

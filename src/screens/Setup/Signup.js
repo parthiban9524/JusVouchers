@@ -53,7 +53,7 @@ function Signup({ navigation }) {
                 />
             </View>
             <View style = {{marginTop : normalize(15), marginLeft : normalize(30)}}>
-                <Text style = {{fontFamily : fonts.lato_regular, fontSize : normalize(18)}} >Register as Vender <Text style = {{color : "#F58220", textDecorationLine : "underline"}} onPress = {() => navigation.navigate("VenderSignup")} > click here</Text> </Text>
+                <Text style = {{fontFamily : fonts.lato_regular, fontSize : normalize(18)}} >Register as Vendor <Text style = {{color : "#F58220", textDecorationLine : "underline"}} onPress = {() => navigation.navigate("VenderSignup")} > click here</Text> </Text>
             </View>
             <View style={{ marginTop: normalize(12) }} >
                 <Submitbutton bg={"#f69632"} text={"Sign up"} txtclr={"#ffffff"} onpress={() => navigation.navigate('AdminScreen')} big={true} />

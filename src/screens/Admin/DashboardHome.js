@@ -35,9 +35,9 @@ export default function DashboardHome({ navigation }) {
                     <TouchableOpacity style={{ borderRadius: 10, backgroundColor: '#FFDCAE99', width: 155, height: 95 }} onPress={() => navigation.navigate("Venders")} >
                         <View style={{ flexDirection: "row", flexWrap: "wrap" }}>
                             <Image source={leader} style={{ height: normalize(35), width: normalize(35), resizeMode: "contain", alignSelf: "center", marginLeft: normalize(8), marginTop: 5 }} />
-                            <Text style={{ fontSize: normalize(14), fontWeight: '500', marginLeft: 5, marginTop: 10 }} >New Vender</Text>
+                            <Text style={{ fontSize: normalize(14), fontWeight: '500', marginLeft: 5, marginTop: 10 }} >New Vendor</Text>
                             <View style={{ flexDirection: "row", marginTop: 10, }} >
-                                <Text style={{ fontSize: normalize(14), fontWeight: '500', marginLeft: normalize(10), }}>16 Venders</Text>
+                                <Text style={{ fontSize: normalize(14), fontWeight: '500', marginLeft: normalize(10), }}>16 Vendors</Text>
                                 <Image source={rising} style={{ width: normalize(20), height: normalize(15), marginLeft: normalize(8), alignSelf: "center" }} />
                                 <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(12), color: "#08D635", top: normalize(10) }} >1.5%</Text>
                             </View>

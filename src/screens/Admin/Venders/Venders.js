@@ -101,14 +101,14 @@ const Venders = ({ navigation }) => {
                     <TouchableOpacity style={{ marginTop: normalize(20), marginLeft: normalize(20) }} onPress={() => navigation.goBack()} >
                         <Image source={left} style={{ height: normalize(30), width: normalize(30) }} />
                     </TouchableOpacity>
-                    <Text style={{ fontFamily: fonts.montserrat_bold, fontSize: normalize(22), fontWeight: 'bold', marginLeft: normalize(100), marginTop: normalize(20) }}>Venders</Text>
+                    <Text style={{ fontFamily: fonts.montserrat_bold, fontSize: normalize(22), fontWeight: 'bold', marginLeft: normalize(100), marginTop: normalize(20) }}>Vendors</Text>
                 </View>
                 <View style={{ borderRadius: normalize(20), backgroundColor: '#FFDCAE99', width: normalize(340), height: normalize(83), alignSelf: "center", marginTop: normalize(15) }} onPress={() => navigation.navigate("SalesDetails")} >
                     <View style={{ flexDirection: "row", alignSelf: "center", marginTop: normalize(15) }}>
                         <Image source={leader} style={{ height: normalize(50), width: normalize(50), resizeMode: "contain", alignSelf: "center", marginLeft: normalize(8), marginTop: 5 }} />
                         <View>
-                            <Text style={{ fontSize: normalize(18), fontWeight: '500', marginLeft: 10, marginTop: 10, color: "#000000", alignSelf: "center" }}  >Total Venders <Text style={{ fontSize: normalize(17), fontWeight: '500', marginLeft: 3, color: '#08D635', fontWeight: '800', fontFamily: fonts.montserrat_regular }}> 680 </Text></Text>
-                            <Text style={{ fontSize: normalize(18), fontWeight: '500', marginLeft: 10, marginTop: 10, color: "#000000" }}  >Today  16 Venders register  </Text>
+                            <Text style={{ fontSize: normalize(18), fontWeight: '500', marginLeft: 10, marginTop: 10, color: "#000000", alignSelf: "center" }}  >Total Vendors <Text style={{ fontSize: normalize(17), fontWeight: '500', marginLeft: 3, color: '#08D635', fontWeight: '800', fontFamily: fonts.montserrat_regular }}> 680 </Text></Text>
+                            <Text style={{ fontSize: normalize(18), fontWeight: '500', marginLeft: 10, marginTop: 10, color: "#000000" }}  >Today  16 Vendors register  </Text>
                         </View>
                         <View style={{ flexDirection: "row", marginTop: normalize(20), }} >
                             <Image source={rising} style={{ width: normalize(40), height: normalize(25), marginLeft: normalize(5), alignSelf: "center" }} />

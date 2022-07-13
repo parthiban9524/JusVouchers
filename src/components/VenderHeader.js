@@ -51,7 +51,7 @@ export default function VenderHeader({ navigation }) {
                                     <Image source={man} style={{ height: normalize(55), width: normalize(55), resizeMode: "contain", alignSelf: "center" }} />
                                 </View>
                                 <View style={{ marginLeft: normalize(20), justifyContent: "center" }} >
-                                    <Text style={{ fontFamily: fonts.montserrat_semibold, fontSize: normalize(15), color: "#3D3C3B", fontWeight: "600" }} >Vender</Text>
+                                    <Text style={{ fontFamily: fonts.montserrat_semibold, fontSize: normalize(15), color: "#3D3C3B", fontWeight: "600" }} >Vendor</Text>
                                     <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(12), color: "#3D3C3B", fontWeight: "600" }}  >Bhopal , india</Text>
                                 </View>
                             </TouchableOpacity>

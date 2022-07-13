@@ -44,7 +44,9 @@ export default function Home({ navigation }) {
         <>
             <Header navigation={navigation} />
             <ScrollView style={{ backfaceVisibility: "visible", backgroundColor: "#ffffff" }} >
-                <Slider navigation={navigation} id={1} />
+                <View style={{ alignSelf: "center" }}>
+                    <Slider navigation={navigation} id={1} />
+                </View>
                 <View style={{ marginTop: normalize(40), marginLeft: normalize(30) }} >
                     <View style={{ flexDirection: "row", justifyContent: "space-between" }} >
                         <Text style={{ fontFamily: fonts.montserrat_regular, fontWeight: "500", color: "#3D3C3B", fontSize: normalize(18) }} >Latest Offer</Text>
@@ -53,14 +55,26 @@ export default function Home({ navigation }) {
                         </View>
                     </View>
                 </View>
-                <View style={{ marginHorizontal: normalize(10), marginTop: 16, flexDirection: "row", justifyContent: "space-around" }} >
-                    <Typecard data={val1} onpress={() => navigation.navigate("VouchersScreen")} />
-                </View>
-                <View style={{ marginHorizontal: normalize(10), marginTop: 16, flexDirection: "row", justifyContent: "space-around" }} >
-                    <Typecard data={val2} onpress = {() => navigation.navigate("DigitalMarketing")} />
-                </View>
+                <ScrollView horizontal={true} style={{ flexDirection: "row", marginLeft: normalize(20), }}>
+                    <View>
+                        <View style={{ marginHorizontal: normalize(10), marginTop: 16, flexDirection: "row", justifyContent: "space-around" }} >
+                            <Typecard data={val1} onpress={() => navigation.navigate("VouchersScreen")} />
+                        </View>
+                        <View style={{ marginHorizontal: normalize(10), marginTop: 16, flexDirection: "row", justifyContent: "space-around" }} >
+                            <Typecard data={val2} onpress={() => navigation.navigate("DigitalMarketing")} />
+                        </View>
+                    </View>
+                    <View>
+                        <View style={{ marginHorizontal: normalize(10), marginTop: normalize(20), flexDirection: "row", justifyContent: "space-around" }} >
+                            <Typecard data={val3}  onpress={() => navigation.navigate("VenderScreen")} />
+                        </View>
+                        <View style={{ marginHorizontal: normalize(10), marginTop: 16, flexDirection: "row", justifyContent: "space-around" }} >
+                            <Typecard data={val4} />
+                        </View>
+                    </View>
+                </ScrollView>
                 <View style={{ alignSelf: "center" }} >
-                    <Slider navigation={navigation} id={1} />
+                    <Slider navigation={navigation} id={1} set = {true} />
                 </View>
                 <View style={{ marginTop: normalize(20), marginLeft: normalize(30) }} >
                     <Text style={{ fontFamily: fonts.montserrat_regular, fontWeight: "600", color: "#3D3C3B", fontSize: normalize(18) }} >Health Plus Card</Text>
@@ -87,12 +101,24 @@ export default function Home({ navigation }) {
                 <View style={{ marginTop: normalize(20), marginLeft: normalize(30) }} >
                     <Text style={{ fontFamily: fonts.montserrat_regular, fontWeight: "500", color: "#3D3C3B", fontSize: normalize(18) }} >Top Selling</Text>
                 </View>
-                <View style={{ marginHorizontal: normalize(10), marginTop: normalize(20), flexDirection: "row", justifyContent: "space-around" }} >
-                    <Typecard data={val3} />
-                </View>
-                <View style={{ marginHorizontal: normalize(10), marginTop: 16, flexDirection: "row", justifyContent: "space-around" }} >
-                    <Typecard data={val4} />
-                </View>
+                <ScrollView horizontal={true} style={{ flexDirection: "row", marginLeft: normalize(20), }}>
+                    <View>
+                        <View style={{ marginHorizontal: normalize(10), marginTop: 16, flexDirection: "row", justifyContent: "space-around" }} >
+                            <Typecard data={val3} onpress={() => navigation.navigate("VenderScreen")} />
+                        </View>
+                        <View style={{ marginHorizontal: normalize(10), marginTop: 16, flexDirection: "row", justifyContent: "space-around" }} >
+                            <Typecard data={val4}/>
+                        </View>
+                    </View>
+                    <View>
+                        <View style={{ marginHorizontal: normalize(10), marginTop: normalize(20), flexDirection: "row", justifyContent: "space-around" }} >
+                            <Typecard data={val1} onpress={() => navigation.navigate("VouchersScreen")} />
+                        </View>
+                        <View style={{ marginHorizontal: normalize(10), marginTop: 16, flexDirection: "row", justifyContent: "space-around" }} >
+                            <Typecard data={val2}  onpress={() => navigation.navigate("DigitalMarketing")}  />
+                        </View>
+                    </View>
+                </ScrollView>
                 <View style={{ marginTop: normalize(20), marginLeft: normalize(30) }} >
                     <Text style={{ fontFamily: fonts.montserrat_regular, fontWeight: "600", color: "#3D3C3B", fontSize: normalize(18) }} >Exclusive Package</Text>
                 </View>

@@ -10,8 +10,10 @@ import beauty2 from "../assest/images/beauty2.png"
 import saloon1 from "../assest/images/saloon1.png"
 import health_card from "../assest/images/health_card.png"
 import perfection from "../assest/images/perfection.png"
-
-
+import offer from "../assest/images/offer.png"
+import voucher1 from "../assest/images/voucher1.png"
+import skin from "../assest/images/skin.png"
+import beauty from "../assest/images/beauty.png"
 
 export default function Swiper({ navigation, id = 1,set = false}) {
 
@@ -21,7 +23,7 @@ export default function Swiper({ navigation, id = 1,set = false}) {
     const renderItem = ({ item, index }) => {
         return (
             <View style={{ alignSelf: "center", marginTop: normalize(40), }}>
-                <Image source={{ uri: item.image }} style={{ height: normalize(150), width: normalize(270), resizeMode: "cover", borderRadius: 10 }} />
+                <Image source={item.image} style={{ height: normalize(150), width: normalize(270), resizeMode: "contain", borderRadius: 10 }} />
                 <View style={{ marginTop: normalize(10), alignSelf: "center", flexDirection: "row", }} >
                     <View style={{ height: normalize(8), width: normalize(8), backgroundColor: item.id == 1 ? "#F58220" : "#C4C4C4", borderRadius: normalize(8) }} />
                     <View style={{ height: normalize(8), width: normalize(8), backgroundColor: item.id == 2 ? "#F58220" : "#C4C4C4", borderRadius: normalize(8), marginLeft: 5 }} />
@@ -45,35 +47,31 @@ export default function Swiper({ navigation, id = 1,set = false}) {
         [
             {
                 "id": "1",
-                "image": "https://jusvouchers.com/wp-content/uploads/2021/12/MamaEarth-Desktop-1639658454.png.webp"
+                "image": offer 
             },
             {
                 "id": "2",
-                "image": "https://jusvouchers.com/wp-content/uploads/2021/12/derma-BANNER-23-DEC-2-1640324430.png.webp"
+                "image": voucher1
             },
             {
                 "id": "3",
-                "image": "https://jusvouchers.com/wp-content/uploads/2021/12/Dell-Desktop-20-12-2021-1640174421.png.webp"
+                "image": skin
             },
             {
                 "id": "4",
-                "image": "https://jusvouchers.com/wp-content/uploads/2021/12/1-CK-Ajio-Dekstop-08-12-2021-1-1640323686.png.webp"
+                "image": beauty
             },
-            {
-                "id": "5",
-                "image": "https://jusvouchers.com/wp-content/uploads/2021/12/BB-HPB-22-dec-2-1640161458.png"
-            }
         ];
 
      const  val =    
      [
         {
             "id": "1",
-            "image": health_card
+            "image": saloon1
         },
         {
             "id": "2",
-            "image": saloon1
+            "image":  health_card
         },
         {
             "id": "3",
@@ -120,7 +118,7 @@ export default function Swiper({ navigation, id = 1,set = false}) {
                         <View style={{ alignSelf: "center", justifyContent: "space-evenly", }} >
                             <Carousel
                                 ref={carousel}
-                                data={ set ? val : data}
+                                data={ set ? data : val}
                                 sliderWidth={480}
                                 itemWidth={350}
                                 renderItem={renderItem}
