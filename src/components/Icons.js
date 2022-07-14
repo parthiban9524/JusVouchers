@@ -76,8 +76,14 @@ import GoldPackage from "../assest/images/GoldPackage.jpg"
 import BronzePackage from "../assest/images/BronzePackage.jpg"
 import SilverPackage from "../assest/images/SilverPackage.jpg"
 import Arrow from "../assest/images/Arrow.png"
+import Address from "../assest/images/Address.png"
+import VName from "../assest/images/VName.png"
+import Price from "../assest/images/Price.png"
 export {
     logo,
+    Price,
+    VName,
+    Address,
     DigitalMarketingHome,
     Arrow,
     GoldPackage,
