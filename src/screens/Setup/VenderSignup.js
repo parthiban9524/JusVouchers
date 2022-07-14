@@ -14,7 +14,7 @@ function VenderSignup({ navigation }) {
         
         <ScrollView style={{ flex: 1, backgroundColor: "#ffffff" }} >
             <View style={{}}>
-            <WavyHeader firstTxt={"Vender"} secTxt={"Account"} navigation={navigation} />
+            <WavyHeader firstTxt={"Vendor"} secTxt={"Account"} navigation={navigation} />
             </View>
             <View style={{ marginTop: normalize(50) }} >
                 <Field

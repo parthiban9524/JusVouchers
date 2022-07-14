@@ -52,10 +52,12 @@ export default function Blog({ navigation }) {
         <View style={{ flex: 1, alignSelf: "center" }} >
             <Header navigation={navigation} />
             <ScrollView style={{ backgroundColor: "#ffffff" }}>
-                <View style={{ flexDirection: "row", marginTop: normalize(20), marginLeft: normalize(20), }} >
-                    <Image source={left} style={{ height: normalize(27), width: normalize(27), alignSelf: "center" }} />
-                    <Text style={{ fontSize: normalize(28), fontFamily: fonts.montserrat_regular, fontWeight: "800", marginLeft: normalize(10) }}>Blog</Text>
-                </View>
+            <View style={{ flexDirection: "row", marginTop: normalize(10), marginLeft: normalize(20), }} >
+                <TouchableOpacity onPress={() => navigation.goBack()}>
+                    <Image source={left} style={{ height: normalize(27), width: normalize(27), alignSelf: "center",marginTop:5 }} />
+                </TouchableOpacity>
+                <Text style={{ fontSize: normalize(28), fontFamily: fonts.montserrat_regular, fontWeight: "800", marginLeft: normalize(20) }}>Blog</Text>
+            </View>
                 <ScrollView style={{ marginTop: normalize(20), marginLeft: normalize(15), flexDirection: "row", }} horizontal={true} >
                     <TouchableOpacity style={{ height: normalize(30), width: normalize(90), backgroundColor: "#FFDCAE", borderRadius: normalize(20), justifyContent: "center", }} onPress={onSet}>
                         <Text style={{ fontSize: normalize(15), fontFamily: fonts.montserrat_regular, fontWeight: "500", textAlign: "center" }} >All</Text>

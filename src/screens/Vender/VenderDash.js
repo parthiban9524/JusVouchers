@@ -18,7 +18,7 @@ export default function VenderDash({ navigation }) {
                 <View style={{ marginLeft: 20 }} >
                     <Text style={{ fontSize: normalize(19), fontWeight: 'bold', color: '#348847' }}>15 June 2022 Wednesday</Text>
                 </View>
-                <TouchableOpacity style={{ borderRadius: 20, backgroundColor: '#FFDCAE99', width: normalize(340), height: normalize(83), marginTop: normalize(20), alignSelf: "center", justifyContent: "center" }} onPress={() => navigation.navigate("VenderSale")} >
+                <TouchableOpacity style={{ borderRadius: 20, backgroundColor: '#FFDCAE99', width: normalize(340), height: normalize(70), marginTop: normalize(20), alignSelf: "center", justifyContent: "center" }} onPress={() => navigation.navigate("VenderSale")} >
                     <View style={{ flexDirection: "row", alignSelf: "center" }}>
                         <Image source={sale1} style={{ height: normalize(50), width: normalize(50), resizeMode: "contain", }} />
                         <Text style={{ fontSize: normalize(20), fontWeight: '500', marginLeft: 25, marginTop: 10 }}  >Today Sale</Text>
@@ -29,7 +29,7 @@ export default function VenderDash({ navigation }) {
                         </View>
                     </View>
                 </TouchableOpacity>
-                <TouchableOpacity style={{ borderRadius: 20, backgroundColor: "#FD040421", width: normalize(340), height: normalize(83), marginTop: normalize(20), alignSelf: "center", justifyContent: "center" }}>
+                <TouchableOpacity style={{ borderRadius: 20, backgroundColor: "#FD040421", width: normalize(340), height: normalize(70), marginTop: normalize(20), alignSelf: "center", justifyContent: "center" }}>
                     <View style={{ flexDirection: "row", alignSelf: "center", }}>
                         <Image source={order_cancel} style={{ height: normalize(50), width: normalize(50), resizeMode: "contain", }} />
                         <Text style={{ fontSize: normalize(20), fontWeight: '500', marginLeft: 25, marginTop: 10 }}  >8 Order Cancel</Text>

@@ -51,8 +51,8 @@ export default function SalesHeader({ navigation }) {
                                     <Image source={man} style={{ height: normalize(55), width: normalize(55), resizeMode: "contain", alignSelf: "center" }} />
                                 </View>
                                 <View style={{ marginLeft: normalize(20), justifyContent: "center" }} >
-                                    <Text style={{ fontFamily: fonts.montserrat_semibold, fontSize: normalize(15), color: "#3D3C3B", fontWeight: "600" }} >SalesPerson</Text>
-                                    <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(12), color: "#3D3C3B", fontWeight: "600" }}  >Bhopal , india</Text>
+                                    <Text style={{ fontFamily: fonts.montserrat_semibold, fontSize: normalize(15), color: "#3D3C3B", fontWeight: "600" }} >Sales Person</Text>
+                                    <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(12), color: "#3D3C3B", fontWeight: "600" }}  >Bhopal, india</Text>
                                 </View>
                             </TouchableOpacity>
                             <TouchableOpacity style={{ height: normalize(30), width: normalize(180), backgroundColor: !select ? "rgba(245, 130, 32, 0.39)" : null, marginLeft: normalize(30), marginTop: normalize(40), borderRadius: normalize(20), justifyContent: "center" }} onPress = {onDash} >
@@ -67,7 +67,7 @@ export default function SalesHeader({ navigation }) {
                                     <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(15), color: "#3D3C3B", fontWeight: "700", marginLeft: normalize(30), top: 2 }} >Customer info View</Text>
                                 </View>
                             </TouchableOpacity>
-                            <TouchableOpacity style={{height: normalize(30), width: normalize(180),backgroundColor: select ? "rgba(245, 130, 32, 0.39)" : null, borderRadius : normalize(20), marginLeft: normalize(30), marginTop: normalize(25), justifyContent: "center" }} onPress={() => navigation.navigate("CustomerForm")} >
+                            <TouchableOpacity style={{height: normalize(30), width: normalize(180), borderRadius : normalize(20), marginLeft: normalize(30), marginTop: normalize(25), justifyContent: "center" }} onPress={() => navigation.navigate("CustomerForm")} >
                                 <View style={{ flexDirection: "row", }} >
                                     <Image source={man} style={{ height: normalize(25), width: normalize(25), resizeMode: 'contain', left: normalize(25),}} />
                                     <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(15), color: "#3D3C3B", fontWeight: "700", marginLeft: normalize(30), top: 2 }} >Customer Form</Text>

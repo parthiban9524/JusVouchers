@@ -23,7 +23,7 @@ const Details = ({ navigation }) => {
                 <View style={{ borderRadius: 20, backgroundColor: '#FFDCAE99', width: normalize(300), height: normalize(83), marginTop: normalize(20), alignSelf: "center", justifyContent: "center" }} >
                     <View style={{ flexDirection: "row", alignSelf: "center" }}>
                         <Image source={new_user} style={{ height: normalize(50), width: normalize(50), resizeMode: "contain",left : normalize(20) }} />
-                        <Text style={{ fontSize: normalize(18), fontWeight: '500', marginHorizontal: normalize(50), marginTop: 10, textAlign : "center" }}  >Pranay has’t Purchese anything yet. </Text>
+                        <Text style={{ fontSize: normalize(18), fontWeight: '500', marginHorizontal: normalize(50), marginTop: 4, textAlign : "center" }}  >Pranay has’t Purchese anything yet. </Text>
                     </View>
                 </View>
                 <View>
