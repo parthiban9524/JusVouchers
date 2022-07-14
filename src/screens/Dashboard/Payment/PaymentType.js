@@ -63,20 +63,20 @@ export default function PaymentType({ navigation }) {
                                     <View style={{ justifyContent: "center", flexDirection : "row" }} >
                                         <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(18), left: 10, bottom: 5 }} >Scan QR </Text>
                                     </View>
-                                    <Image source={qrcode} style={{ height: normalize(30), width: normalize(30), left : normalize(100) }} />
+                                    <Image source={qrcode} style={{ height: normalize(40), width: normalize(40), left : normalize(100), bottom : normalize(10) }} />
                                 </TouchableOpacity>
                             </View>
                         </View>
                     </View>
                 </View>
 
-                <View style={{ marginTop: normalize(80), alignSelf: "center" }}>
-                    <Image source={payment_card1} style={{ height: normalize(135), width: normalize(320) }} />
-                    <View style={{ position: "absolute", marginTop: normalize(10) }} >
+                <View style={{ marginTop: normalize(70), alignSelf: "center" }}>
+                    <Image source={payment_card1} style={{ height: normalize(160), width: normalize(320) }} />
+                    <View style={{ position: "absolute", marginTop: normalize(25) }} >
                         <View style={{ marginLeft: normalize(35), }} >
-                            <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(18), fontWeight: "600", color: "#000000" }} >Price Details</Text>
+                            <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(18), fontWeight: "600", color: "#000000",  }} >Price Details</Text>
                         </View>
-                        <View style={{ width: normalize(297), borderColor: "#797877", borderBottomWidth: 1.2, alignSelf: "center", left: 15 }} />
+                        <View style={{ width: normalize(297), borderColor: "#797877", borderBottomWidth: 1.2, alignSelf: "center", left: 15, marginTop : 5  }} />
                         <View style={{ flexDirection: "row", justifyContent: "space-between", marginTop: normalize(10) }} >
                             <Text style={{ fontFamily: fonts.montserrat_semibold, fontSize: normalize(15), color: "#000000", marginLeft: normalize(38) }} >Price (1 card)</Text>
                             <Text style={{ fontFamily: fonts.montserrat_semibold, fontSize: normalize(15), color: "#000000" }}>2500/-</Text>
@@ -85,7 +85,7 @@ export default function PaymentType({ navigation }) {
                             <Text style={{ fontFamily: fonts.montserrat_semibold, fontSize: normalize(15), color: "#000000", marginLeft: normalize(38) }} >Discount</Text>
                             <Text style={{ fontFamily: fonts.montserrat_semibold, fontSize: normalize(15), color: "#000000" }}>-1000/-</Text>
                         </View>
-                        <View style={{ width: normalize(297), borderColor: "#797877", borderBottomWidth: 1.2, alignSelf: "center", left: 15, marginTop: normalize(20) }} />
+                        <View style={{ width: normalize(297), borderColor: "#797877", borderBottomWidth: 1.2, alignSelf: "center", left: 15, marginTop: normalize(15) }} />
                         <View style={{ flexDirection: "row", justifyContent: "space-between", marginTop: normalize(10) }} >
                             <Text style={{ fontFamily: fonts.montserrat_semibold, fontSize: normalize(15), marginLeft: normalize(38), color: "#348847" }} >Discount</Text>
                             <Text style={{ fontFamily: fonts.montserrat_semibold, fontSize: normalize(15), color: "#348847" }}>1500/-</Text>

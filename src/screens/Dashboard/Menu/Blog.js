@@ -33,7 +33,7 @@ export default function Blog({ navigation }) {
 
     const renderItem = ({ item }) => (
         <TouchableOpacity style={{ marginTop: normalize(20) }} activeOpacity={1} onPress={() => navigation.navigate("BlogDetails",{data : item})} >
-            <Image source={item.image} style={{ height: normalize(170), width: normalize(330), resizeMode: "cover", marginLeft: normalize(20), }} />
+            <Image source={item.image} style={{ height: normalize(170), width: normalize(330), resizeMode: "contain", marginLeft: normalize(20), }} />
             <View style={{ marginTop: normalize(15), marginLeft: normalize(20), }} >
                 <Text style={{ fontFamily: fonts.montserrat_semibold, fontSize: normalize(22), color: "#000000" }} >{item.name}</Text>
             </View>

@@ -73,6 +73,8 @@ import MSVouchers from "./src/screens/Admin/MSVouchers";
 import VouchersHandling from "./src/screens/Admin/VoucherHandling";
 import RemoveVoucher from "./src/screens/Admin/RemoveVoucher";
 import PaymentDetails from "./src/screens/Admin/PaymentDetails";
+import Privacy from "./src/screens/Dashboard/Menu/Privacy";
+import Terms from "./src/screens/Dashboard/Menu/Terms";
 
 export default function App() {
 
@@ -97,7 +99,8 @@ export default function App() {
         <HomeNavigator.Screen name="Profile" component={Profile} />
         <HomeNavigator.Screen name="Exclusive" component={Exclusive} />
         <HomeNavigator.Screen name="DigitalMarketing" component={DigitalMarketing} />
-
+        <HomeNavigator.Screen name="Privacy" component={Privacy} />
+        <HomeNavigator.Screen name="Terms" component={Terms} />
       </HomeNavigator.Navigator>
     )
   }
@@ -206,7 +209,7 @@ export default function App() {
                   resizeMode='contain'
                   style={{ width: normalize(35), height: normalize(35), }}
                 />
-                <Text style={{ textAlign: 'center', fontSize: normalize(12), fontFamily: fonts.inter_bold, color: "#ffffff" }}>{"Home"}</Text>
+                <Text style={{ textAlign: 'center', fontSize: normalize(12), fontFamily: fonts.inter_bold, color: "#ffffff",letterSpacing : 1 }}>{"Home"}</Text>
               </View>
             )
           }}
@@ -225,7 +228,7 @@ export default function App() {
                   resizeMode='contain'
                   style={{ width: normalize(35), height: normalize(35), }}
                 />
-                <Text style={{ textAlign: 'center', fontSize: normalize(12), fontFamily: fonts.inter_bold, color: "#ffffff", right: 10 }}>{"Voucher"}</Text>
+                <Text style={{ textAlign: 'center', fontSize: normalize(12), fontFamily: fonts.inter_bold, color: "#ffffff", right : 5, letterSpacing : 1 }}>{"Voucher"}</Text>
               </View>
             )
           }}
@@ -244,7 +247,7 @@ export default function App() {
                   resizeMode='contain'
                   style={{ width: normalize(35), height: normalize(35), }}
                 />
-                <Text style={{ textAlign: 'center', fontSize: normalize(12), fontFamily: fonts.inter_bold, color: "#ffffff" }}>{"Cart"}</Text>
+                <Text style={{ textAlign: 'center', fontSize: normalize(12), fontFamily: fonts.inter_bold, color: "#ffffff", letterSpacing : 1 }}>{"Cart"}</Text>
               </View>
             )
           }}
@@ -263,7 +266,7 @@ export default function App() {
                   resizeMode='contain'
                   style={{ width: normalize(35), height: normalize(35), }}
                 />
-                <Text style={{ textAlign: 'center', fontSize: normalize(12), fontFamily: fonts.inter_bold, color: "#ffffff", right: 15 }}>{"Notification"}</Text>
+                <Text style={{ textAlign: 'center', fontSize: normalize(12), fontFamily: fonts.inter_bold, color: "#ffffff", right: 15, letterSpacing : 1 }}>{"Notification"}</Text>
               </View>
             )
           }}

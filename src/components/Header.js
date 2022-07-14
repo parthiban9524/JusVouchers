@@ -44,7 +44,7 @@ export default function Header({ navigation }) {
                 find && (
                     <View style={{ height: normalize(50), width: "100%", backgroundColor: "#F9AA44", }} >
                         <TextInput
-                            style={{ height: normalize(30), width: normalize(320), backgroundColor: "#ffffff", borderRadius: normalize(10), alignSelf: "center", marginTop: 10, paddingLeft: normalize(30), fontFamily: fonts.lato_bold, fontSize: normalize(15) }}
+                            style={{ height: normalize(30), width: normalize(320), backgroundColor: "#ffffff", borderRadius: normalize(10), alignSelf: "center", marginTop: 10, paddingLeft: normalize(30), fontFamily: fonts.lato_bold, fontSize: normalize(15), paddingBottom : normalize(5)}}
                             placeholder="Search Anything"
                         />
                         <Image source={search} style={{ height: normalize(20), width: normalize(20), tintColor: "#F9AA44", bottom: normalize(25), left: normalize(35) }} />
@@ -65,7 +65,7 @@ export default function Header({ navigation }) {
                                 </View>
                                 <View style={{ marginLeft: normalize(20), justifyContent: "center" }} >
                                     <Text style={{ fontFamily: fonts.montserrat_semibold, fontSize: normalize(15), color: "#3D3C3B", fontWeight: "600" }} >Shruti Shukla</Text>
-                                    <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(12), color: "#3D3C3B", fontWeight: "600" }}  >lucknow , india</Text>
+                                    <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(12), color: "#3D3C3B", fontWeight: "600" }}  >lucknow, india</Text>
                                 </View>
                             </TouchableOpacity>
                             <TouchableOpacity style={{ height: normalize(30), width: normalize(180), backgroundColor: "rgba(245, 130, 32, 0.39)", marginLeft: normalize(30), marginTop: normalize(40), borderRadius: normalize(20), justifyContent: "center" }} >
@@ -93,13 +93,13 @@ export default function Header({ navigation }) {
                                     <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(15), color: "#3D3C3B", fontWeight: "700", marginLeft: normalize(30), top: 2 }} >Online Marketing</Text>
                                 </View>
                             </TouchableOpacity>
-                            <TouchableOpacity style={{ marginLeft: normalize(30), marginTop: normalize(25), justifyContent: "center" }} >
+                            <TouchableOpacity style={{ marginLeft: normalize(30), marginTop: normalize(25), justifyContent: "center" }} onPress={() => navigation.navigate("Terms")} >
                                 <View style={{ flexDirection: "row", }} >
                                     <Image source={more} style={{ height: normalize(20), width: normalize(20), resizeMode: 'contain', left: normalize(25) }} />
                                     <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(15), color: "#3D3C3B", fontWeight: "700", marginLeft: normalize(30), top: 2 }} >Terms & Conditions</Text>
                                 </View>
                             </TouchableOpacity>
-                            <TouchableOpacity style={{ marginLeft: normalize(30), marginTop: normalize(25), justifyContent: "center" }} >
+                            <TouchableOpacity style={{ marginLeft: normalize(30), marginTop: normalize(25), justifyContent: "center" }} onPress={() => navigation.navigate("Privacy")} >
                                 <View style={{ flexDirection: "row", }} >
                                     <Image source={privacy} style={{ height: normalize(20), width: normalize(20), resizeMode: 'contain', left: normalize(25) }} />
                                     <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(15), color: "#3D3C3B", fontWeight: "700", marginLeft: normalize(30), top: 2 }} >Privacy Policy</Text>

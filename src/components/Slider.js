@@ -25,11 +25,11 @@ export default function Swiper({ navigation, id = 1,set = false}) {
             <View style={{ alignSelf: "center", marginTop: normalize(40), }}>
                 <Image source={item.image} style={{ height: normalize(150), width: normalize(270), resizeMode: "contain", borderRadius: 10 }} />
                 <View style={{ marginTop: normalize(10), alignSelf: "center", flexDirection: "row", }} >
-                    <View style={{ height: normalize(8), width: normalize(8), backgroundColor: item.id == 1 ? "#F58220" : "#C4C4C4", borderRadius: normalize(8) }} />
-                    <View style={{ height: normalize(8), width: normalize(8), backgroundColor: item.id == 2 ? "#F58220" : "#C4C4C4", borderRadius: normalize(8), marginLeft: 5 }} />
-                    <View style={{ height: normalize(8), width: normalize(8), backgroundColor: item.id == 3 ? "#F58220" : "#C4C4C4", borderRadius: normalize(8), marginLeft: 5 }} />
-                    <View style={{ height: normalize(8), width: normalize(8), backgroundColor: item.id == 4? "#F58220" : "#C4C4C4", borderRadius: normalize(8), marginLeft: 5 }} />
-                    <View style={{ height: normalize(8), width: normalize(8), backgroundColor: item.id == 5 ? "#F58220" : "#C4C4C4", borderRadius: normalize(8), marginLeft: 5 }} />
+                    <View style={{ height: normalize(8), width: normalize(8), backgroundColor: item.id == 1 ? "#F58220" : "#C4C4C4", borderRadius: normalize(8), left : 5 }} />
+                    <View style={{ height: normalize(8), width: normalize(8), backgroundColor: item.id == 2 ? "#F58220" : "#C4C4C4", borderRadius: normalize(8), left: 10 }} />
+                    <View style={{ height: normalize(8), width: normalize(8), backgroundColor: item.id == 3 ? "#F58220" : "#C4C4C4", borderRadius: normalize(8), left: 15 }} />
+                    <View style={{ height: normalize(8), width: normalize(8), backgroundColor: item.id == 4? "#F58220" : "#C4C4C4", borderRadius: normalize(8), left: 20 }} />
+                    <View style={{ height: normalize(8), width: normalize(8), backgroundColor: item.id == 5 ? "#F58220" : "#C4C4C4", borderRadius: normalize(8), left: 25 }} />
                 </View>
             </View>
         )
@@ -37,7 +37,7 @@ export default function Swiper({ navigation, id = 1,set = false}) {
 
     const renderItem1 = ({ item, index }) => {
         return (
-            <View style={{ marginTop: normalize(20), }}>
+            <View style={{ marginTop: normalize(20),alignSelf : "center" }}>
                 <Image source={{ uri: item.image }} style={{ height: normalize(83), width: normalize(175), resizeMode: "contain", borderRadius: 10 }} />
             </View>
         )

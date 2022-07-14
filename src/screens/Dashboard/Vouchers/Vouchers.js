@@ -54,20 +54,30 @@ export default function Vouchers({ navigation }) {
                 <TouchableOpacity style={{ left: normalize(145), top: 5 }} onPress={Onpress(item.like)} >
                     <Image source={item.like ? red_heart : white_heart} style={{ height: normalize(18), width: normalize(18), }} />
                 </TouchableOpacity>
-                <TouchableOpacity style={{ marginTop: normalize(20), right: 10 }} onPress={() => navigation.navigate("Vouchers_detail", { image: item.image })} >
+                <TouchableOpacity style={{ right: 10 }} onPress={() => navigation.navigate("Vouchers_detail", { image: item.image })} >
 
                     {
                         item.start_offer && (
                             <>
-                                <Text style={{ fontFamily: fonts.lato_regular, fontWeight: "500", fontSize: normalize(18), color: "#000000", right : normalize(15) }} >{item.name}</Text>
-                                <Text style={{ fontWeight: "700", fontSize: normalize(23), color: "#F58220", right: normalize(20) }} >{item.start_offer}<Text style={{ fontFamily: fonts.montserrat_regular, fontWeight: "500", fontSize: normalize(20), color: "#938C8C" }} >to</Text> <Text style={{ fontWeight: "700", fontSize: normalize(23), color: "#F58220" }} >{item.end_offer}</Text><Text style={{ fontFamily: fonts.montserrat_regular, fontWeight: "500", fontSize: normalize(20), color: "#938C8C" }} >off</Text></Text>
+                                {
+                                    item.name !== "" && (
+                                        <Text style={{ fontFamily: fonts.lato_regular, fontWeight: "500", fontSize: normalize(16), color: "#000000", marginTop: normalize(15) }} >{item.name}</Text>
+
+                                    )
+                                }
+                                <Text style={{ fontWeight: "700", fontSize: normalize(23), color: "#F58220", right: normalize(20),  marginTop: item.name !== "" ? normalize(8) : normalize(20) }} >{item.start_offer}<Text style={{ fontFamily: fonts.montserrat_regular, fontWeight: "500", fontSize: normalize(20), color: "#938C8C" }} >to</Text> <Text style={{ fontWeight: "700", fontSize: normalize(23), color: "#F58220" }} >{item.end_offer}</Text><Text style={{ fontFamily: fonts.montserrat_regular, fontWeight: "500", fontSize: normalize(20), color: "#938C8C" }} >off</Text></Text>
                             </>)
                     }
                     {
                         !item.start_offer && (
                             <>
-                                <Text style={{ fontFamily: fonts.lato_regular, fontWeight: "500", fontSize: normalize(18), color: "#000000", }} >{item.name}</Text>
-                                <Text style={{ fontWeight: "700", fontSize: normalize(28), color: "#F58220" }} >{item.offer} <Text style={{ fontFamily: fonts.montserrat_regular, fontWeight: "500", fontSize: normalize(20), color: "#938C8C" }} >off</Text></Text>
+                                {
+                                    item.name !== "" && (
+                                        <Text style={{ fontFamily: fonts.lato_regular, fontWeight: "500", fontSize: normalize(16), color: "#000000", marginTop: normalize(10) }} >{item.name}</Text>
+
+                                    )
+                                }
+                                <Text style={{ fontWeight: "700", fontSize: normalize(28), color: "#F58220", marginTop: item.name !== "" ? null : normalize(20) }} >{item.offer} <Text style={{ fontFamily: fonts.montserrat_regular, fontWeight: "500", fontSize: normalize(20), color: "#938C8C" }} >off</Text></Text>
                             </>)
                     }
                     <Text style={{ fontFamily: fonts.montserrat_regular, fontWeight: "500", fontSize: normalize(12), color: "#3D3C3B", textAlign: "center" }} >{item.offer_text}</Text>
@@ -93,7 +103,7 @@ export default function Vouchers({ navigation }) {
                     renderItem={renderItem}
                     keyExtractor={item => item.id}
                 />
-                <View style = {{marginBottom : normalize(100)}} />
+                <View style={{ marginBottom: normalize(100) }} />
             </ScrollView>
         </>
 

@@ -25,19 +25,19 @@ export const BlogData = [
         "category": "Health",
         "name": "Health Plus Card",
         "image": health,
-        "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the "
+        "details": "HealthPlusCard is used for providing up to 100% reimbursement for Health, Dental and Vision care related expenses"
     },
     {
         "category": "Saloon",
         "name": "Offer Card",
         "image": beauty1,
-        "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the "
+        "details": "Flora Saloons are dedicated towards the evolvement of  modern Indian woman and her exploration of beauty. "
     },
     {
         "category": "SPA",
         "name": "SPA Offers",
         "image": beauty2,
-        "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the "
+        "details": "Aura Spa gift cards are redeemable across 50+ Spa locations across India for premium spa services of the recipient’s choice."
     },
     {
         "category": "Online Marketing",
@@ -55,13 +55,13 @@ export const BlogData = [
         "category": "Saloon",
         "name": "Favorite Hair Cut Article",
         "image": saloon,
-        "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the "
+        "details": "The HairLab UniSex Saloon is offers to the people for their appoinments "
     },
     {
         "category": "Discount Vouchers",
         "name": "Voucher Discounts",
         "image": health,
-        "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the "
+        "details": "Discount voucher means a voucher carrying a right to receive a price discount or rebate with regard to a supply of goods or services"
     },
 ]
 
