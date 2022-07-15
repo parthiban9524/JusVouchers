@@ -11,9 +11,9 @@ export default function Favorites({navigation}) {
     return (
         <>
             <Header navigation={navigation} />
-            <View style={{ flex: 1, }} >
+            <View style={{ flex: 1, backgroundColor : "#ffffff" }} >
                 <View style={{ flexDirection: "row", marginTop: normalize(20), marginLeft: normalize(20) }} >
-                    <TouchableOpacity onPress={() => navigation.navigate("Vouchers")} >
+                    <TouchableOpacity onPress={() => navigation.navigate("Profile")} >
                         <Image source={left} style={{ height: normalize(30), width: normalize(30) }} />
                     </TouchableOpacity>
                     <View style={{ marginLeft: normalize(60), alignSelf: "center" }} >
