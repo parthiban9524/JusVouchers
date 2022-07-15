@@ -108,12 +108,12 @@ export default function User({ navigation }) {
                 </View>
                 <View style={{ borderRadius: normalize(20), backgroundColor: '#FFDCAE99', width: normalize(340), height: normalize(83), alignSelf: "center", marginTop: normalize(15) }} onPress={() => navigation.navigate("SalesDetails")} >
                     <View style={{ flexDirection: "row", alignSelf: "center", marginTop: normalize(15) }}>
-                        <Image source={new_user} style={{ height: normalize(50), width: normalize(50), resizeMode: "contain", alignSelf: "center", marginLeft: normalize(8), marginTop: 5 }} />
+                        <Image source={new_user} style={{ height: normalize(50), width: normalize(50), resizeMode: "contain", alignSelf: "center", marginLeft: normalize(12), marginTop: 5 }} />
                         <View>
-                            <Text style={{ fontSize: normalize(18), fontWeight: '500', marginLeft: 10, marginTop: 10, color: "#000000", alignSelf: "center" }}  >Today  572 new user register </Text>
+                            <Text style={{ fontSize: normalize(18), fontWeight: '500', marginLeft: 10, marginTop: 10, color: "#000000", top : normalize(12)}}  >Today  572 new user register </Text>
                         </View>
-                        <View style={{ flexDirection: "row", marginTop: normalize(30), }} >
-                            <Image source={rising} style={{ width: normalize(40), height: normalize(25), marginLeft: normalize(5), alignSelf: "center" }} />
+                        <View style={{ flexDirection: "row", marginTop: normalize(20), }} >
+                            <Image source={rising} style={{ width: normalize(40), height: normalize(25), right : 5,  alignSelf: "center" }} />
                             <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(16), color: "#08D635", alignSelf: "center", top: 10, right: 10 }} >16.5%</Text>
                         </View>
                     </View>

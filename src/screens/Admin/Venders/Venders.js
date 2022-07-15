@@ -81,13 +81,13 @@ const Venders = ({ navigation }) => {
         return (
             <TouchableOpacity style={[styles.data_container, { backgroundColor: backgroundColor }]} onPress={() => onDate(item)} >
                 <View style={{ justifyContent: "center" }}>
-                    <Text style={styles.data_text}>{item.name}</Text>
+                    <Text style={[styles.data_text,{left : normalize(20)}]}>{item.name}</Text>
                 </View>
                 <View style={{ justifyContent: "center" }}>
                     <Text style={styles.data_text} >{item.date}</Text>
                 </View>
                 <View style={{ justifyContent: "center" }}>
-                    <Text style={styles.data_text} >{item.category}</Text>
+                    <Text style={[styles.data_text,{left : 10}]} >{item.category}</Text>
                 </View>
             </TouchableOpacity>
         );
@@ -106,9 +106,9 @@ const Venders = ({ navigation }) => {
                 <View style={{ borderRadius: normalize(20), backgroundColor: '#FFDCAE99', width: normalize(340), height: normalize(83), alignSelf: "center", marginTop: normalize(15) }} onPress={() => navigation.navigate("SalesDetails")} >
                     <View style={{ flexDirection: "row", alignSelf: "center", marginTop: normalize(15) }}>
                         <Image source={leader} style={{ height: normalize(50), width: normalize(50), resizeMode: "contain", alignSelf: "center", marginLeft: normalize(8), marginTop: 5 }} />
-                        <View>
-                            <Text style={{ fontSize: normalize(18), fontWeight: '500', marginLeft: 10, marginTop: 10, color: "#000000", alignSelf: "center" }}  >Total Vendors <Text style={{ fontSize: normalize(17), fontWeight: '500', marginLeft: 3, color: '#08D635', fontWeight: '800', fontFamily: fonts.montserrat_regular }}> 680 </Text></Text>
-                            <Text style={{ fontSize: normalize(18), fontWeight: '500', marginLeft: 10, marginTop: 10, color: "#000000" }}  >Today  16 Vendors register  </Text>
+                        <View >
+                            <Text style={{ fontSize: normalize(18), fontWeight: '500', marginLeft: 10, marginTop: 5, color: "#000000", alignSelf: "center" }}  >Total Vendors <Text style={{ fontSize: normalize(17), fontWeight: '500', marginLeft: 3, color: '#08D635', fontWeight: '800', fontFamily: fonts.montserrat_regular }}> 680 </Text></Text>
+                            <Text style={{ fontSize: normalize(18), fontWeight: '500', marginLeft: 10, marginTop: 7, color: "#000000" }}  >Today  16 Vendors register  </Text>
                         </View>
                         <View style={{ flexDirection: "row", marginTop: normalize(20), }} >
                             <Image source={rising} style={{ width: normalize(40), height: normalize(25), marginLeft: normalize(5), alignSelf: "center" }} />
@@ -118,9 +118,9 @@ const Venders = ({ navigation }) => {
                 </View>
                 <View style={{ width: normalize(340), borderRadius: normalize(10), backgroundColor: "#D0E3FFB0", marginVertical: normalize(20), alignSelf: "center" }}>
                     <View style={{ flexDirection: "row", justifyContent: "space-around", marginTop: normalize(20), }}>
-                        <Text style={styles.data_text}>Name</Text>
-                        <Text style={styles.data_text}>Date</Text>
-                        <Text style={styles.data_text} >Sales in Day</Text>
+                        <Text style={[styles.data_text,{left : normalize(20)}]}>Name</Text>
+                        <Text style={[styles.data_text,{left : 10}]}>Date</Text>
+                        <Text style={[styles.data_text,{right : normalize(20)}]} >Sales in Day</Text>
                     </View>
                     <View style={{ width: normalize(340), borderColor: "#797877", borderBottomWidth: 1.2, alignSelf: "center", marginTop: normalize(10) }} />
                     <FlatList
@@ -151,6 +151,7 @@ const styles = StyleSheet.create({
         fontFamily: fonts.montserrat_semibold,
         fontSize: normalize(16),
         color: "#000000",
+        width : normalize(90), 
     },
     data_container: {
         flexDirection: "row",

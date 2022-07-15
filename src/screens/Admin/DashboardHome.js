@@ -14,7 +14,7 @@ export default function DashboardHome({ navigation }) {
             <AdminHeader navigation={navigation} />
             <ScrollView>
                 <View style={{ margin: 20 }} >
-                    <Text style={{ fontSize: normalize(22), fontWeight: 'bold', color: "#000000" }}>Dashboard</Text>
+                    <Text style={{ fontSize: normalize(22), fontFamily : fonts.lato_regular,fontWeight : "600",  color: "#000000", textAlign : "center" }}>Dashboard</Text>
                 </View>
                 <View style={{ marginLeft: 20 }} >
                     <Text style={{ fontSize: normalize(19), fontWeight: 'bold', color: 'green' }}>15 June 2022 Wednesday</Text>

@@ -24,7 +24,7 @@ export default function AddVoucher({ navigation }) {
                     <Text style={{ fontSize: normalize(20), fontFamily: fonts.montserrat_semibold, alignSelf: 'center', marginTop: normalize(20), color: "#000000" }}>Add Voucher</Text>
                 </View>
                 <View style={{ marginTop: 20 }}>
-                    <Text style={{ marginLeft: normalize(65), fontSize: normalize(15), fontWeight: '700', color: '#2958c4' }}>Voucher Name</Text>
+                    <Text style={{ marginLeft: normalize(45), fontSize: normalize(19), fontWeight: '700', color: '#2958c4' }}>Voucher Name</Text>
                     <TextInput
                         style={styles.input}
                         onChangeText={addVoucher}
@@ -34,7 +34,7 @@ export default function AddVoucher({ navigation }) {
                     />
                 </View>
                 <View style={{ marginTop: 20, }}>
-                    <Text style={{ marginLeft: normalize(65), fontSize: normalize(15), fontWeight: '700', color: '#2958c4' }}>Voucher Category</Text>
+                    <Text style={{ marginLeft: normalize(45), fontSize: normalize(19), fontWeight: '700', color: '#2958c4' }}>Voucher Category</Text>
                     <TextInput
                         style={styles.input}
                         onChangeText={addVoucherCategory}
@@ -44,8 +44,8 @@ export default function AddVoucher({ navigation }) {
                     />
                 </View>
                 <View style={{ marginTop: normalize(20), }}>
-                    <Text style={{ marginLeft: normalize(70), fontSize: normalize(15), fontWeight: '700', color: '#2958c4', }}>Upload Voucher</Text>
-                    <Image source={lines} style={{ height: normalize(90), width: normalize(270), alignSelf: "center", top: 5 }} />
+                    <Text style={{ marginLeft: normalize(50), fontSize: normalize(19), fontWeight: '700', color: '#2958c4', }}>Upload Voucher</Text>
+                    <Image source={lines} style={{ height: normalize(120), width: normalize(300), alignSelf: "center", top: 5 }} />
                     <View style={{ position: "absolute", alignSelf: "center", marginTop: normalize(45) }} >
                         <TextInput
                             style={styles.input_one}
@@ -68,8 +68,8 @@ export default function AddVoucher({ navigation }) {
 }
 const styles = StyleSheet.create({
     input: {
-        height: normalize(35),
-        width: normalize(270),
+        height: normalize(50),
+        width: normalize(300),
         elevation: 5,
         backgroundColor: "#ffffff",
         borderRadius: normalize(18),

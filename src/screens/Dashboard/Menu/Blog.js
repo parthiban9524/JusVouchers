@@ -50,7 +50,7 @@ export default function Blog({ navigation }) {
     return (
 
         <View style={{ flex: 1, alignSelf: "center" }} >
-            <Header navigation={navigation} />
+            <Header navigation={navigation} bg = {1} />
             <ScrollView style={{ backgroundColor: "#ffffff" }}>
             <View style={{ flexDirection: "row", marginTop: normalize(10), marginLeft: normalize(20), }} >
                 <TouchableOpacity onPress={() => navigation.goBack()}>
