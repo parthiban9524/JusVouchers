@@ -52,7 +52,7 @@ export default function AdminHeader({ navigation }) {
                                 </View>
                                 <View style={{ marginLeft: normalize(20), justifyContent: "center" }} >
                                     <Text style={{ fontFamily: fonts.montserrat_semibold, fontSize: normalize(15), color: "#3D3C3B", fontWeight: "600" }} >Admin</Text>
-                                    <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(12), color: "#3D3C3B", fontWeight: "600" }}  >Bhopal , india</Text>
+                                    <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(12), color: "#3D3C3B", fontWeight: "600" }}  >Bhopal, india</Text>
                                 </View>
                             </TouchableOpacity>
                             <TouchableOpacity style={{ height: normalize(30), width: normalize(180), backgroundColor: !select ? "rgba(245, 130, 32, 0.39)" : null, marginLeft: normalize(30), marginTop: normalize(40), borderRadius: normalize(20), justifyContent: "center" }} onPress = {onDash} >
@@ -70,7 +70,7 @@ export default function AdminHeader({ navigation }) {
                             <TouchableOpacity style={{height: normalize(30), width: normalize(180), marginLeft: normalize(30), marginTop: normalize(25), justifyContent: "center" }} onPress={() => navigation.navigate("PaymentDetails")} >
                                 <View style={{ flexDirection: "row", }} >
                                     <Image source={paycard} style={{ height: normalize(25), width: normalize(25), resizeMode: 'contain', left: normalize(25), tintColor : "#000000" }} />
-                                    <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(15), color: "#3D3C3B", fontWeight: "700", marginLeft: normalize(30), top: 2 }} >PaymentDetails</Text>
+                                    <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(15), color: "#3D3C3B", fontWeight: "700", marginLeft: normalize(30), top: 2 }} >Payment Details</Text>
                                 </View>
                             </TouchableOpacity>
                             <TouchableOpacity style={{height: normalize(30), width: normalize(180), marginLeft: normalize(30), marginTop: normalize(25), justifyContent: "center" }} onPress={() => navigation.navigate("AddVoucher")} >

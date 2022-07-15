@@ -23,7 +23,7 @@ export default function AdminBlog({ navigation }) {
                     <Text style={{ fontSize: normalize(20), fontFamily: fonts.montserrat_semibold, alignSelf: 'center', marginTop: 10 }}>Add Blog</Text>
                 </View>
                 <View style={{ marginTop: 20, }}>
-                    <Text style={{ marginLeft: normalize(65), fontSize: normalize(15), fontWeight: '700', color: '#2958c4' }}>Blog Name</Text>
+                    <Text style={{ marginLeft: normalize(45), fontSize: normalize(19), fontWeight: '700', color: '#2958c4' }}>Blog Name</Text>
                     <TextInput
                         style={styles.input}
                         onChangeText={setBlog}
@@ -33,7 +33,7 @@ export default function AdminBlog({ navigation }) {
                     />
                 </View>
                 <View style={{ marginTop: 20,  }}>
-                    <Text style={{ marginLeft: normalize(65), fontSize: normalize(15), fontWeight: '700', color: '#2958c4' }}>Blog Category</Text>
+                    <Text style={{ marginLeft: normalize(45), fontSize: normalize(19), fontWeight: '700', color: '#2958c4' }}>Blog Category</Text>
                     <TextInput
                         style={styles.input}
                         onChangeText={Blogcategory}
@@ -43,8 +43,8 @@ export default function AdminBlog({ navigation }) {
                     />
                 </View>
                 <View style={{ marginTop: normalize(20), }}>
-                    <Text style={{ marginLeft: normalize(65), fontSize: normalize(15), fontWeight: '700', color: '#2958c4', }}>Upload Blog Image</Text>
-                    <Image source={lines} style={{ height: normalize(90), width: normalize(270), alignSelf: "center", top: 5 }} />
+                    <Text style={{ marginLeft: normalize(45), fontSize: normalize(19), fontWeight: '700', color: '#2958c4', }}>Upload Blog Image</Text>
+                    <Image source={lines} style={{ height: normalize(120), width: normalize(300), alignSelf: "center", top: 5 }} />
                     <View style={{ position: "absolute", alignSelf: "center", marginTop: normalize(45) }} >
                         <TextInput
                             style={styles.input_one}
@@ -53,7 +53,7 @@ export default function AdminBlog({ navigation }) {
                     </View>
                 </View>
                 <View style={{ marginTop: 20, }}>
-                    <Text style={{ marginLeft: normalize(65), fontSize: normalize(15), fontWeight: '700', color: '#2958c4' }}>Blog Content</Text>
+                    <Text style={{ marginLeft: normalize(45), fontSize: normalize(19), fontWeight: '700', color: '#2958c4' }}>Blog Content</Text>
                     <TextInput
                         style={styles.input_two}
                         onChangeText={setBlogUpload}
@@ -72,8 +72,8 @@ export default function AdminBlog({ navigation }) {
 }
 const styles = StyleSheet.create({
     input: {
-        height: normalize(35),
-        width: normalize(270),
+        height: normalize(50),
+        width: normalize(300),
         elevation: 5,
         backgroundColor: "#ffffff",
         borderRadius: normalize(18),
@@ -90,13 +90,13 @@ const styles = StyleSheet.create({
         fontWeight: "500"
     },
     input_two: {
-        height: normalize(275),
-        width: normalize(270),
+        height: normalize(250),
+        width: normalize(300),
         elevation: 3,
         backgroundColor: "#ffffff",
         borderRadius: normalize(18),
         alignSelf : "center",
-        paddingBottom : normalize(240),
+        paddingBottom : normalize(190),
         paddingLeft: normalize(15),
         marginTop: 5,
         fontFamily: fonts.lato_regular,

@@ -37,10 +37,10 @@ export default function MSVouchers({navigation}) {
 
         return (
             <TouchableOpacity style={[styles.data_container]} onPress={() => onDate(item)} >
-                <View style={{ justifyContent: "center" }}>
+                <View style={{ justifyContent: "center", right : normalize(15) }}>
                     <Text style={styles.data_text}>{item.name}</Text>
                 </View>
-                <View style={{ justifyContent: "center" }}>
+                <View style={{ justifyContent: "center", right : normalize(15) }}>
                     <Text style={styles.data_text} >{item.percentage}</Text>
                 </View>
             </TouchableOpacity>
@@ -58,17 +58,17 @@ export default function MSVouchers({navigation}) {
                     <Text style={{ fontFamily: fonts.montserrat_bold, fontSize: normalize(22), fontWeight: 'bold', marginLeft: normalize(60), marginTop: normalize(20) }}>Most Selling Voucher</Text>
                 </View>
                 <View style={{ borderRadius: normalize(20), backgroundColor: '#FFDCAE99', width: normalize(340), height: normalize(83), alignSelf: "center", marginTop: normalize(40) }} onPress={() => navigation.navigate("MSVouchers")} >
-                    <View style={{ flexDirection: "row", alignSelf: "center", marginTop: normalize(15) }}>
-                        <Image source={admin_voucher} style={{ height: normalize(40), width: normalize(40), resizeMode: "contain", alignSelf: "center", right: normalize(8), marginTop: 5, tintColor: "red" }} />
+                    <View style={{ flexDirection: "row",marginLeft : normalize(20),  marginTop: normalize(15) }}>
+                        <Image source={admin_voucher} style={{ height: normalize(40), width: normalize(40), resizeMode: "contain", marginTop: 5, tintColor: "red" }} />
                         <View>
-                            <Text style={{ fontSize: normalize(16), fontWeight: '500', marginLeft: 10, marginTop: normalize(15), color: "#000000", alignSelf: "center", fontFamily: fonts.montserrat_semibold }}  >Doctor Voucher is best Selling Voucher </Text>
+                            <Text style={{ fontSize: normalize(16), fontWeight: '500', marginLeft: 10, marginTop: normalize(15), color: "#000000", alignSelf: "center", fontFamily: fonts.montserrat_semibold }}  >Best Selling Voucher - Doctor Voucher </Text>
                         </View>
                     </View>
                 </View>
                 <View style={{ width: normalize(340), borderRadius: normalize(10), backgroundColor: "#D0E3FFB0", marginVertical: normalize(20), alignSelf: "center" }}>
                     <View style={{ flexDirection: "row", justifyContent: "space-around", marginTop: normalize(20), marginLeft: normalize(20) }}>
                         <Text style={styles.data_text}>Voucher Name</Text>
-                        <Text style={styles.data_text} >Voucher Sell Perchantage</Text>
+                        <Text style={styles.data_text} > Sell Perchantage</Text>
                     </View>
                     <View style={{ width: normalize(340), borderColor: "#797877", borderBottomWidth: 1.2, alignSelf: "center", marginTop: normalize(10) }} />
                     <FlatList

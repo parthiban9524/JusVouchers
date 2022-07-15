@@ -57,6 +57,9 @@ function Login({ navigation, handleSubmit }) {
             <View style={{ marginTop: normalize(23) }}>
                 <Submitbutton bg={"#ffffff"} text={"Sign up"} txtclr={"#f69632"} onpress={() => navigation.navigate("Signup")} big={true} />
             </View>
+            <View style = {{marginTop : normalize(25), alignSelf : "center"}}>
+                <Text style = {{fontFamily : fonts.lato_regular, fontSize : normalize(18)}} >To Register as a Admin  <Text style = {{color : "#F58220", textDecorationLine : "underline"}} onPress = {() => navigation.navigate("AdminSignup")} >click here</Text> </Text>
+            </View>
         </View>
     )
 }

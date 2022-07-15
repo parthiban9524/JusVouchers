@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { View, Text, Image, TouchableOpacity } from "react-native"
 import { connect } from "react-redux";
 import { Field, reduxForm } from "redux-form";
@@ -10,6 +10,29 @@ import Input from "../../../components/Input";
 import Submitbutton from "../../../components/Submitbutton";
 
 function PaymentOption({ navigation }) {
+
+    const [card, setcard] = useState(false)
+    const [txt, settxt] = useState("")
+
+
+    const onClick = (data) => {
+        setcard(true)
+        // settxt(data)
+        if(card === true)
+        {
+            setcard(false)
+        }
+    }
+
+    const onTouch = (data) => {
+        settxt(data)
+        if(txt == data) {
+            settxt("")
+        }
+        setcard(false)
+    }
+
+
     return (
         <>
             <Header navigation={navigation} />
@@ -20,10 +43,18 @@ function PaymentOption({ navigation }) {
                 <View style={{ marginTop: normalize(25), marginLeft: normalize(45) }} >
                     <Text style={{ fontFamily: fonts.montserrat_regular, fontWeight: '600', fontSize: normalize(20), color: "#000000" }} >Payment Option</Text>
                 </View>
-                <View style={{ flexDirection: "row", marginTop: normalize(18), marginLeft: normalize(45) }} >
-                    <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(12), fontWeight: "500" }} > Debit card </Text>
-                    <Image source={triangle} style={{ height: normalize(10), width: normalize(10), alignSelf: "center", left: 10 }} />
-                </View>
+                <TouchableOpacity onPress={ onClick} style={{ flexDirection: "row", marginTop: normalize(18), marginLeft: normalize(45) }} >
+                    <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(12), fontWeight: "500" }} > {txt !== "" ? txt : "SelectOne" }  </Text>
+                    <Image source={triangle} style={{ height: normalize(10), width: normalize(10), alignSelf: "center", left: 10 }} />  
+                </TouchableOpacity>
+                {
+                    card && (
+                        <View style = {{marginLeft: normalize(45), marginTop : 10}} >
+                        <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(12), fontWeight: "500" }} onPress = { () => onTouch("DebitCard") } > DebitCard </Text>
+                        <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(12), fontWeight: "500", marginTop : normalize(10) }} onPress = { () => onTouch("CreditCard") }  > CreditCard </Text>
+                        </View>
+                    )
+                }
                 <View style={{ flexDirection: "row", marginTop: normalize(25), marginLeft: normalize(15), justifyContent: "space-evenly" }}>
                     <View style={{ height: normalize(43), width: normalize(75), borderColor: "#08D635", borderWidth: 1, borderRadius: 5, justifyContent: "center" }} >
                         <Image source={visa} style={{ height: normalize(25), width: normalize(53), resizeMode: "contain", alignSelf: "center" }} />

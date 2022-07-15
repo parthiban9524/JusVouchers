@@ -75,6 +75,7 @@ import RemoveVoucher from "./src/screens/Admin/RemoveVoucher";
 import PaymentDetails from "./src/screens/Admin/PaymentDetails";
 import Privacy from "./src/screens/Dashboard/Menu/Privacy";
 import Terms from "./src/screens/Dashboard/Menu/Terms";
+import AdminSignup from "./src/screens/Setup/AdminSignup";
 
 export default function App() {
 
@@ -127,6 +128,7 @@ export default function App() {
         <AuthNavigator.Screen name="Welcome" component={Welcome} />
         <AuthNavigator.Screen name="Login" component={Login} />
         <AuthNavigator.Screen name="Signup" component={Signup} />
+        <AuthNavigator.Screen name="AdminSignup" component={AdminSignup} />
         <AuthNavigator.Screen name="VenderSignup" component={VenderSignup} />
         <AuthNavigator.Screen name="SalesPersonSignup" component={SalesPersonSignup} />
         <AuthNavigator.Screen name="ForgotPassword" component={ForgotPassword} />

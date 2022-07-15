@@ -42,7 +42,7 @@ export default function Home({ navigation }) {
 
     return (
         <>
-            <Header navigation={navigation} />
+            <Header navigation={navigation} bg = {true} />
             <ScrollView style={{ backfaceVisibility: "visible", backgroundColor: "#ffffff" }} >
                 <View style={{ alignSelf: "center" }}>
                     <Slider navigation={navigation} id={1} />
