@@ -4,10 +4,11 @@ import { connect } from "react-redux";
 import { Field, reduxForm } from "redux-form";
 
 import { fonts, normalize } from "../../components/Utils";
-import { admin_voucher, home, lock, mail, phone, user, vendor, left } from "../../components/Icons"
+import {  mail, phone, user, left, Address, Price, VName } from "../../components/Icons"
 import Input from "../../components/Input";
 import Submitbutton from "../../components/Submitbutton"
 import SalesHeader from "../../components/SalesHeader"
+import AddVoucher from "../Admin/AdminVoucher/AddVoucher";
 
 function CustomerForm({ navigation }) {
     return (
@@ -20,7 +21,7 @@ function CustomerForm({ navigation }) {
           </TouchableOpacity>
             <View style={{alignSelf:'center' }} >
           
-                <Text style={{ fontSize: normalize(22), fontWeight: 'bold', color: "#000000" }}>Get Customer Details</Text>
+                <Text style={{ fontSize: normalize(24), fontWeight: 'bold' }}>Get Customer Details</Text>
             </View>
             <View style={{ marginTop: normalize(25) }} >
                 <Field
@@ -49,6 +50,9 @@ function CustomerForm({ navigation }) {
                     component={Input}
                     img={mail}
                     id={1}
+                    tint color
+
+
                 />
             </View>
             <View  >
@@ -56,7 +60,7 @@ function CustomerForm({ navigation }) {
                     label="Address"
                     name="Address"
                     component={Input}
-                    img={vendor}
+                    img={Address}
                     id={1}
                 />
             </View>
@@ -66,7 +70,7 @@ function CustomerForm({ navigation }) {
                     label="Voucher Name"
                     name="VName"
                     component={Input}
-                    img={admin_voucher}
+                    img={VName}
                     id={1}
                 />
             </View>
@@ -75,7 +79,7 @@ function CustomerForm({ navigation }) {
                     label="Voucher Price"
                     name="VPrice"
                     component={Input}
-                    img={admin_voucher}
+                    img={Price}
                     id={1}
                 />
             </View>

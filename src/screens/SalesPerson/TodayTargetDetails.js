@@ -33,9 +33,12 @@ const TodayTargetDetails = ({ navigation }) => {
     <>
       <SaleHeader navigation={navigation} />
       <SafeAreaView style={styles.container}>
+        <View style={{flexDirection:"row"}}>
         <TouchableOpacity style={{ marginTop: normalize(20), marginLeft: normalize(20) }} onPress={() => navigation.goBack()} >
           <Image source={left} style={{ height: normalize(30), width: normalize(30) }} />
         </TouchableOpacity>
+        <Text style={{fontSize:22,fontFamily:fonts.inter_bold,marginTop:18,marginLeft:80}}>Target Details</Text>
+        </View>
         <View style={{ borderRadius: 20, backgroundColor: '#FFDCAE99', width: normalize(340), height: normalize(83), marginTop: normalize(20), alignSelf: "center", justifyContent: "center" }} >
           <View style={{ flexDirection: "row", alignSelf: "center" }}>
             <Image source={sale1} style={{ height: normalize(50), width: normalize(50), resizeMode: "contain", }} />

@@ -22,13 +22,13 @@ export default function Saleperson({ navigation }) {
                         <Image source={sale1} style={{ height: normalize(50), width: normalize(50), resizeMode: "contain", }} />
                         <Text style={{ fontSize: normalize(20), fontWeight: '500', marginLeft: 25, marginTop: 10 }}  >Today Target</Text>
                         <View style={{ flexDirection: "row", marginTop: 10, }} >
-                            <Text style={{ fontSize: normalize(20), fontWeight: '500', marginLeft: normalize(15), color: "#00B028" }}>10</Text>
+                            <Text style={{ fontSize: normalize(20), fontWeight: '500', marginLeft: normalize(15), color: "#00B028"}}>10</Text>
                             <Image source={rising} style={{ width: normalize(40), height: normalize(25), marginLeft: normalize(20), alignSelf: "center", }} />
                             <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(16), color: "#08D635", top: normalize(20) }} >5.6%</Text>
                         </View>
                     </View>
                 </TouchableOpacity>
-                <TouchableOpacity style={{ borderRadius: 20, backgroundColor: "#FD040421", width: normalize(340), height: normalize(83), marginTop: normalize(20), alignSelf: "center", justifyContent: "center" }}>
+                {/* <TouchableOpacity style={{ borderRadius: 20, backgroundColor: "#FD040421", width: normalize(340), height: normalize(83), marginTop: normalize(20), alignSelf: "center", justifyContent: "center" }}>
                     <View style={{ flexDirection: "row", alignSelf: "center", }}>
                         <Image source={order_cancel} style={{ height: normalize(50), width: normalize(50), resizeMode: "contain", }} />
                         <Text style={{ fontSize: normalize(20), fontWeight: '500', marginLeft: 25, marginTop: 10 }}  >8 Order Cancel</Text>
@@ -37,7 +37,7 @@ export default function Saleperson({ navigation }) {
                             <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(16), color: "#08D635", top: normalize(20) }} >1.2%</Text>
                         </View>
                     </View>
-                </TouchableOpacity>
+                </TouchableOpacity> */}
                 
                 
             </ScrollView>
