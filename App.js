@@ -229,7 +229,7 @@ export default function App() {
               <View>
                 <Image source={voucher}
                   resizeMode='contain'
-                  style={{ width: normalize(35), height: normalize(35),marginLeft:10 }}
+                  style={{ width: normalize(35), height: normalize(35),marginLeft:7 }}
                 />
                 <Text style={{ textAlign: 'center', fontSize: normalize(12), fontFamily: fonts.inter_bold, color: "#ffffff", letterSpacing : 1 }}>{"Voucher"}</Text>
               </View>
