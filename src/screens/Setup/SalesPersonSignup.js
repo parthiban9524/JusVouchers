@@ -60,7 +60,7 @@ import WavyHeader from "../../components/Wavyheader";
                 <View style={{ width: normalize(130), borderBottomWidth: 1, borderColor: "#938C8C" }} />
             </View>
             <View style={{ marginTop: normalize(13) }}>
-                <Submitbutton bg={"#ffffff"} text={"Log in"} txtclr={"#f69632"} onpress={() => navigation.navigate("SalesPersonLogin")} big={true} />
+                <Submitbutton bg={"#ffffff"} text={"Log in"} txtclr={"#f69632"} onpress={() => navigation.navigate("Login")} big={true} />
             </View>
         </ScrollView>
     )

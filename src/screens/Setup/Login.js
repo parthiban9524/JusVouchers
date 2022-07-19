@@ -25,6 +25,14 @@ function Login({ navigation, handleSubmit }) {
         }
     }
 
+    const onTouch = (data) => {
+        settxt(data)
+        if(txt == data) {
+            settxt("")
+        }
+        setcard(false)
+    }
+
     return (
         <View style={{ flex: 1, backgroundColor: "#ffffff" }} >
             <WavyHeader navigation={navigation} />
@@ -60,18 +68,15 @@ function Login({ navigation, handleSubmit }) {
             </TouchableOpacity>
             </View>
             <TouchableOpacity onPress={ onClick} style={{ flexDirection: "row", marginTop: normalize(18), marginLeft: normalize(45) }} >
-                    <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(12), fontWeight: "500" }} > {  "User Login" }  </Text>
+                    <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(12), fontWeight: "500" }} > {txt !== "" ? txt : "User Login" }  </Text>
                     <Image source={triangle} style={{ height: normalize(10), width: normalize(10), alignSelf: "center", left: 10 }} />  
                 </TouchableOpacity>
                 {
                     card && (
                         <View style = {{marginLeft: normalize(45), marginTop : 10}} >
-                            
-                        <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(12), fontWeight: "500" }} onPress={() => navigation.navigate('AdminLogin')} > Login as Admin </Text>
-                        
-                        <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(12), fontWeight: "500", marginTop : normalize(10) }} onPress={() => navigation.navigate('VendorLogin')}  > Login as Vendor </Text>
-                        
-                        <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(12), fontWeight: "500", marginTop : normalize(10) }} onPress={() => navigation.navigate('SalesPersonLogin')}  > Login as SalePerson </Text>
+                        <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(12), fontWeight: "500" }} onPress = { () => onTouch("Admin Login") }  > Admin Login </Text>
+                        <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(12), fontWeight: "500", marginTop : normalize(10) }} onPress = { () => onTouch("Vendor Login") }  > Vendor Login </Text>
+                        <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(12), fontWeight: "500", marginTop : normalize(10) }} onPress = { () => onTouch("SalePerson Login") }  > SalePerson Login </Text>
                         
                         </View>
                     )

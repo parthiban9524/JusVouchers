@@ -77,9 +77,6 @@ import PaymentDetails from "./src/screens/Admin/PaymentDetails";
 import Privacy from "./src/screens/Dashboard/Menu/Privacy";
 import Terms from "./src/screens/Dashboard/Menu/Terms";
 import AdminSignup from "./src/screens/Setup/AdminSignup";
-import AdminLogin from "./src/screens/Setup/AdminLogin";
-import VendorLogin from "./src/screens/Setup/VendorLogin";
-import SalesPersonLogin from "./src/screens/Setup/SalesPersonLogin";
 export default function App() {
 
   const Stack = createStackNavigator();
@@ -130,9 +127,6 @@ export default function App() {
       <AuthNavigator.Navigator initialRouteName="Welcome" screenOptions={{ headerShown: false }} >
         <AuthNavigator.Screen name="Welcome" component={Welcome} />
         <AuthNavigator.Screen name="Login" component={Login} />
-        <AuthNavigator.Screen name="AdminLogin" component={AdminLogin} />
-        <AuthNavigator.Screen name="VendorLogin" component={VendorLogin} />
-        <AuthNavigator.Screen name="SalesPersonLogin" component={SalesPersonLogin} />
         <AuthNavigator.Screen name="Signup" component={Signup} />
         <AuthNavigator.Screen name="AdminSignup" component={AdminSignup} />
         <AuthNavigator.Screen name="VenderSignup" component={VenderSignup} />
