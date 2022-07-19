@@ -62,7 +62,7 @@ function VenderSignup({ navigation }) {
                 <View style={{ width: normalize(130), borderBottomWidth: 1, borderColor: "#938C8C" }} />
             </View>
             <View style={{ marginTop: normalize(21) }}>
-                <Submitbutton bg={"#ffffff"} text={"Log in"} txtclr={"#f69632"} onpress={() => navigation.navigate("VenderScreen")} big={true} />
+                <Submitbutton bg={"#ffffff"} text={"Log in"} txtclr={"#f69632"} onpress={() => navigation.navigate("VendorLogin")} big={true} />
             </View>
         </ScrollView>
     )

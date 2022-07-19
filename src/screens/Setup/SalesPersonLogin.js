@@ -10,7 +10,7 @@ import Input from "../../components/Input";
 import Submitbutton from "../../components/Submitbutton"
 import WavyHeader from "../../components/Wavyheader";
 
-function Login({ navigation, handleSubmit }) {
+function SalesPersonLogin({ navigation, handleSubmit }) {
 
     const [card, setcard] = React.useState(false)
     const [txt, settxt] = React.useState("")
@@ -25,6 +25,7 @@ function Login({ navigation, handleSubmit }) {
         }
     }
 
+   
     return (
         <View style={{ flex: 1, backgroundColor: "#ffffff" }} >
             <WavyHeader navigation={navigation} />
@@ -60,24 +61,22 @@ function Login({ navigation, handleSubmit }) {
             </TouchableOpacity>
             </View>
             <TouchableOpacity onPress={ onClick} style={{ flexDirection: "row", marginTop: normalize(18), marginLeft: normalize(45) }} >
-                    <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(12), fontWeight: "500" }} > {  "User Login" }  </Text>
+                    <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(12), fontWeight: "500" }} > { "SalePerson Login" }  </Text>
                     <Image source={triangle} style={{ height: normalize(10), width: normalize(10), alignSelf: "center", left: 10 }} />  
                 </TouchableOpacity>
                 {
                     card && (
                         <View style = {{marginLeft: normalize(45), marginTop : 10}} >
-                            
-                        <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(12), fontWeight: "500" }} onPress={() => navigation.navigate('AdminLogin')} > Login as Admin </Text>
+                        <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(12), fontWeight: "500" }}  onPress={() => navigation.navigate('VendorLogin') }> Login as User </Text>
+                        <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(12), fontWeight: "500", marginTop : normalize(10) }}  onPress={() => navigation.navigate('AdminLogin') }> Login as Admin </Text>
                         
-                        <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(12), fontWeight: "500", marginTop : normalize(10) }} onPress={() => navigation.navigate('VendorLogin')}  > Login as Vendor </Text>
-                        
-                        <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(12), fontWeight: "500", marginTop : normalize(10) }} onPress={() => navigation.navigate('SalesPersonLogin')}  > Login as SalePerson </Text>
+                        <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(12), fontWeight: "500", marginTop : normalize(10) }}  onPress={() => navigation.navigate('VendorLogin')} > Login as Vendor </Text>
                         
                         </View>
                     )
                 }
             <View style={{ marginTop: normalize(20) }} >
-                <Submitbutton bg={"#f69632"} text={"Log in"} txtclr={"#ffffff"} big={true}  onpress={() => navigation.navigate("DashboardNavigation")} />
+                <Submitbutton bg={"#f69632"} text={"Log in"} txtclr={"#ffffff"} big={true}  onpress={() => navigation.navigate("SalesScreen")} />
             </View>
             <View style={{ flexDirection: "row", alignSelf: "center", justifyContent: "center" }} >
                 <View style={{ width: normalize(130), borderBottomWidth: 1, borderColor: "#938C8C" }} />
@@ -85,7 +84,7 @@ function Login({ navigation, handleSubmit }) {
                 <View style={{ width: normalize(130), borderBottomWidth: 1, borderColor: "#938C8C" }} />
             </View>
             <View style={{ marginTop: normalize(23) }}>
-                <Submitbutton bg={"#ffffff"} text={"Sign up"} txtclr={"#f69632"} onpress={() => navigation.navigate("Signup")} big={true} />
+                <Submitbutton bg={"#ffffff"} text={"Sign up"} txtclr={"#f69632"} onpress={() => navigation.navigate("SalesPersonSignup")} big={true} />
             </View>
             <View style = {{marginTop : normalize(25), alignSelf : "center"}}>
                 <Text style = {{fontFamily : fonts.lato_regular, fontSize : normalize(18)}} >To Register as a Admin  <Text style = {{color : "#F58220", textDecorationLine : "underline"}} onPress = {() => navigation.navigate("AdminSignup")} >click here</Text> </Text>
@@ -94,5 +93,5 @@ function Login({ navigation, handleSubmit }) {
     )
 }
 export default connect(null, null)(reduxForm({
-    form: 'Login',
-})(Login));
+    form: 'SalesPersonLogin',
+})(SalesPersonLogin));
