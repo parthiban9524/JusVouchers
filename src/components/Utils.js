@@ -1,4 +1,4 @@
-import { Dimensions, Platform, PixelRatio } from 'react-native';
+import { Dimensions, Platform, PixelRatio, ToastAndroid } from 'react-native';
 
 export const screenWidth = Dimensions.get('screen').width;
 export const screenHeight = Dimensions.get('screen').height;
@@ -47,3 +47,24 @@ export const getDistinctCategory = (offers) => {
   }
   return []
 };
+
+export const showToast = (errors, color, multiple) => {
+  if (multiple !== true)
+    multiple = false;
+
+  if (color !== true)
+    color = '#000';
+
+  if (Array.isArray(errors))
+    errors = errorMessage(errors, multiple);
+
+  ToastAndroid.show(errors, {
+    duration: 5000,
+    backgroundColor: color,
+    position: -30,
+    animation: true,
+    shadow: false,
+    hideOnPress: true,
+    opacity: 0.9
+  })
+}

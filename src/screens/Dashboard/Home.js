@@ -7,12 +7,10 @@ import Submitbutton from "../../components/Submitbutton";
 import Typecard from "../../components/Typecard";
 import { fonts, normalize } from "../../components/Utils";
 
-import gym from "../../assest/images/gym.png"
 import doctor from "../../assest/images/doctor.png"
 import health from "../../assest/images/health.png"
 import yoga from "../../assest/images/yoga.png"
 import saloon from "../../assest/images/saloon.png"
-import diet from "../../assest/images/diet.png"
 import online from "../../assest/images/online.png"
 import offline from "../../assest/images/offline.png"
 import exclusive from "../../assest/images/exclusive.png"
@@ -66,7 +64,7 @@ export default function Home({ navigation }) {
                     </View>
                     <View>
                         <View style={{ marginHorizontal: normalize(10), marginTop: normalize(20), flexDirection: "row", justifyContent: "space-around" }} >
-                            <Typecard data={val3}  onpress={() => navigation.navigate("VenderScreen")} />
+                            <Typecard data={val3}  onpress={() => navigation.navigate("OfflineMarketing")} />
                         </View>
                         <View style={{ marginHorizontal: normalize(10), marginTop: 16, flexDirection: "row", justifyContent: "space-around" }} >
                             <Typecard data={val4} />
@@ -104,7 +102,7 @@ export default function Home({ navigation }) {
                 <ScrollView horizontal={true} style={{ flexDirection: "row", marginLeft: normalize(20), }}>
                     <View>
                         <View style={{ marginHorizontal: normalize(10), marginTop: 16, flexDirection: "row", justifyContent: "space-around" }} >
-                            <Typecard data={val3} onpress={() => navigation.navigate("VenderScreen")} />
+                            <Typecard data={val3} onpress={() => navigation.navigate("OfflineMarketing")} />
                         </View>
                         <View style={{ marginHorizontal: normalize(10), marginTop: 16, flexDirection: "row", justifyContent: "space-around" }} >
                             <Typecard data={val4}/>
@@ -112,7 +110,7 @@ export default function Home({ navigation }) {
                     </View>
                     <View>
                         <View style={{ marginHorizontal: normalize(10), marginTop: normalize(20), flexDirection: "row", justifyContent: "space-around" }} >
-                            <Typecard data={val1} onpress={() => navigation.navigate("VouchersScreen")} />
+                            <Typecard data={val1} onpress={() => navigation.navigate("OfflineMarketing")} />
                         </View>
                         <View style={{ marginHorizontal: normalize(10), marginTop: 16, flexDirection: "row", justifyContent: "space-around" }} >
                             <Typecard data={val2}  onpress={() => navigation.navigate("DigitalMarketing")}  />

@@ -6,6 +6,6 @@ const config = {
         timeout: 20000,
     }
 };
-export const API_HOST = config.api.host + '/api/app';
+export const API_HOST = config.api.host + '/api/user';
 export const API = config.api.host;
 export default config

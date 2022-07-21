@@ -77,6 +77,7 @@ import PaymentDetails from "./src/screens/Admin/PaymentDetails";
 import Privacy from "./src/screens/Dashboard/Menu/Privacy";
 import Terms from "./src/screens/Dashboard/Menu/Terms";
 import AdminSignup from "./src/screens/Setup/AdminSignup";
+import OfflineMarketing from "./src/screens/Dashboard/Menu/OfflineMarketing";
 export default function App() {
 
   const Stack = createStackNavigator();
@@ -100,6 +101,7 @@ export default function App() {
         <HomeNavigator.Screen name="Profile" component={Profile} />
         <HomeNavigator.Screen name="Exclusive" component={Exclusive} />
         <HomeNavigator.Screen name="DigitalMarketing" component={DigitalMarketing} />
+        <HomeNavigator.Screen name="OfflineMarketing" component={OfflineMarketing} />
         <HomeNavigator.Screen name="Privacy" component={Privacy} />
         <HomeNavigator.Screen name="Terms" component={Terms} />
       </HomeNavigator.Navigator>
