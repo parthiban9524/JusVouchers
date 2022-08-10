@@ -1,20 +1,80 @@
-import React from "react";
-import { View, Text, TextInput, StyleSheet, Image } from "react-native";
-import { Colors } from "react-native/Libraries/NewAppScreen";
+import React, { useState } from "react";
+import { View, Text, TextInput, StyleSheet, Image, TouchableOpacity } from "react-native";
+import { connect } from "react-redux";
+import { Field, reduxForm } from "redux-form";
+import { required, email } from 'redux-form-validators';
+import { launchImageLibrary } from 'react-native-image-picker'
+
+
 import AdminHeader from "../../../components/AdminHeader";
 import { fonts, normalize } from "../../../components/Utils";
 import Submitbutton from "../../../components/Submitbutton";
-import { FileUploader } from "react-drag-drop-file";
-import { lines } from "../../../components/Icons";
+import Input from "../../../components/Input";
+import { LoginData } from "../../../components/Authconst";
 
-const fileTypes = ["JPEG", "PNG", "GIF"];
+import { submitVoucher } from "../../../actions";
 
-export default function AddVoucher({ navigation }) {
+ function AddVoucher(props) {
+
+    const {navigation ,submitVoucher, handleSubmit, serverError} = props;
+    const fileTypes = ["JPEG", "PNG", "GIF"];
+    const submit = value => {
+        const userVal = LoginData.data
+        console.log("UserVal",userVal)
+        const val1 = value;
+        const val2 = { "UPLOAD_VOUCHER": filePath.uri };
+        const data = Object.assign(val1, val2)
+        const user = { "USER_ID" : userVal.userrole}
+        console.log("user",user)
+        const val = Object.assign(data, user)
+        console.log("val",val)
+        submitVoucher(val);
+    }
 
     const [voucher, addVoucher] = React.useState(null);
     const [voucherCategory, addVoucherCategory] = React.useState(null);
-    const [voucherupload, addVoucherupload] = React.useState(null);
-    const [file, setfile] = React.useState(null);
+    const [filePath, setFilePath] = useState({});
+    
+
+    const chooseFile = (type) => {
+        let options = {
+            mediaType: type,
+            maxWidth: 300,
+            maxHeight: 550,
+            quality: 1,
+        };
+        launchImageLibrary(options, (response) => {
+            console.log('Response = ', response);
+
+            if (response.didCancel) {
+                alert('User cancelled camera picker');
+                return;
+            } else if (response.errorCode == 'camera_unavailable') {
+                alert('Camera not available on device');
+                return;
+            } else if (response.errorCode == 'permission') {
+                alert('Permission not satisfied');
+                return;
+            } else if (response.errorCode == 'others') {
+                alert(response.errorMessage);
+                return;
+            }
+            console.log('base64 -> ', response.base64);
+            console.log('uri -> ', response.uri);
+            console.log('width -> ', response.width);
+            console.log('height -> ', response.height);
+            console.log('fileSize -> ', response.fileSize);
+            console.log('type -> ', response.type);
+            console.log('fileName -> ', response.fileName);
+            setFilePath(response.assets[0]);
+        });
+    };
+
+    const upload = () => {
+        chooseFile('photo')
+    }
+
+
 
     return (
         <>
@@ -25,38 +85,38 @@ export default function AddVoucher({ navigation }) {
                 </View>
                 <View style={{ marginTop: 20 }}>
                     <Text style={{ marginLeft: normalize(45), fontSize: normalize(19), fontWeight: '700', color: '#2958c4' }}>Voucher Name</Text>
-                    <TextInput
-                        style={styles.input}
-                        onChangeText={addVoucher}
-                        value={voucher}
-                        placeholder="Enter Voucher Name"
-
-                    />
+                    <Field
+                    label="Enter Voucher Name"
+                    name="VOUCHER_NAME"
+                    component={Input}
+                    id={4}
+                    autoCapitalize={'none'}
+                    validate={[required()]}
+                />
                 </View>
                 <View style={{ marginTop: 20, }}>
                     <Text style={{ marginLeft: normalize(45), fontSize: normalize(19), fontWeight: '700', color: '#2958c4' }}>Voucher Category</Text>
-                    <TextInput
-                        style={styles.input}
-                        onChangeText={addVoucherCategory}
-                        value={voucherCategory}
-                        placeholder="Enter Voucher Category"
-
-                    />
+                    <Field
+                    label="Enter the Voucher Category"
+                    name="VOUCHER_CATEGORY"
+                    component={Input}
+                    id={4}
+                    autoCapitalize={'none'}
+                    validate={[required()]}
+                />
                 </View>
                 <View style={{ marginTop: normalize(20), }}>
                     <Text style={{ marginLeft: normalize(50), fontSize: normalize(19), fontWeight: '700', color: '#2958c4', }}>Upload Voucher</Text>
-                    <Image source={lines} style={{ height: normalize(120), width: normalize(300), alignSelf: "center", top: 5 }} />
-                    <View style={{ position: "absolute", alignSelf: "center", marginTop: normalize(45) }} >
-                        <TextInput
-                            style={styles.input_one}
-                            onChangeText={addVoucherupload}
-                            value={voucherupload}
-                            placeholder="Drag here from Upload"
+                    <TouchableOpacity style={styles.input_one} onPress={upload}>
+                        <Text style={{ fontFamily: fonts.lato_regular, fontSize: normalize(14), bottom: normalize(20), textAlign: "center" }} >Click Here To Upload Image</Text>
+                        <Image
+                            source={{ uri: filePath.uri }}
+                            style={{ width: normalize(250), height: normalize(150), margin: 5, alignSelf: "center", resizeMode: "contain" }}
                         />
-                    </View>
+                    </TouchableOpacity>
                 </View>
                 <View style={{ marginTop: normalize(46) }} >
-                    <Submitbutton voucher={true} bg={"#F58220"} text={"Upload"} txtclr={"#ffffff"} onpress={() => navigation.navigate("AdminUpload")} />
+                    <Submitbutton voucher={true} bg={"#F58220"} text={"Upload"} txtclr={"#ffffff"} onpress = {handleSubmit(submit)} />
                 </View>
                 <View style={{ marginTop: normalize(20) }} >
                     <Submitbutton voucher={true} bg={"#F58220"} text={"Manage Voucher"} txtclr={"#ffffff"} onpress={() => navigation.navigate("VoucherHandling")} />
@@ -66,6 +126,23 @@ export default function AddVoucher({ navigation }) {
 
     )
 }
+
+const mapStateToProps = (state) => {
+    return {
+        ...state.admin,
+    };
+}
+const mapDispatchToProps = (dispatch) => {
+    return {
+        submitVoucher: (data) => { dispatch(submitVoucher(data)) },
+    }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(reduxForm({
+    form: 'AddVoucher',
+})(AddVoucher));
+
+
 const styles = StyleSheet.create({
     input: {
         height: normalize(50),
@@ -81,8 +158,18 @@ const styles = StyleSheet.create({
         fontWeight: "500"
     },
     input_one: {
-        fontFamily: fonts.lato_regular,
-        fontSize: normalize(12),
-        fontWeight: "500"
+        height: normalize(250),
+        width: normalize(300),
+        elevation: 5,
+        backgroundColor: "#ffffff",
+        borderRadius: normalize(18),
+        alignSelf: "center",
+        paddingLeft: normalize(15),
+        alignSelf: "center",
+        marginTop: normalize(15),
+        justifyContent: "center"
+
     },
 });
+
+

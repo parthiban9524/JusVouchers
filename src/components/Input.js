@@ -88,6 +88,30 @@ export default function Input(props) {
                     </>
                 )
             }
+            {
+                id == 4 && (
+                    <>
+                        <TextInput
+                            style={{ height: normalize(50), width: normalize(300), elevation: 5, backgroundColor: "#ffffff", borderRadius: normalize(18), alignSelf: "center", paddingLeft: normalize(15), marginTop: 5, fontFamily: fonts.lato_regular, fontSize: normalize(12), fontWeight: "500"}}
+                            onChangeText={onChangeHandler}
+                            placeholder={label}
+                            autoCapitalize="none"
+                            onBlur={onBlurHandler}
+                            value={values}
+                            autoCorrect={false}
+                            onFocus={handleFocus}
+                            {...props}
+                        />
+                        {
+                                touched && (error || serverError) && (
+                                    <View style={{ paddingHorizontal: 40 }}>
+                                        <Text>{serverError ? serverError : error}</Text>
+                                    </View>
+                                )
+                            }
+                    </>
+                )
+            }
         </View>
     )
 }

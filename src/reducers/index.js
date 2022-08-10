@@ -1,10 +1,12 @@
 import { combineReducers } from "redux";
 import { reducer as forms } from 'redux-form';
 import setupReducer from "./setupReducer";
+import adminReducer from "./adminReducer";
 
 const appReducer = combineReducers({
     form: forms,
     setup: setupReducer,
+    admin: adminReducer
 })
 const rootReducer = (state, action) => {
     if (action.type === 'USER_LOGOUT') {

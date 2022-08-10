@@ -1,4 +1,5 @@
-import { Dimensions, Platform, PixelRatio, ToastAndroid } from 'react-native';
+import { Dimensions, Platform, PixelRatio } from 'react-native';
+import Toast from 'react-native-root-toast';
 
 export const screenWidth = Dimensions.get('screen').width;
 export const screenHeight = Dimensions.get('screen').height;
@@ -58,7 +59,7 @@ export const showToast = (errors, color, multiple) => {
   if (Array.isArray(errors))
     errors = errorMessage(errors, multiple);
 
-  ToastAndroid.show(errors, {
+  Toast.show(errors, {
     duration: 5000,
     backgroundColor: color,
     position: -30,
