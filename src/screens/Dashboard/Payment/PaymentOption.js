@@ -1,15 +1,12 @@
 import React, { useState } from "react";
-import { View, Text, Image, TouchableOpacity } from "react-native"
-import { connect } from "react-redux";
-import { Field, reduxForm } from "redux-form";
+import { View, Text, Image, TouchableOpacity, TextInput } from "react-native"
 
 import Header from "../../../components/Header";
 import { normalize, fonts } from "../../../components/Utils";
 import { left, mastercard, rupay, triangle, visa } from "../../../components/Icons";
-import Input from "../../../components/Input";
 import Submitbutton from "../../../components/Submitbutton";
 
-function PaymentOption({ navigation }) {
+export default function PaymentOption({ navigation }) {
 
     const [card, setcard] = useState(false)
     const [txt, settxt] = useState("")
@@ -18,15 +15,14 @@ function PaymentOption({ navigation }) {
     const onClick = (data) => {
         setcard(true)
         // settxt(data)
-        if(card === true)
-        {
+        if (card === true) {
             setcard(false)
         }
     }
 
     const onTouch = (data) => {
         settxt(data)
-        if(txt == data) {
+        if (txt == data) {
             settxt("")
         }
         setcard(false)
@@ -43,15 +39,15 @@ function PaymentOption({ navigation }) {
                 <View style={{ marginTop: normalize(25), marginLeft: normalize(45) }} >
                     <Text style={{ fontFamily: fonts.montserrat_regular, fontWeight: '600', fontSize: normalize(20), color: "#000000" }} >Payment Option</Text>
                 </View>
-                <TouchableOpacity onPress={ onClick} style={{ flexDirection: "row", marginTop: normalize(18), marginLeft: normalize(45) }} >
-                    <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(12), fontWeight: "500" }} > {txt !== "" ? txt : "SelectOne" }  </Text>
-                    <Image source={triangle} style={{ height: normalize(10), width: normalize(10), alignSelf: "center", left: 10 }} />  
+                <TouchableOpacity onPress={onClick} style={{ flexDirection: "row", marginTop: normalize(18), marginLeft: normalize(45) }} >
+                    <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(12), fontWeight: "500" }} > {txt !== "" ? txt : "SelectOne"}  </Text>
+                    <Image source={triangle} style={{ height: normalize(10), width: normalize(10), alignSelf: "center", left: 10 }} />
                 </TouchableOpacity>
                 {
                     card && (
-                        <View style = {{marginLeft: normalize(45), marginTop : 10}} >
-                        <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(12), fontWeight: "500" }} onPress = { () => onTouch("DebitCard") } > DebitCard </Text>
-                        <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(12), fontWeight: "500", marginTop : normalize(10) }} onPress = { () => onTouch("CreditCard") }  > CreditCard </Text>
+                        <View style={{ marginLeft: normalize(45), marginTop: 10 }} >
+                            <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(12), fontWeight: "500" }} onPress={() => onTouch("DebitCard")} > DebitCard </Text>
+                            <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(12), fontWeight: "500", marginTop: normalize(10) }} onPress={() => onTouch("CreditCard")}  > CreditCard </Text>
                         </View>
                     )
                 }
@@ -68,44 +64,34 @@ function PaymentOption({ navigation }) {
                 </View>
 
                 <View style={{ marginTop: normalize(55) }} >
-                    <Field
-                        label="Email"
-                        name="email"
-                        component={Input}
-                        wid={318}
-                        id={2}
+                    <TextInput
+                        style={{ width: normalize(318), height: normalize(50), borderColor: "#9A9393", borderWidth: 1, alignSelf: "center", fontFamily: fonts.montserrat_regular, fontSize: normalize(15), paddingLeft: normalize(20), top: 10, }}
+                        placeholder={"Email"}
+
                     />
                 </View>
                 <View style={{ marginTop: normalize(15), flexDirection: "row", justifyContent: "space-evenly", marginHorizontal: 10 }} >
-                    <Field
-                        label="Card number"
-                        name="Card number"
-                        component={Input}
-                        wid={216}
-                        id={2}
+                    <TextInput
+                        style={{ width: normalize(216), height: normalize(50), borderColor: "#9A9393", borderWidth: 1, alignSelf: "center", fontFamily: fonts.montserrat_regular, fontSize: normalize(15), paddingLeft: normalize(20), top: 10, }}
+                        placeholder={"Card Number"}
+
                     />
-                    <Field
-                        label="Exp"
-                        name="Exp"
-                        component={Input}
-                        wid={84}
-                        id={2}
+                    <TextInput
+                        style={{ width: normalize(84), height: normalize(50), borderColor: "#9A9393", borderWidth: 1, alignSelf: "center", fontFamily: fonts.montserrat_regular, fontSize: normalize(15), paddingLeft: normalize(20), top: 10, }}
+                        placeholder={"EXP"}
+
                     />
                 </View>
                 <View style={{ marginTop: normalize(15), flexDirection: "row", justifyContent: "space-evenly", marginHorizontal: 10 }} >
-                    <Field
-                        label="Cardholder Name"
-                        name="Cardholder Name"
-                        component={Input}
-                        wid={216}
-                        id={2}
+                    <TextInput
+                        style={{ width: normalize(216), height: normalize(50), borderColor: "#9A9393", borderWidth: 1, alignSelf: "center", fontFamily: fonts.montserrat_regular, fontSize: normalize(15), paddingLeft: normalize(20), top: 10, }}
+                        placeholder={"Cardholder Name"}
+
                     />
-                    <Field
-                        label="C V V"
-                        name="C V V"
-                        component={Input}
-                        wid={84}
-                        id={2}
+                    <TextInput
+                        style={{ width: normalize(84), height: normalize(50), borderColor: "#9A9393", borderWidth: 1, alignSelf: "center", fontFamily: fonts.montserrat_regular, fontSize: normalize(15), paddingLeft: normalize(20), top: 10, }}
+                        placeholder={"C V V"}
+
                     />
                 </View>
                 <View style={{ marginTop: normalize(65), flexDirection: "row", marginLeft: normalize(70) }} >
@@ -119,7 +105,3 @@ function PaymentOption({ navigation }) {
         </>
     )
 }
-export default connect(null, null)(reduxForm({
-    form: 'PaymentOption',
-    enableReinitialize: true
-})(PaymentOption));

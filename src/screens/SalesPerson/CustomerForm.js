@@ -1,87 +1,78 @@
 import React from "react";
-import { View, Text, StatusBar, ScrollView,TouchableOpacity,Image} from "react-native";
-import { connect } from "react-redux";
-import { Field, reduxForm } from "redux-form";
+import { View, Text, StatusBar, ScrollView, TouchableOpacity, Image , TextInput} from "react-native";
 
 import { fonts, normalize } from "../../components/Utils";
-import {  mail, phone, user, left, Address, Price, VName } from "../../components/Icons"
-import Input from "../../components/Input";
+import { mail, phone, user, left, Address, Price, VName } from "../../components/Icons"
 import Submitbutton from "../../components/Submitbutton"
 import SalesHeader from "../../components/SalesHeader"
-import AddVoucher from "../Admin/AdminVoucher/AddVoucher";
 
-function CustomerForm({ navigation }) {
+export default function CustomerForm({ navigation }) {
     return (
 
         <ScrollView style={{ flex: 1, backgroundColor: "#ffffff" }} >
             <StatusBar backgroundColor={"#F9AA44"} translucent={false} />
             <SalesHeader navigation={navigation} />
-            <TouchableOpacity style={{ marginTop: normalize(20),marginLeft:normalize(20) }} onPress={() => navigation.navigate("SalePerson")} >
-            <Image source={left} style={{ height: normalize(30), width: normalize(30) }} />
-          </TouchableOpacity>
-            <View style={{alignSelf:'center' }} >
-          
+            <TouchableOpacity style={{ marginTop: normalize(20), marginLeft: normalize(20) }} onPress={() => navigation.navigate("SalePerson")} >
+                <Image source={left} style={{ height: normalize(30), width: normalize(30) }} />
+            </TouchableOpacity>
+            <View style={{ alignSelf: 'center' }} >
+
                 <Text style={{ fontSize: normalize(24), fontWeight: 'bold' }}>Get Customer Details</Text>
             </View>
             <View style={{ marginTop: normalize(25) }} >
-                <Field
-                    label="Customer Full Name"
-                    name="Full name"
-                    component={Input}
-                    img={user}
-                    id={1}
-
+                <TextInput
+                    style={{ width: normalize(300), borderColor: "#938C8C", borderBottomWidth: 1, alignSelf: "center", fontFamily: fonts.lato_regular, fontSize: normalize(20), paddingLeft: normalize(30), top: 10, }}
+                    placeholder={"Customer Full Name"}
+                    autoCapitalize="none"
+                    autoCorrect={false}
                 />
+                <Image source={user} style={{ height: normalize(25), width: normalize(25), left: normalize(40), bottom: normalize(28) }} />
             </View>
             <View >
-                <Field
-                    label="Phone"
-                    name="phone"
-                    component={Input}
-                    img={phone}
-                    id={1}
-                    
+                <TextInput
+                    style={{ width: normalize(300), borderColor: "#938C8C", borderBottomWidth: 1, alignSelf: "center", fontFamily: fonts.lato_regular, fontSize: normalize(20), paddingLeft: normalize(30), top: 10, }}
+                    placeholder={"Phone"}
+                    autoCapitalize="none"
+                    autoCorrect={false}
                 />
+                <Image source={phone} style={{ height: normalize(25), width: normalize(25), left: normalize(40), bottom: normalize(28) }} />
             </View>
-            <View  >
-                <Field
-                    label="Email"
-                    name="email"
-                    component={Input}
-                    img={mail}
-                    id={1}
-                    tint color
-
-
+            <View>
+                <TextInput
+                    style={{ width: normalize(300), borderColor: "#938C8C", borderBottomWidth: 1, alignSelf: "center", fontFamily: fonts.lato_regular, fontSize: normalize(20), paddingLeft: normalize(30), top: 10, }}
+                    placeholder={"Email"}
+                    autoCapitalize="none"
+                    autoCorrect={false}
                 />
+                <Image source={mail} style={{ height: normalize(25), width: normalize(25), left: normalize(40), bottom: normalize(28) }} />
             </View>
-            <View  >
-                <Field
-                    label="Address"
-                    name="Address"
-                    component={Input}
-                    img={Address}
-                    id={1}
+            <View>
+                <TextInput
+                    style={{ width: normalize(300), borderColor: "#938C8C", borderBottomWidth: 1, alignSelf: "center", fontFamily: fonts.lato_regular, fontSize: normalize(20), paddingLeft: normalize(30), top: 10, }}
+                    placeholder={"Address"}
+                    autoCapitalize="none"
+                    autoCorrect={false}
                 />
+                <Image source={Address} style={{ height: normalize(25), width: normalize(25), left: normalize(40), bottom: normalize(28) }} />
             </View>
 
-            <View  >
-                <Field
-                    label="Voucher Name"
-                    name="VName"
-                    component={Input}
-                    img={VName}
-                    id={1}
+            <View>
+                <TextInput
+                    style={{ width: normalize(300), borderColor: "#938C8C", borderBottomWidth: 1, alignSelf: "center", fontFamily: fonts.lato_regular, fontSize: normalize(20), paddingLeft: normalize(30), top: 10, }}
+                    placeholder={"Voucher Name"}
+                    autoCapitalize="none"
+                    autoCorrect={false}
                 />
+                <Image source={VName} style={{ height: normalize(25), width: normalize(25), left: normalize(40), bottom: normalize(28) }} />
             </View>
-            <View  >
-                <Field
-                    label="Voucher Price"
-                    name="VPrice"
-                    component={Input}
-                    img={Price}
-                    id={1}
+            <View>
+                <TextInput
+                    style={{ width: normalize(300), borderColor: "#938C8C", borderBottomWidth: 1, alignSelf: "center", fontFamily: fonts.lato_regular, fontSize: normalize(20), paddingLeft: normalize(30), top: 10, }}
+                    placeholder={"Voucher Price"}
+                    autoCapitalize="none"
+                    autoCorrect={false}
                 />
+                <Image source={Price} style={{ height: normalize(25), width: normalize(25), left: normalize(40), bottom: normalize(28) }} />
             </View>
             <View style={{ marginTop: normalize(13) }} >
                 <Submitbutton bg={"#f69632"} text={"Submit"} txtclr={"#ffffff"} onpress={() => alert("Form Submit")} big={true} />
@@ -90,7 +81,3 @@ function CustomerForm({ navigation }) {
         </ScrollView>
     )
 }
-export default connect(null, null)(reduxForm({
-    form: 'CustomerForm',
-    enableReinitialize: true
-})(CustomerForm));

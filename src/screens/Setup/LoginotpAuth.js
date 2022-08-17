@@ -1,13 +1,11 @@
-
-import { View, Text, StyleSheet, KeyboardAvoidingView, Image, TextInput, TouchableOpacity } from 'react-native'
 import React from 'react'
+import { View, Text, StyleSheet, KeyboardAvoidingView, Image, TextInput, TouchableOpacity } from 'react-native'
+
 import { fonts, normalize } from '../../components/Utils';
-import { left } from '../../components/Icons';
-import { connect } from "react-redux";
-import { Field, reduxForm } from "redux-form";
 import WavyHeader from '../../components/Wavyheader';
 import Submitbutton from '../../components/Submitbutton';
-const LoginotpAuth = ({ navigation }) => {
+
+export default function LoginotpAuth({ navigation }) {
     let textInput = React.useRef(null);
     const [phoneNumber, setPhoneNumber] = React.useState();
     const [focusInput, setFocusinput] = React.useState(true);
@@ -86,7 +84,7 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
         alignItems: 'center',
         width: normalize(320),
-        elevation : 5
+        elevation: 5
     },
     openDialogView: {
         flexDirection: 'row',
@@ -101,8 +99,3 @@ const styles = StyleSheet.create({
         width: 10
     },
 })
-
-export default connect(null, null)(reduxForm({
-    form: 'LoginotpAuth',
-    enableReinitialize: true
-})(LoginotpAuth));
