@@ -1,15 +1,12 @@
 import React from "react";
-import { View, Text, Image, ScrollView } from "react-native"
-import { connect } from "react-redux";
-import { Field, reduxForm } from "redux-form";
+import { View, Text, Image, ScrollView, TextInput } from "react-native"
 
 import Header from "../../../components/Header";
 import { user } from "../../../components/Icons";
 import { fonts, normalize } from "../../../components/Utils";
-import Input from "../../../components/Input";
 import Submitbutton from "../../../components/Submitbutton";
 
-function HealthForm({ navigation }) {
+export default function HealthForm({ navigation }) {
     return (
         <>
             <Header navigation={navigation} />
@@ -30,46 +27,36 @@ function HealthForm({ navigation }) {
                         </View>
                     </View>
                     <View style={{ marginTop: normalize(15) }}>
-                        <Field
-                            label="Full Name"
-                            name="Full Name"
-                            component={Input}
-                            wid={318}
-                            id={3}
+                        <TextInput
+                            style={{ width: normalize(318), borderColor: "#000000", borderBottomWidth: 1, marginLeft: normalize(10), fontFamily: fonts.lato_regular, fontSize: normalize(20) }}
+                            placeholder={"Full Name"}
+                            placeholderTextColor={"#000000"}
                         />
                     </View>
                     <View style={{ flexDirection: "row", marginTop: 10 }} >
-                        <Field
-                            label="Age"
-                            name="Age"
-                            component={Input}
-                            wid={150}
-                            id={3}
+                        <TextInput
+                            style={{ width: normalize(150), borderColor: "#000000", borderBottomWidth: 1, marginLeft: normalize(10), fontFamily: fonts.lato_regular, fontSize: normalize(20) }}
+                            placeholder={"Age"}
+                            placeholderTextColor={"#000000"}
                         />
-                        <Field
-                            label="Gender"
-                            name="Gender"
-                            component={Input}
-                            wid={150}
-                            id={3}
+                        <TextInput
+                            style={{ width: normalize(150), borderColor: "#000000", borderBottomWidth: 1, marginLeft: normalize(10), fontFamily: fonts.lato_regular, fontSize: normalize(20) }}
+                            placeholder={"Gender"}
+                            placeholderTextColor={"#000000"}
                         />
                     </View>
                     <View style={{ marginTop: 10 }} >
-                        <Field
-                            label="Phone"
-                            name="Phone"
-                            component={Input}
-                            wid={318}
-                            id={3}
+                        <TextInput
+                            style={{ width: normalize(318), borderColor: "#000000", borderBottomWidth: 1, marginLeft: normalize(10), fontFamily: fonts.lato_regular, fontSize: normalize(20) }}
+                            placeholder={"Phone"}
+                            placeholderTextColor={"#000000"}
                         />
                     </View>
                     <View style={{ marginTop: 10 }}>
-                        <Field
-                            label="Email"
-                            name="Email"
-                            component={Input}
-                            wid={318}
-                            id={3}
+                        <TextInput
+                            style={{ width: normalize(318), borderColor: "#000000", borderBottomWidth: 1, marginLeft: normalize(10), fontFamily: fonts.lato_regular, fontSize: normalize(20) }}
+                            placeholder={"Email"}
+                            placeholderTextColor={"#000000"}
                         />
                     </View>
                 </View>
@@ -83,46 +70,36 @@ function HealthForm({ navigation }) {
                         </View>
                     </View>
                     <View style={{ marginTop: normalize(15) }}>
-                        <Field
-                            label="Full Name"
-                            name="Full Name"
-                            component={Input}
-                            wid={318}
-                            id={3}
+                        <TextInput
+                            style={{ width: normalize(318), borderColor: "#000000", borderBottomWidth: 1, marginLeft: normalize(10), fontFamily: fonts.lato_regular, fontSize: normalize(20) }}
+                            placeholder={"Full Name"}
+                            placeholderTextColor={"#000000"}
                         />
                     </View>
                     <View style={{ flexDirection: "row", marginTop: 10 }} >
-                        <Field
-                            label="Age"
-                            name="Age"
-                            component={Input}
-                            wid={150}
-                            id={3}
+                        <TextInput
+                            style={{ width: normalize(150), borderColor: "#000000", borderBottomWidth: 1, marginLeft: normalize(10), fontFamily: fonts.lato_regular, fontSize: normalize(20) }}
+                            placeholder={"Age"}
+                            placeholderTextColor={"#000000"}
                         />
-                        <Field
-                            label="Gender"
-                            name="Gender"
-                            component={Input}
-                            wid={150}
-                            id={3}
+                        <TextInput
+                            style={{ width: normalize(150), borderColor: "#000000", borderBottomWidth: 1, marginLeft: normalize(10), fontFamily: fonts.lato_regular, fontSize: normalize(20) }}
+                            placeholder={"Gender"}
+                            placeholderTextColor={"#000000"}
                         />
                     </View>
                     <View style={{ marginTop: 10 }} >
-                        <Field
-                            label="Phone"
-                            name="Phone"
-                            component={Input}
-                            wid={318}
-                            id={3}
+                        <TextInput
+                            style={{ width: normalize(318), borderColor: "#000000", borderBottomWidth: 1, marginLeft: normalize(10), fontFamily: fonts.lato_regular, fontSize: normalize(20) }}
+                            placeholder={"Phone"}
+                            placeholderTextColor={"#000000"}
                         />
                     </View>
                     <View style={{ marginTop: 10 }}>
-                        <Field
-                            label="Email"
-                            name="Email"
-                            component={Input}
-                            wid={318}
-                            id={3}
+                        <TextInput
+                            style={{ width: normalize(318), borderColor: "#000000", borderBottomWidth: 1, marginLeft: normalize(10), fontFamily: fonts.lato_regular, fontSize: normalize(20) }}
+                            placeholder={"Email"}
+                            placeholderTextColor={"#000000"}
                         />
                     </View>
                 </View>
@@ -136,46 +113,36 @@ function HealthForm({ navigation }) {
                         </View>
                     </View>
                     <View style={{ marginTop: normalize(15) }}>
-                        <Field
-                            label="Full Name"
-                            name="Full Name"
-                            component={Input}
-                            wid={318}
-                            id={3}
+                        <TextInput
+                            style={{ width: normalize(318), borderColor: "#000000", borderBottomWidth: 1, marginLeft: normalize(10), fontFamily: fonts.lato_regular, fontSize: normalize(20) }}
+                            placeholder={"Full Name"}
+                            placeholderTextColor={"#000000"}
                         />
                     </View>
                     <View style={{ flexDirection: "row", marginTop: 10 }} >
-                        <Field
-                            label="Age"
-                            name="Age"
-                            component={Input}
-                            wid={150}
-                            id={3}
+                        <TextInput
+                            style={{ width: normalize(150), borderColor: "#000000", borderBottomWidth: 1, marginLeft: normalize(10), fontFamily: fonts.lato_regular, fontSize: normalize(20) }}
+                            placeholder={"Age"}
+                            placeholderTextColor={"#000000"}
                         />
-                        <Field
-                            label="Gender"
-                            name="Gender"
-                            component={Input}
-                            wid={150}
-                            id={3}
+                        <TextInput
+                            style={{ width: normalize(150), borderColor: "#000000", borderBottomWidth: 1, marginLeft: normalize(10), fontFamily: fonts.lato_regular, fontSize: normalize(20) }}
+                            placeholder={"Gender"}
+                            placeholderTextColor={"#000000"}
                         />
                     </View>
                     <View style={{ marginTop: 10 }} >
-                        <Field
-                            label="Phone"
-                            name="Phone"
-                            component={Input}
-                            wid={318}
-                            id={3}
+                        <TextInput
+                            style={{ width: normalize(318), borderColor: "#000000", borderBottomWidth: 1, marginLeft: normalize(10), fontFamily: fonts.lato_regular, fontSize: normalize(20) }}
+                            placeholder={"Phone"}
+                            placeholderTextColor={"#000000"}
                         />
                     </View>
                     <View style={{ marginTop: 10 }}>
-                        <Field
-                            label="Email"
-                            name="Email"
-                            component={Input}
-                            wid={318}
-                            id={3}
+                        <TextInput
+                            style={{ width: normalize(318), borderColor: "#000000", borderBottomWidth: 1, marginLeft: normalize(10), fontFamily: fonts.lato_regular, fontSize: normalize(20) }}
+                            placeholder={"Email"}
+                            placeholderTextColor={"#000000"}
                         />
                     </View>
                 </View>
@@ -189,46 +156,36 @@ function HealthForm({ navigation }) {
                         </View>
                     </View>
                     <View style={{ marginTop: normalize(15) }}>
-                        <Field
-                            label="Full Name"
-                            name="Full Name"
-                            component={Input}
-                            wid={318}
-                            id={3}
+                        <TextInput
+                            style={{ width: normalize(318), borderColor: "#000000", borderBottomWidth: 1, marginLeft: normalize(10), fontFamily: fonts.lato_regular, fontSize: normalize(20) }}
+                            placeholder={"Full Name"}
+                            placeholderTextColor={"#000000"}
                         />
                     </View>
                     <View style={{ flexDirection: "row", marginTop: 10 }} >
-                        <Field
-                            label="Age"
-                            name="Age"
-                            component={Input}
-                            wid={150}
-                            id={3}
+                        <TextInput
+                            style={{ width: normalize(150), borderColor: "#000000", borderBottomWidth: 1, marginLeft: normalize(10), fontFamily: fonts.lato_regular, fontSize: normalize(20) }}
+                            placeholder={"Age"}
+                            placeholderTextColor={"#000000"}
                         />
-                        <Field
-                            label="Gender"
-                            name="Gender"
-                            component={Input}
-                            wid={150}
-                            id={3}
+                        <TextInput
+                            style={{ width: normalize(150), borderColor: "#000000", borderBottomWidth: 1, marginLeft: normalize(10), fontFamily: fonts.lato_regular, fontSize: normalize(20) }}
+                            placeholder={"Gender"}
+                            placeholderTextColor={"#000000"}
                         />
                     </View>
                     <View style={{ marginTop: 10 }} >
-                        <Field
-                            label="Phone"
-                            name="Phone"
-                            component={Input}
-                            wid={318}
-                            id={3}
+                        <TextInput
+                            style={{ width: normalize(318), borderColor: "#000000", borderBottomWidth: 1, marginLeft: normalize(10), fontFamily: fonts.lato_regular, fontSize: normalize(20) }}
+                            placeholder={"Phone"}
+                            placeholderTextColor={"#000000"}
                         />
                     </View>
                     <View style={{ marginTop: 10 }}>
-                        <Field
-                            label="Email"
-                            name="Email"
-                            component={Input}
-                            wid={318}
-                            id={3}
+                        <TextInput
+                            style={{ width: normalize(318), borderColor: "#000000", borderBottomWidth: 1, marginLeft: normalize(10), fontFamily: fonts.lato_regular, fontSize: normalize(20) }}
+                            placeholder={"Email"}
+                            placeholderTextColor={"#000000"}
                         />
                     </View>
                 </View>
@@ -240,7 +197,3 @@ function HealthForm({ navigation }) {
 
     )
 }
-export default connect(null, null)(reduxForm({
-    form: 'HealthForm',
-    enableReinitialize: true
-})(HealthForm));

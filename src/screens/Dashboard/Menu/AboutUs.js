@@ -88,7 +88,6 @@ export default function AboutUs({ navigation }) {
                 </View>
                 <View style = {{marginBottom : normalize(30)}}  />
             </ScrollView>
-
         </View>
     )
 }

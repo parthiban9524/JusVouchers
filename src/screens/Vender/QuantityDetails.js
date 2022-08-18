@@ -13,11 +13,10 @@ export default function QuantityDetails({ navigation }) {
 
     console.log("data",DATA)
 
-   
     const renderItem = ({ item }) => {
 console.log("Item", item)
         return (
-            <View style={[styles.data_container]} >
+            <TouchableOpacity style={[styles.data_container]} onPress={() => onDate(item)} >
                 <View style={{ justifyContent: "center",marginRight:30 }}>
                     <Text style={styles.data_text}>{item.name}</Text>
                 </View>
@@ -27,7 +26,7 @@ console.log("Item", item)
                 <View style={{ justifyContent: "center", marginRight: normalize(0) }}>
                     <Text style={styles.data_text} >{item.balance}</Text>
                 </View>
-            </View>
+            </TouchableOpacity>
         );
     };
 

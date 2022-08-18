@@ -1,14 +1,11 @@
-import React, { useEffect, useState } from "react";
-import { FlatList, SafeAreaView, StatusBar, StyleSheet, Text, TouchableOpacity, View, Image } from "react-native";
-import { connect } from "react-redux";
-import { Field, reduxForm } from "redux-form";
+import React from "react";
+import {  SafeAreaView,  StyleSheet, Text, TouchableOpacity, View, Image, TextInput } from "react-native";
 
 import { normalize, fonts } from "../../../components/Utils";
-import { sale1, rising, left, new_user } from "../../../components/Icons";
+import {  left, new_user } from "../../../components/Icons";
 import AdminHeader from "../../../components/AdminHeader";
-import Input from "../../../components/Input";
 
-const UserDetails = ({ navigation }) => {
+export default function UserDetails  ({ navigation })  {
 
     const DATA = navigation.getState().routes[2].params.data.personal
 
@@ -21,8 +18,8 @@ const UserDetails = ({ navigation }) => {
                 </TouchableOpacity>
                 <View style={{ borderRadius: 20, backgroundColor: '#FFDCAE99', width: normalize(300), height: normalize(83), marginTop: normalize(20), alignSelf: "center", justifyContent: "center" }} onPress={() => navigation.navigate("SalesDetails")} >
                     <View style={{ flexDirection: "row", alignSelf: "center" }}>
-                        <Image source={new_user} style={{ height: normalize(50), width: normalize(50), resizeMode: "contain",left : normalize(20) }} />
-                        <Text style={{ fontSize: normalize(18), fontWeight: '500', marginHorizontal: normalize(50), marginTop: 10, textAlign : "center" }}  >Pranay has’t Purchese anything yet. </Text>
+                        <Image source={new_user} style={{ height: normalize(50), width: normalize(50), resizeMode: "contain", left: normalize(20) }} />
+                        <Text style={{ fontSize: normalize(18), fontWeight: '500', marginHorizontal: normalize(50), marginTop: 10, textAlign: "center" }}  >Pranay has’t Purchese anything yet. </Text>
                     </View>
                 </View>
                 <View>
@@ -32,58 +29,47 @@ const UserDetails = ({ navigation }) => {
                     <View style={{ marginLeft: normalize(15) }}>
                         <Text style={{ fontFamily: fonts.lato_regular, fontWeight: "500", fontSize: normalize(12), color: "#0D2FA9" }} >Name</Text>
                     </View>
-                    <Field
-                        label={DATA.name}
-                        name="Full Name"
-                        component={Input}
-                        wid={318}
-                        id={3}
+                    <TextInput
+                        style={{ width: normalize(318), borderColor: "#000000", borderBottomWidth: 1, marginLeft: normalize(10), fontFamily: fonts.lato_regular, fontSize: normalize(20) }}
+                        placeholder={DATA.name}
+                        placeholderTextColor={"#000000"}
                     />
                 </View>
                 <View style={{ marginTop: normalize(15), marginLeft: normalize(15) }}>
                     <View style={{ marginLeft: normalize(15) }}>
                         <Text style={{ fontFamily: fonts.lato_regular, fontWeight: "500", fontSize: normalize(12), color: "#0D2FA9" }} >Email</Text>
                     </View>
-                    <Field
-                        label={DATA.email}
-                        name="Full Name"
-                        component={Input}
-                        wid={318}
-                        id={3}
+                    <TextInput
+                        style={{ width: normalize(318), borderColor: "#000000", borderBottomWidth: 1, marginLeft: normalize(10), fontFamily: fonts.lato_regular, fontSize: normalize(20) }}
+                        placeholder={DATA.email}
+                        placeholderTextColor={"#000000"}
                     />
                 </View>
                 <View style={{ marginTop: normalize(15), marginLeft: normalize(15) }}>
                     <View style={{ marginLeft: normalize(15) }}>
                         <Text style={{ fontFamily: fonts.lato_regular, fontWeight: "500", fontSize: normalize(12), color: "#0D2FA9" }} >Mobile no</Text>
                     </View>
-                    <Field
-                        label={DATA.phone}
-                        name="Full Name"
-                        component={Input}
-                        wid={318}
-                        id={3}
+                    <TextInput
+                        style={{ width: normalize(318), borderColor: "#000000", borderBottomWidth: 1, marginLeft: normalize(10), fontFamily: fonts.lato_regular, fontSize: normalize(20) }}
+                        placeholder={DATA.phone}
+                        placeholderTextColor={"#000000"}
                     />
                 </View>
                 <View style={{ marginTop: normalize(15), marginLeft: normalize(15) }}>
                     <View style={{ marginLeft: normalize(15) }}>
                         <Text style={{ fontFamily: fonts.lato_regular, fontWeight: "500", fontSize: normalize(12), color: "#0D2FA9" }} >Address</Text>
                     </View>
-                    <Field
-                        label={DATA.address}
-                        name="Full Name"
-                        component={Input}
-                        wid={318}
-                        id={3}
+                    <TextInput
+                        style={{ width: normalize(318), borderColor: "#000000", borderBottomWidth: 1, marginLeft: normalize(10), fontFamily: fonts.lato_regular, fontSize: normalize(20) }}
+                        placeholder={DATA.address}
+                        placeholderTextColor={"#000000"}
                     />
-                </View>   
+                </View>
             </SafeAreaView>
         </>
     );
 };
-export default connect(null, null)(reduxForm({
-    form: 'UserDetails',
-    enableReinitialize: true
-})(UserDetails));
+
 
 const styles = StyleSheet.create({
     container: {

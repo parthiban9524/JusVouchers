@@ -1,81 +1,101 @@
-import React, { useEffect, useRef } from 'react'
-import { View, Text, Keyboard } from 'react-native'
-import { connect } from "react-redux";
-import { Field, reduxForm } from "redux-form";
-import { get } from 'lodash';
-import { required, } from 'redux-form-validators';
+import React from 'react'
+import { View, Text, StyleSheet, KeyboardAvoidingView, Image, TextInput, TouchableOpacity } from 'react-native'
 
-import { showToast } from '../../components/Utils';
 import { fonts, normalize } from '../../components/Utils';
 import WavyHeader from '../../components/Wavyheader';
 import Submitbutton from '../../components/Submitbutton';
-import { phone } from '../../components/Icons';
-import { submitOTP } from '../../actions';
-import Input from '../../components/Input';
 
-const LoginotpAuth = ({ navigation, handleSubmit, submitOTP, serverError, data = {} }) => {
+export default function LoginotpAuth({ navigation }) {
+    let textInput = React.useRef(null);
+    const [phoneNumber, setPhoneNumber] = React.useState();
+    const [focusInput, setFocusinput] = React.useState(true);
 
-    const isInitialMount = useRef(true);
-
-
-    const submit = value => {
-        submitOTP(value)
+    const onChangePhone = (Number) => {
+        setPhoneNumber(Number)
     }
 
-    useEffect(() => {
-        if (serverError && serverError.length !== 0 && get(serverError, 'message')) {
-            Keyboard.dismiss();
-            showToast(get(serverError, 'message'));
-        }
-    }, [serverError])
+    const onChangeFocus = () => {
+        setFocusinput(true)
+    }
 
-    useEffect(() => {
-        if (isInitialMount.current) {
-            isInitialMount.current = false;
-        } else {
-            if (data && get(data, 'status') === 1) {
-                console.log("condition pass", data)
-                navigation.navigate('InputOTPScreen');
-            }
-        }
-    }, [data]);
+    const onChangeBlur = () => {
+        setFocusinput(false)
+    }
+
+    React.useEffect(() => {
+        textInput.focus()
+    }, [])
 
     return (
         <>
             <WavyHeader firstTxt={"OTP Login"} secTxt={""} navigation={navigation} />
-            <View>
-                <View style={{ marginTop: normalize(100) }} >
-                    <Text style={{ textAlign: "center", fontSize: normalize(20), fontFamily: fonts.montserrat_semibold, }}>{"Please Input Mobile Number"}</Text>
-                </View>
-                <View style={{ marginTop: normalize(40) }} >
-                    <Field
-                        label=" +91  PhoneNumber"
-                        name="PHONE_NO"
-                        component={Input}
-                        img={phone}
-                        id={1}
-                        keyboardType='numeric'
-                        validate={[required()]}
-                    />
-                </View>
-                <View style={{ marginTop: normalize(80) }} >
-                    <Submitbutton bg={"#f69632"} text={"Send"} txtclr={"#ffffff"} onpress={handleSubmit(submit)} big={true} />
-                </View>
+            <View style={styles.container} >
+                <KeyboardAvoidingView
+                    keyboardVerticalOffset={50}
+                    behavior={'padding'}
+                    style={styles.containerAvoiddingView}>
+                    <Text style={styles.textTitle}>{"Please input mobile number"}</Text>
+
+                    <View style={styles.containerInput}>
+                        <View style={styles.openDialogView}>
+                            <Text style={{ fontSize: normalize(18) }}>{"+91 "}</Text>
+                        </View>
+                        <TextInput
+                            ref={(input) => textInput = input}
+                            style={styles.phoneInputtext}
+                            placeholder='98 98 87 45 21'
+                            keyboardType='numeric'
+                            value={Number}
+                            onChange={onChangePhone}
+                            secureTextEntry={false}
+                            onFocus={onChangeFocus}
+                            onBlur={onChangeBlur}
+                        />
+                    </View>
+                    <View style={{ marginTop: normalize(80) }} >
+                        <Submitbutton voucher={true} bg={phoneNumber ? "#f69632" : 'gray'} text={"Confirm"} txtclr={"#ffffff"} onpress={() => navigation.navigate("InputOTPScreen")} />
+                    </View>
+                </KeyboardAvoidingView>
             </View>
         </>
     )
 }
-const mapStateToProps = (state) => {
-    return {
-        ...state.setup,
-    };
-};
-const mapDispatchToProps = (dispatch) => {
-    return {
-        submitOTP: (data) => { dispatch(submitOTP(data)) },
-    }
-};
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        marginTop: normalize(50)
+    },
+    containerAvoiddingView: {
+        flex: 1,
+        alignItems: "center",
+        padding: 10
+    },
+    textTitle: {
+        marginVertical: normalize(50),
+        fontSize: normalize(20),
+        color: "#000000",
+        fontFamily: fonts.lato_bold,
 
-export default connect(mapStateToProps, mapDispatchToProps)(reduxForm({
-    form: 'LoginotpAuth',
-})(LoginotpAuth));
+    },
+    containerInput: {
+        flexDirection: 'row',
+        paddingHorizontal: 12,
+        borderRadius: 10,
+        backgroundColor: 'white',
+        alignItems: 'center',
+        width: normalize(320),
+        elevation: 5
+    },
+    openDialogView: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+
+    }, phoneInputtext: {
+        marginLeft: 10,
+        flex: 1,
+        height: normalize(50),
+        fontSize: normalize(18),
+        width: 10
+    },
+})

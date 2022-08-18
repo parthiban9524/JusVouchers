@@ -79,10 +79,8 @@ import Arrow from "../assest/images/Arrow.png"
 import Address from "../assest/images/Address.png"
 import VName from "../assest/images/VName.png"
 import Price from "../assest/images/Price.png"
-import loader from "../assest/images/loader.png"
 export {
     logo,
-    loader,
     Price,
     VName,
     Address,

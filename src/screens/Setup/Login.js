@@ -1,109 +1,55 @@
-import React, { useState, useRef, useEffect } from "react";
-import { View, Text, Image, TouchableOpacity, Keyboard } from "react-native";
-import { connect } from "react-redux";
-import { Field, reduxForm } from "redux-form";
-import { required, email } from 'redux-form-validators';
-import SelectDropdown from 'react-native-select-dropdown'
+import React from "react";
+import { View, Text, Image, TouchableOpacity, TextInput } from "react-native";
 
-import { fonts, normalize, showToast } from "../../components/Utils";
-import { lock, mail, triangle } from "../../components/Icons"
-import Input from "../../components/Input";
+
+import { fonts, normalize } from "../../components/Utils";
+import { Arrow, lock, mail, triangle } from "../../components/Icons"
 import Submitbutton from "../../components/Submitbutton"
 import WavyHeader from "../../components/Wavyheader";
-import { submitLogin } from "../../actions";
-import { get } from "lodash";
-import { setData } from "../../components/Authconst";
 
-function Login(props) {
+export default function Login({ navigation }) {
 
-    const { navigation, handleSubmit, serverError, response = {}, submitLogin, meta, data } = props;
+    const [card, setcard] = React.useState(false)
+    const [txt, settxt] = React.useState("")
 
-    const [role, setrole] = useState(1)
 
-    const countries = ["User", "Admin", "Vendor", "SalePerson"]
-
-    const isInitialMount = useRef(true);
-
-    useEffect(() => {
-        if (serverError && serverError.length !== 0 && get(serverError, 'message')) {
-            Keyboard.dismiss();
-            showToast(get(serverError, 'message'));
+    const onClick = (data) => {
+        setcard(true)
+        // settxt(data)
+        if (card === true) {
+            setcard(false)
         }
-    }, [serverError])
+    }
 
-    useEffect(() => {
-        if (isInitialMount.current) {
-            isInitialMount.current = false;
-        } else {
-            console.log("data", data)
-            if (data && meta === 'login') {
-                const UserRole = get(data, "user.userrole")
-                setData(data)
-
-                if (UserRole === 1) {
-                    navigation.navigate("DashboardNavigation")
-                }
-                if (UserRole === 2) {
-                    setTimeout(() => {
-                        navigation.navigate("AdminScreen")
-                    }, 500)
-                }
-                if (UserRole === 3) {
-                    navigation.navigate("VenderScreen")
-                }
-                if (UserRole === 4) {
-                    navigation.navigate("SalesScreen")
-                }
-
-                // let usertoken = get(data, 'data.token.access_token');
-                // api.defaults.headers.common['Authorization'] = `Bearer ${usertoken}`;
-                // let userdetails = get(data, 'data.user');
-                // let userdata = {};
-                // userdata['remember'] = remember;
-                // userdata['token'] = usertoken;
-                // userdata['userdetails'] = userdetails;
-                // RNSecureKeyStore.set(USER_DATA, JSON.stringify(userdata), { accessible: ACCESSIBLE.ALWAYS_THIS_DEVICE_ONLY });
-                // if (usertoken !== null && userdata !== null) {
-                //     reset()
-                //     fetchUserToken(usertoken);
-                //     fetchUserRemember(remember);
-                //     navigation.navigate('DashboardNavigation', { id: data.id })
-                // }
-            }
+    const onTouch = (data) => {
+        settxt(data)
+        if (txt == data) {
+            settxt("")
         }
-    }, [data]);
-    const submit = value => {
-        const val1 = value;
-        const val2 = { "USER_ROLE": role };
-        const data = Object.assign(val1, val2)
-        submitLogin(data);
+        setcard(false)
     }
 
     return (
         <View style={{ flex: 1, backgroundColor: "#ffffff" }} >
             <WavyHeader navigation={navigation} />
             <View style={{ marginTop: normalize(75) }} >
-                <Field
-                    label="Email"
-                    name="EMAIL"
-                    component={Input}
-                    img={mail}
-                    id={1}
-                    autoCapitalize={'none'}
-                    keyboardType={'email-address'}
-                    validate={[required(), email()]}
+                <TextInput
+                    style={{ width: normalize(300), borderColor: "#938C8C", borderBottomWidth: 1, alignSelf: "center", fontFamily: fonts.lato_regular, fontSize: normalize(20), paddingLeft: normalize(30), top: 10, }}
+                    placeholder={"Email"}
+                    autoCapitalize="none"
+                    autoCorrect={false}
                 />
+                <Image source={mail} style={{ height: normalize(25), width: normalize(25), left: normalize(40), bottom: normalize(28) }} />
             </View>
-            <View style={{ marginTop: normalize(10) }} >
-                <Field
-                    label="Password"
-                    name="PASSWORD"
-                    component={Input}
-                    validate={[required()]}
-                    img={lock}
-                    id={1}
-                    secureTextEntry={true}
+            <View style={{ marginTop: normalize(15) }} >
+                <TextInput
+                    style={{ width: normalize(300), borderColor: "#938C8C", borderBottomWidth: 1, alignSelf: "center", fontFamily: fonts.lato_regular, fontSize: normalize(20), paddingLeft: normalize(30), top: 10, }}
+                    placeholder={"Password"}
+                    autoCapitalize="none"
+                    autoCorrect={false}
+                    secureTextEntry = {true}
                 />
+                <Image source={lock} style={{ height: normalize(25), width: normalize(25), left: normalize(40), bottom: normalize(28) }} />
             </View>
             <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
                 <TouchableOpacity style={{ alignSelf: "flex-end", marginLeft: 20 }} onPress={() => navigation.navigate('LoginotpAuth')} >
@@ -113,28 +59,21 @@ function Login(props) {
                     <Text style={{ fontSize: normalize(18), fontFamily: fonts.lato_regular, color: "#F58220" }}>Forgot password </Text>
                 </TouchableOpacity>
             </View>
-            <View style={{ marginLeft: normalize(30), marginTop: normalize(20) }} >
-                <SelectDropdown
-                    data={countries}
-                    buttonStyle={{ height: normalize(30), width: normalize(115) }}
-                    buttonTextStyle={{ fontSize: normalize(14), }}
-                    defaultValueByIndex={0}
-                    onSelect={(selectedItem, index) => {
-                    }}
-                    buttonTextAfterSelection={(selectedItem, index) => {
-                        setrole(index + 1)
-                        return selectedItem
-                    }}
-                    rowTextForSelection={(item, index) => {
-                        return item
-                    }}
-                />
-                <View style={{ position: "absolute", left: normalize(90), top: 7 }} >
-                    <Image source={triangle} style={{ height: normalize(20), width: normalize(20) }} />
-                </View>
-            </View>
+            <TouchableOpacity onPress={onClick} style={{ flexDirection: "row", marginTop: normalize(18), marginLeft: normalize(45) }} >
+                <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(12), fontWeight: "500" }} > {txt !== "" ? txt : "User Login"}  </Text>
+                <Image source={triangle} style={{ height: normalize(10), width: normalize(10), alignSelf: "center", left: 10 }} />
+            </TouchableOpacity>
+            {
+                card && (
+                    <View style={{ marginLeft: normalize(45), marginTop: 10 }} >
+                        <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(12), fontWeight: "500" }} onPress={() => onTouch("Admin Login")}  > Admin Login </Text>
+                        <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(12), fontWeight: "500", marginTop: normalize(10) }} onPress={() => onTouch("Vendor Login")}  > Vendor Login </Text>
+                        <Text style={{ fontFamily: fonts.montserrat_regular, fontSize: normalize(12), fontWeight: "500", marginTop: normalize(10) }} onPress={() => onTouch("SalePerson Login")}  > SalePerson Login </Text>
+                    </View>
+                )
+            }
             <View style={{ marginTop: normalize(20) }} >
-                <Submitbutton bg={"#f69632"} text={"Log in"} txtclr={"#ffffff"} big={true} onpress={handleSubmit(submit)} />
+                <Submitbutton bg={"#f69632"} text={"Log in"} txtclr={"#ffffff"} big={true} onpress={() => navigation.navigate("DashboardNavigation")} />
             </View>
             <View style={{ flexDirection: "row", alignSelf: "center", justifyContent: "center" }} >
                 <View style={{ width: normalize(130), borderBottomWidth: 1, borderColor: "#938C8C" }} />
@@ -150,18 +89,3 @@ function Login(props) {
         </View>
     )
 }
-
-const mapStateToProps = (state) => {
-    return {
-        ...state.setup,
-    };
-}
-const mapDispatchToProps = (dispatch) => {
-    return {
-        submitLogin: (data) => { dispatch(submitLogin(data)) },
-    }
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(reduxForm({
-    form: 'Login',
-})(Login));
